@@ -98,7 +98,7 @@ For updates check the readme.
 
 <addon id="plugin.video.tvchopo"
        name="TVCHOPO"
-       version="1.0.3"
+       version="1.0.2"
        provider-name="torete">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
