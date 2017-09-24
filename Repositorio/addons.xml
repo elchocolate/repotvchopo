@@ -97,7 +97,7 @@ For updates check the readme.
 </addon>
 
 <addon id="plugin.video.tvchopo"
-       name="TVCHOPO"
+       name="[COLOR fuchsia]T[/COLOR][COLOR green]V[/COLOR][COLOR yellow]C[/COLOR][COLOR red]HO[/COLOR][COLOR pink]PO[/COLOR]"
        version="4.0.0"
        provider-name="torete">
   <requires>
