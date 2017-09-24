@@ -2,7 +2,7 @@
 <addons>
 <addon id="plugin.video.tvchopo"
        name="TVCHOPO"
-       version="3.0.0"
+       version="1.0.1"
        provider-name="torete">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -23,10 +23,10 @@
     <provides>video</provides>
   </extension>
 
-   <extension point="xbmc.addon.repository" name="tvchopo Jose">
-        <info>https://raw.githubusercontent.com/elchocolate/repo1/master/Repositorio/addons.xml</info>
-        <checksum>https://raw.githubusercontent.com/elchocolate/repo1/master/Repositorio/addons.xml.md5</checksum>
-        <datadir zip="true">https://raw.githubusercontent.com/elchocolate/repo1/master/Repositorio/</datadir>
+       <extension point="xbmc.addon.repository" name="repotvchopo">
+        <info>https://raw.githubusercontent.com/elchocolate/repotvchopo/Repo/master/Repositorio/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/elchocolate/repotvchopo/Repo/master/Repositorio/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/</datadir>
     </extension>
 
   <extension point="xbmc.addon.metadata">
