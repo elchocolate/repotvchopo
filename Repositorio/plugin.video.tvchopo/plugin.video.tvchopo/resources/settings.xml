@@ -1,8 +1,16 @@
-﻿<settings>
-  		
-  <category label="tvchopo">
-        <setting type="lsep" label="Para su buen funcionamiento pinchar en" option="close" action="RunPlugin(plugin://plugin.video.tvchopo MASTER/?mode=7)" />
-        <setting type="lsep" label="[COLOR red]POR DEFECTO[/COLOR] y luego en [COLOR red]OK[/COLOR]" option="close" action="RunPlugin(plugin://plugin.video.tvchopo MASTER/?mode=7)" />
+﻿<settings>		
+  <category label="Información festa">
+       	<setting type="lsep" label="[COLOR lime]Versión del Addon Actualizado 17/09/2017[/COLOR]" option="close" action="RunPlugin(plugin://plugin.video.festa/?mode=7)" />
+       
+        
+		<setting type="lsep" label="[COLOR yellow]Email:[/COLOR] addonfesta@gmail.com" option="close" action="RunPlugin(plugin://plugin.video.festa/?mode=7)" />
+	
+		<setting type="lsep" label="[COLOR yellow]Grupo Telegram:[/COLOR] @addonfesta" option="close" action="RunPlugin(plugin://plugin.video.festa/?mode=7)" />
+ </category>
+		
+  <category label="Configuración General">
+        <setting type="lsep" label="Para su buen funcionamiento pinchar en" option="close" action="RunPlugin(plugin://plugin.video.festa/?mode=7)" />
+        <setting type="lsep" label="[COLOR red]POR DEFECTO[/COLOR] y luego en [COLOR red]OK[/COLOR]" option="close" action="RunPlugin(plugin://plugin.video.festa/?mode=7)" />
 		<setting id="ask_playlist_items" type="bool" label="Elegir Fuente de Video" default="true" visible="false"/>
 		<setting id="debug" type="bool" label="Enable Add-on Debugging" default="true" visible="false"/>
         <setting id="1080pquality" label="[COLOR lime]Mejorar calidad 1080p[/COLOR]" type="bool" default="true"/>
@@ -11,4 +19,5 @@
         <setting id="donotshowbychannels" label="Ocultar Canales" type="bool" default="false" visible="false"/>
   </category>
   </settings>
+
 
