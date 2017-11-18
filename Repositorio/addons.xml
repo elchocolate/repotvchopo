@@ -98,7 +98,7 @@ For updates check the readme.
 
 <addon id="plugin.video.tvchopo"
        name="[COLOR fuchsia]T[/COLOR][COLOR green]V[/COLOR][COLOR yellow]C[/COLOR][COLOR orange]HO[/COLOR][COLOR pink]PO[/COLOR]"
-       version="5.0.2"
+       version="5.0.1"
        provider-name="torete">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
