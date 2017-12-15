@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="plugin.video.tvchopo"
        name="[COLOR fuchsia]T[/COLOR][COLOR green]V[/COLOR][COLOR yellow]C[/COLOR][COLOR orange]HO[/COLOR][COLOR pink]PO[/COLOR]"
-       version="5.0.3"
+       version="5.0.4"
        provider-name="torete">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
