@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.Zeus"
-       name="[COLOR gold] Zeus[/COLOR]"
-       version="4.0.2"
-       provider-name="Zeus">
+<addon id="plugin.video.JHG.MASTER.3.0"
+       name="[COLOR goldenrod]JHG.MASTER.3.0 [/COLOR]"
+       version="3.0.1"
+       provider-name="[COLOR goldenrod]JHG.MASTER.3.0[/COLOR]">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.beautifulsoup" version="3.2.1"/>
@@ -22,9 +22,21 @@
     <provides>video</provides>
   </extension>
 
+
   <extension point="xbmc.addon.metadata">
-    <summary>Creado por JHG</summary>
-    <description>JHG 2017</description>
+    <summary>[COLOR goldenrod][B]JHG.MASTER.3.0 [/B][/COLOR]</summary>
+    <description>
+----= Bienvenidos a JHG.MASTER.3.0 TV Addon =----
+Este complemento se convierte en una opcion mas
+a la hora de tener un centro multimedia completo,
+cubriendo las categorias mas solicitadas por los 
+usuarios.
+		
+JHG.MASTER.3.0 no aloja ningun tipo de contenido. Todos estos 
+enlaces estan colocado de manera libre en interNET.
+--------------------------------------------------------------------
+         
+    </description>
     <platform>all</platform>
   </extension>
 </addon>
