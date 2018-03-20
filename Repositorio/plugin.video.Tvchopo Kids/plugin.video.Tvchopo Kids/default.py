@@ -20,18 +20,12 @@ except:
     import simplejson as json
 import SimpleDownloader as downloader
 import time
-
-try:
-   import ssl
-   ssl._create_default_https_context = ssl._create_unverified_context
-except:
-   pass
-   
 tsdownloader=False
 hlsretry=False
 resolve_url=['180upload.com', 'allmyvideos.net', 'bestreams.net', 'clicknupload.com', 'cloudzilla.to', 'movshare.net', 'novamov.com', 'nowvideo.sx', 'videoweed.es', 'daclips.in', 'datemule.com', 'fastvideo.in', 'faststream.in', 'filehoot.com', 'filenuke.com', 'sharesix.com',  'plus.google.com', 'picasaweb.google.com', 'gorillavid.com', 'gorillavid.in', 'grifthost.com', 'hugefiles.net', 'ipithos.to', 'ishared.eu', 'kingfiles.net', 'mail.ru', 'my.mail.ru', 'videoapi.my.mail.ru', 'mightyupload.com', 'mooshare.biz', 'movdivx.com', 'movpod.net', 'movpod.in', 'movreel.com', 'mrfile.me', 'nosvideo.com', 'openload.io', 'played.to', 'bitshare.com', 'filefactory.com', 'k2s.cc', 'oboom.com', 'rapidgator.net', 'primeshare.tv', 'bitshare.com', 'filefactory.com', 'k2s.cc', 'oboom.com', 'rapidgator.net', 'sharerepo.com', 'stagevu.com', 'streamcloud.eu', 'streamin.to', 'thefile.me', 'thevideo.me', 'tusfiles.net', 'uploadc.com', 'zalaa.com', 'uploadrocket.net', 'uptobox.com', 'v-vids.com', 'veehd.com', 'vidbull.com', 'videomega.tv', 'vidplay.net', 'vidspot.net', 'vidto.me', 'vidzi.tv', 'vimeo.com', 'vk.com', 'vodlocker.com', 'xfileload.com', 'xvidstage.com', 'zettahost.tv']
 g_ignoreSetResolved=['plugin.video.dramasonline','plugin.video.f4mTester','plugin.video.shahidmbcnet','plugin.video.SportsDevil','plugin.stream.vaughnlive.tv','plugin.video.ZemTV-shani']
-
+global gLSProDynamicCodeNumber
+gLSProDynamicCodeNumber=0
 class NoRedirection(urllib2.HTTPErrorProcessor):
    def http_response(self, request, response):
        return response
@@ -60,7 +54,7 @@ history = os.path.join(profile, 'history')
 REV = os.path.join(profile, 'list_revision')
 icon = os.path.join(home, 'icon.png')
 FANART = os.path.join(home, 'fanart.jpg')
-source_file = os.path.join(home, base64.b64decode('c291cmNlX2ZpbGU='))
+source_file = os.path.join(home, 'source_file')
 functions_dir = profile
 
 communityfiles = os.path.join(profile, 'LivewebTV')
@@ -828,7 +822,20 @@ def getItems(items,fanart,dontLink=False):
                         addDir(name.encode('utf-8'),ext_url[0],53,thumbnail,fanArt,desc,genre,date,None,'source')
                         #xbmc.executebuiltin("Container.SetViewMode(500)")
                     else:
-                        
+                        try:
+                            if '$doregex' in name and not getRegexParsed==None:
+                                
+                                tname,setres=getRegexParsed(regexs, name)
+                                
+                                if not tname==None:
+                                    name=tname
+                        except: pass
+                        try:
+                            if '$doregex' in thumbnail and not getRegexParsed==None:
+                                tname,setres=getRegexParsed(regexs, thumbnail)
+                                if not tname==None:
+                                    thumbnail=tname
+                        except: pass
                         addLink(url[0],name.encode('utf-8', 'ignore'),thumbnail,fanArt,desc,genre,date,True,None,regexs,total)
                     #print 'success'
             except:
@@ -1889,20 +1896,39 @@ def doEval(fun_call,page_data,Cookie_Jar,m):
 
 def doEvalFunction(fun_call,page_data,Cookie_Jar,m):
 #    print 'doEvalFunction'
-    ret_val=''
-    if functions_dir not in sys.path:
-        sys.path.append(functions_dir)
-        
-    f=open(os.path.join(functions_dir,'LSProdynamicCode.py'),"wb")
-    f.write("# -*- coding: utf-8 -*-\n")
-    f.write(fun_call.encode("utf-8"));
-    
-    f.close()
-    import LSProdynamicCode
-    ret_val=LSProdynamicCode.GetLSProData(page_data,Cookie_Jar,m)
     try:
-        return str(ret_val)
-    except: return ret_val
+        global gLSProDynamicCodeNumber
+        gLSProDynamicCodeNumber=gLSProDynamicCodeNumber+1
+        ret_val=''
+        print 'doooodoo'
+        if functions_dir not in sys.path:
+            sys.path.append(functions_dir)
+
+        filename='LSProdynamicCode%s.py'%str(gLSProDynamicCodeNumber)
+        filenamewithpath=os.path.join(functions_dir,filename)
+        f=open(filenamewithpath,"wb")
+        f.write("# -*- coding: utf-8 -*-\n")
+        f.write(fun_call.encode("utf-8"));
+        f.close()
+        print 'before do'
+        LSProdynamicCode = import_by_string(filename.split('.')[0],filenamewithpath)
+        print 'after'
+         
+        ret_val=LSProdynamicCode.GetLSProData(page_data,Cookie_Jar,m)
+        try:
+            return str(ret_val)
+        except: return ret_val
+    except: traceback.print_exc()
+    return ""
+
+def import_by_string(full_name,filenamewithpath):
+    try:
+        
+        import importlib
+        return importlib.import_module(full_name, package=None)
+    except:
+        import imp
+        return imp.load_source(full_name,filenamewithpath)
 
 
 def getGoogleRecaptchaResponse(captchakey, cj,type=1): #1 for get, 2 for post, 3 for rawpost
@@ -2425,6 +2451,7 @@ def play_playlist(name, mu_playlist,queueVideo=None):
 
 
 def download_file(name, url):
+        
         if addon.getSetting('save_location') == "":
             xbmc.executebuiltin("XBMC.Notification('Tvchopo Kids','Choose a location to save files.',15000,"+icon+")")
             addon.openSettings()
@@ -2465,9 +2492,9 @@ def addDir(name,url,mode,iconimage,fanart,description,genre,date,credits,showcon
 
 
         if regexs and len(regexs)>0:
-            u=sys.argv[0]+"?url="+urllib.quote_plus(url)+"&mode="+str(mode)+"&name="+urllib.quote_plus(utf8(name))+"&fanart="+urllib.quote_plus(fanart)+"&regexs="+regexs
+            u=sys.argv[0]+"?url="+urllib.quote_plus(url)+"&mode="+str(mode)+"&name="+urllib.quote_plus(name)+"&fanart="+urllib.quote_plus(fanart)+"&regexs="+regexs
         else:
-            u=sys.argv[0]+"?url="+urllib.quote_plus(url)+"&mode="+str(mode)+"&name="+urllib.quote_plus(utf8(name))+"&fanart="+urllib.quote_plus(fanart)
+            u=sys.argv[0]+"?url="+urllib.quote_plus(url)+"&mode="+str(mode)+"&name="+urllib.quote_plus(name)+"&fanart="+urllib.quote_plus(fanart)
         
         ok=True
         if date == '':
@@ -2520,6 +2547,7 @@ def ytdl_download(url,title,media_type='video'):
     # play in xbmc while playing go back to contextMenu(c) to "!!Download!!"
     # Trial yasceen: seperate |User-Agent=
     import youtubedl
+    
     if not url == '':
         if media_type== 'audio':
             youtubedl.single_YD(url,download=True,audio=True)
@@ -2550,13 +2578,6 @@ def uni(string, encoding = 'utf-8'):
         if not isinstance(string, unicode):
             string = unicode(string, encoding, 'ignore')
     return string
-
-def utf8(string, encoding = 'utf-8'):
-    if isinstance(string, basestring):
-        if isinstance(string, unicode):
-            string = string.encode('utf-8')
-    return string
-    
 def removeNonAscii(s): return "".join(filter(lambda x: ord(x)<128, s))
 
 def sendJSON( command):
@@ -2574,39 +2595,36 @@ def pluginquerybyJSON(url,give_me_result=None,playlist=False):
     else:
         json_query = uni('{"jsonrpc":"2.0","method":"Files.GetDirectory","params":{"directory":"%s","media":"video","properties":[ "plot","playcount","director", "genre","votes","duration","trailer","premiered","thumbnail","title","year","dateadded","fanart","rating","season","episode","studio","mpaa"]},"id":1}') %url
     json_folder_detail = json.loads(sendJSON(json_query))
-    #addon_log( 'Detail: '+str(json_folder_detail))
+    #print json_folder_detail
     if give_me_result:
         return json_folder_detail
     if json_folder_detail.has_key('error'):
         return
     else:
-        if 'files' in json_folder_detail['result']:
-            for i in json_folder_detail['result']['files'] :
-                meta ={}
-                url = i['file']
-                #name = removeNonAscii(i['label'])
-                name = i['label']
-                thumbnail = removeNonAscii(i['thumbnail'])
-                fanart = removeNonAscii(i['fanart'])
-                meta = dict((k,v) for k, v in i.iteritems() if not v == '0' or not v == -1 or v == '')
-                meta.pop("file", None)
-                if i['filetype'] == 'file':
-                    if playlist:
-                        play_playlist(name,url,queueVideo='1')
-                        continue
-                    else:
-                        addLink(url,name,thumbnail,fanart,'','','','',None,'',total=len(json_folder_detail['result']['files']),allinfo=meta)
-                        #xbmc.executebuiltin("Container.SetViewMode(500)")
-                        if i['type'] and i['type'] == 'tvshow' :
-                            xbmcplugin.setContent(int(sys.argv[1]), 'tvshows')
-                        elif 'episode' in i and i['episode'] > 0 :
-                            xbmcplugin.setContent(int(sys.argv[1]), 'episodes')
 
+        for i in json_folder_detail['result']['files'] :
+            meta ={}
+            url = i['file']
+            name = removeNonAscii(i['label'])
+            thumbnail = removeNonAscii(i['thumbnail'])
+            fanart = removeNonAscii(i['fanart'])
+            meta = dict((k,v) for k, v in i.iteritems() if not v == '0' or not v == -1 or v == '')
+            meta.pop("file", None)
+            if i['filetype'] == 'file':
+                if playlist:
+                    play_playlist(name,url,queueVideo='1')
+                    continue
                 else:
-                    addDir(name,url,53,thumbnail,fanart,'','','','',allinfo=meta)
-            xbmcplugin.endOfDirectory(int(sys.argv[1]))
-        else:
-            return
+                    addLink(url,name,thumbnail,fanart,'','','','',None,'',total=len(json_folder_detail['result']['files']),allinfo=meta)
+                    #xbmc.executebuiltin("Container.SetViewMode(500)")
+                    if i['type'] and i['type'] == 'tvshow' :
+                        xbmcplugin.setContent(int(sys.argv[1]), 'tvshows')
+                    elif i['episode'] > 0 :
+                        xbmcplugin.setContent(int(sys.argv[1]), 'episodes')
+
+            else:
+                addDir(name,url,53,thumbnail,fanart,'','','','',allinfo=meta)
+        xbmcplugin.endOfDirectory(int(sys.argv[1]))
 
 def addLink(url,name,iconimage,fanart,description,genre,date,showcontext,playlist,regexs,total,setCookie="",allinfo={}):
         #print 'url,name',url,name,iconimage
@@ -3143,27 +3161,28 @@ elif mode==17 or mode==117:
     else:
         url,setresolved = getRegexParsed(regexs, url)
         print repr(url),setresolved,'imhere'
-        if url:
-            if '$PLAYERPROXY$=' in url:
-                url,proxy=url.split('$PLAYERPROXY$=')
-                print 'proxy',proxy
-                #Jairox mod for proxy auth
-                proxyuser = None
-                proxypass = None
-                if len(proxy) > 0 and '@' in proxy:
-                    proxy = proxy.split(':')
-                    proxyuser = proxy[0]
-                    proxypass = proxy[1].split('@')[0]
-                    proxyip = proxy[1].split('@')[1]
-                    port = proxy[2]
-                else:
-                    proxyip,port=proxy.split(':')
+        if not (regexs and 'notplayable' in regexs and not url):        
+            if url:
+                if '$PLAYERPROXY$=' in url:
+                    url,proxy=url.split('$PLAYERPROXY$=')
+                    print 'proxy',proxy
+                    #Jairox mod for proxy auth
+                    proxyuser = None
+                    proxypass = None
+                    if len(proxy) > 0 and '@' in proxy:
+                        proxy = proxy.split(':')
+                        proxyuser = proxy[0]
+                        proxypass = proxy[1].split('@')[0]
+                        proxyip = proxy[1].split('@')[1]
+                        port = proxy[2]
+                    else:
+                        proxyip,port=proxy.split(':')
 
-                playmediawithproxy(url,name,iconimage,proxyip,port, proxyuser,proxypass) #jairox
+                    playmediawithproxy(url,name,iconimage,proxyip,port, proxyuser,proxypass) #jairox
+                else:
+                    playsetresolved(url,name,iconimage,setresolved,regexs)
             else:
-                playsetresolved(url,name,iconimage,setresolved,regexs)
-        else:
-            xbmc.executebuiltin("XBMC.Notification(Tvchopo Kids,Failed to extract regex. - "+"this"+",4000,"+icon+")")
+                xbmc.executebuiltin("XBMC.Notification(Tvchopo Kids,Failed to extract regex. - "+"this"+",4000,"+icon+")")
 elif mode==18:
     addon_log("youtubedl")
     try:
@@ -3178,10 +3197,18 @@ elif mode==19:
 
 elif mode==21:
     addon_log("download current file using youtube-dl service")
-    ytdl_download('',name,'video')
+    mtype='video'
+    if '[mp3]' in name:
+        mtype='audio'
+        name=name.replace('[mp3]','')
+    ytdl_download('',name, mtype)
 elif mode==23:
     addon_log("get info then download")
-    ytdl_download(url,name,'video')
+    mtype='video'
+    if '[mp3]' in name:
+        mtype='audio'
+        name=name.replace('[mp3]','')
+    ytdl_download(url,name,mtype)
 elif mode==24:
     addon_log("Audio only youtube download")
     ytdl_download(url,name,'audio')
