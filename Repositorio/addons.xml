@@ -130,7 +130,7 @@ For updates check the readme.
 
 <addon id="plugin.video.Tvchopo Kids"
        name="[COLOR pink]Tvchopo Kids[/COLOR]"
-       version="0.0.1"
+       version="1.0.0"
        provider-name="Tvchopo team">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -151,6 +151,11 @@ For updates check the readme.
     <provides>video</provides>
   </extension>
 
+   <extension point="xbmc.addon.repository" name="tvchoco Jose">
+        <info>https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/</datadir>
+    </extension>
 
   <extension point="xbmc.addon.metadata">
     <summary>Tvchopo</summary>
