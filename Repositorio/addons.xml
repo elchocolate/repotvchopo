@@ -17,6 +17,38 @@
     </extension>
 </addon>
 
+<addon id="plugin.video.quasar" name="Quasar" version="0.9.78" provider-name="scakemyer">
+    <requires>
+        <import addon="xbmc.addon" version="16.0.0" />
+        <import addon="xbmc.python" version="2.24.0" />
+        <import addon="repository.quasar" optional="true" />
+        <import addon="script.quasar.burst" optional="true" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="navigation.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.service" library="service.py" start="startup" />
+    <extension point="xbmc.python.module" library="resources/site-packages" />
+    <extension point="xbmc.subtitle.module" library="navigation.py" />
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">Quasar: Torrent streaming</summary>
+        <description lang="en">Quasar is a torrent finding and streaming engine. It doesn't go on torrent websites for legal reasons. However, it calls specially crafted add-ons (called providers) that are installed separately.[CR]This project is a fork of the well known, but no longer maintained Pulsar project from steeve.</description>
+        <language>en el es de fi fr he hr it nl pt ro sk</language>
+        <platform>all</platform>
+        <website>https://github.com/scakemyer/plugin.video.quasar</website>
+        <source>https://github.com/scakemyer/plugin.video.quasar</source>
+        <forum>http://forum.kodi.tv/showthread.php?tid=257967</forum>
+        <license>Non commercial. See https://github.com/scakemyer/plugin.video.quasar/blob/master/LICENSE</license>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+            <screenshot>resources/screenshots/home.jpg</screenshot>
+            <screenshot>resources/screenshots/movies.jpg</screenshot>
+            <screenshot>resources/screenshots/webui.png</screenshot>
+        </assets>
+    </extension>
+</addon>
+
 <addon id="plugin.video.sin.barreras"
        name="[COLOR orange]SIN BARRERAS[/COLOR]"
        version="1.0.0"
@@ -54,40 +86,6 @@ addonsinbarreras@gmail.com
 
 https://t.me/sinbarreras
 	</description>
-    <platform>all</platform>
-  </extension>
-</addon>
-
-<addon
-  id="plugin.video.SportsDevil"
-  version="2017.09.4"
-  name="SportsDevil"
-  provider-name="SportsDevil">
-  <requires>
-   <import addon="xbmc.python" version="2.14.0"/>
-   <import addon="script.module.dateutil" />
-   <import addon="script.module.simplejson" />
-   <import addon="script.module.six" />
-   <import addon="script.module.requests" />
-   <import addon="script.module.livestreamer" />
-   <!-- <import addon="script.video.F4mProxy" /> -->
-   <!-- <import addon="plugin.video.f4mTester" /> -->
-  </requires>
-  <extension
-    point="xbmc.python.pluginsource"
-    library="default.py">
-   <provides>video</provides>
-  </extension>
-  <extension point="xbmc.service" library="service/proxy_service.py" start="startup" />
-  <extension point="xbmc.addon.metadata">
-    <summary>Play videos of different ad-financed sports streaming sites</summary>
-    <description>Play videos of different ad-financed sports streaming sites.
-
-SportsDevil does not provide any streams of its own; stream quality, content and copyright are responsibility of the ad-financed source web site.
-
-For updates check the readme.
-    </description>
-    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
     <platform>all</platform>
   </extension>
 </addon>
