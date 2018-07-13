@@ -159,7 +159,7 @@ https://t.me/sinbarreras
 
 <addon id="plugin.video.tvchopo"
        name="[COLOR fuchsia]T[/COLOR][COLOR green]V[/COLOR][COLOR yellow]C[/COLOR][COLOR orange]HO[/COLOR][COLOR pink]PO[/COLOR]"
-       version="5.1.1"
+       version="6.0"
        provider-name="torete">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -188,7 +188,9 @@ https://t.me/sinbarreras
 
   <extension point="xbmc.addon.metadata">
     <summary>Creado por torete</summary>
-    <description>Para el disfrute en familia</description>
+    <description>Tvchopo  es un proyecto sin ánimo de lucro, no se aceptan donativos.
+Este complemento no aloja ningún contenido en servidores propios, todos los links que comparte pueden encontrarse libremente en la red.
+No nos hacemos responsables de la  distribución del mismo por parte de terceros.</description>
     <platform>all</platform>
   </extension>
 </addon>
