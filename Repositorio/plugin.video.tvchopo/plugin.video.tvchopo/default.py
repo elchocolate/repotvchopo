@@ -24,7 +24,8 @@ tsdownloader=False
 hlsretry=False
 resolve_url=['180upload.com', 'allmyvideos.net', 'bestreams.net', 'clicknupload.com', 'cloudzilla.to', 'movshare.net', 'novamov.com', 'nowvideo.sx', 'videoweed.es', 'daclips.in', 'datemule.com', 'fastvideo.in', 'faststream.in', 'filehoot.com', 'filenuke.com', 'sharesix.com',  'plus.google.com', 'picasaweb.google.com', 'gorillavid.com', 'gorillavid.in', 'grifthost.com', 'hugefiles.net', 'ipithos.to', 'ishared.eu', 'kingfiles.net', 'mail.ru', 'my.mail.ru', 'videoapi.my.mail.ru', 'mightyupload.com', 'mooshare.biz', 'movdivx.com', 'movpod.net', 'movpod.in', 'movreel.com', 'mrfile.me', 'nosvideo.com', 'openload.io', 'played.to', 'bitshare.com', 'filefactory.com', 'k2s.cc', 'oboom.com', 'rapidgator.net', 'primeshare.tv', 'bitshare.com', 'filefactory.com', 'k2s.cc', 'oboom.com', 'rapidgator.net', 'sharerepo.com', 'stagevu.com', 'streamcloud.eu', 'streamin.to', 'thefile.me', 'thevideo.me', 'tusfiles.net', 'uploadc.com', 'zalaa.com', 'uploadrocket.net', 'uptobox.com', 'v-vids.com', 'veehd.com', 'vidbull.com', 'videomega.tv', 'vidplay.net', 'vidspot.net', 'vidto.me', 'vidzi.tv', 'vimeo.com', 'vk.com', 'vodlocker.com', 'xfileload.com', 'xvidstage.com', 'zettahost.tv']
 g_ignoreSetResolved=['plugin.video.dramasonline','plugin.video.f4mTester','plugin.video.shahidmbcnet','plugin.video.SportsDevil','plugin.stream.vaughnlive.tv','plugin.video.ZemTV-shani']
-
+global gLSProDynamicCodeNumber
+gLSProDynamicCodeNumber=0
 class NoRedirection(urllib2.HTTPErrorProcessor):
    def http_response(self, request, response):
        return response
@@ -53,48 +54,73 @@ history = os.path.join(profile, 'history')
 REV = os.path.join(profile, 'list_revision')
 icon = os.path.join(home, 'icon.png')
 FANART = os.path.join(home, 'fanart.jpg')
-source_file = os.path.join(profile, 'source_file')
+source_file = os.path.join(home, 'source_file')
 functions_dir = profile
+
 communityfiles = os.path.join(profile, 'LivewebTV')
 downloader = downloader.SimpleDownloader()
 debug = addon.getSetting('debug')
-Oo0o0000o0o0 = 'aHR0cDovL2JpdC5seS8='
-oOo0oooo00o = base64 . b64decode ( Oo0o0000o0o0 )
-oO0o0o0ooO0oO = 'Mkx5eHpwcw=='
-oo0o0O00 = base64 . b64decode ( oO0o0o0ooO0oO )
-oO = 'JCRMU1Byb0VuY0tleT0='
-i1iiIIiiI111 = base64 . b64decode ( oO )
-oooOOOOO = 'dHZjaG9wbyQ='
-i1iiIII111ii = base64 . b64decode ( oooOOOOO )
-i1iIIi1 = oOo0oooo00o + oo0o0O00 + i1iiIIiiI111 + i1iiIII111ii + '$'
-ii11iIi1I = i1iIIi1
-oOOoo00O0O = ii11iIi1I
 if os.path.exists(favorites)==True:
     FAV = open(favorites).read()
 else: FAV = []
+if os.path.exists(source_file)==True:
+    SOURCES = open(source_file).read()
+else: SOURCES = []
 
-
-SOURCES = [{"url": oOOoo00O0O, "fanart" : "https://i.imgur.com/s7fUpI5.jpg" , "Genero" : "Tv En Vivo" , "Fecha" : "21.02.2018" , "Creditos" : "Alex" } ]
 
 def addon_log(string):
-        xbmc.log("")
-		
+    if debug == 'true':
+        xbmc.log("[addon.tvchopo-%s]: %s" %(addon_version, string))
+
 
 def makeRequest(url, headers=None):
-        return data;
-		
+        try:
+            if headers is None:
+                headers = {'User-Agent' : 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'}
+                
+            if '|' in url:
+                url,header_in_page=url.split('|')
+                header_in_page=header_in_page.split('&')
+                
+                for h in header_in_page:
+                    if len(h.split('='))==2:
+                        n,v=h.split('=')
+                    else:
+                        vals=h.split('=')
+                        n=vals[0]
+                        v='='.join(vals[1:])
+                        #n,v=h.split('=')
+                    print n,v
+                    headers[n]=v
+                    
+            req = urllib2.Request(url,None,headers)
+            response = urllib2.urlopen(req)
+            data = response.read()
+            response.close()
+            return data
+        except urllib2.URLError, e:
+            addon_log('URL: '+url)
+            if hasattr(e, 'code'):
+                addon_log('We failed with error code - %s.' % e.code)
+                xbmc.executebuiltin("XBMC.Notification(tvchopo,We failed with error code - "+str(e.code)+",10000,"+icon+")")
+            elif hasattr(e, 'reason'):
+                addon_log('We failed to reach a server.')
+                addon_log('Reason: %s' %e.reason)
+                xbmc.executebuiltin("XBMC.Notification(tvchopo,We failed to reach a server. - "+str(e.reason)+",10000,"+icon+")")
 
 def getSources():
-	try:
-		if os.path.exists(favorites) == True:
-			FAV = open(favorites).read()
-			if FAV == "[]":
-				os.remove(favorites)
-			else:
-				addDir('[COLOR yellow][B]- MIS CANALES FAVORITOS[/COLOR][/B]','url',4,os.path.join(home, 'resources', 'favorite.png'),FANART,'','','','')
-				addDir('','',100,'',FANART,'','','','')
-
-		sources = SOURCES
+        try:
+            if os.path.exists(favorites) == True:
+                addDir('Favorites','url',4,os.path.join(home, 'resources', 'favorite.png'),FANART,'','','','')
+            if addon.getSetting("browse_xml_database") == "true":
+                addDir('XML Database','http://xbmcplus.xb.funpic.de/www-data/filesystem/',15,icon,FANART,'','','','')
+            if addon.getSetting("browse_community") == "true":
+                addDir('Community Files','community_files',16,icon,FANART,'','','','')
+            if addon.getSetting("searchotherplugins") == "true":
+                addDir('Search Other Plugins','Search Plugins',25,icon,FANART,'','','','')
+            if os.path.exists(source_file)==True:
+                sources = json.loads(open(source_file,"r").read())
+                #print 'sources',sources
                 if len(sources) > 1:
                     for i in sources:
                         try:
@@ -201,7 +227,7 @@ def addSource(url=None):
             b.close()
         addon.setSetting('new_url_source', "")
         addon.setSetting('new_file_source', "")
-        xbmc.executebuiltin("XBMC.Notification(probando,New source added.,5000,"+icon+")")
+        xbmc.executebuiltin("XBMC.Notification(tvchopo,New source added.,5000,"+icon+")")
         if not url is None:
             if 'xbmcplus.xb.funpic.de' in url:
                 xbmc.executebuiltin("XBMC.Container.Update(%s?mode=14,replace)" %sys.argv[0])
@@ -798,7 +824,9 @@ def getItems(items,fanart,dontLink=False):
                     else:
                         try:
                             if '$doregex' in name and not getRegexParsed==None:
+                                
                                 tname,setres=getRegexParsed(regexs, name)
+                                
                                 if not tname==None:
                                     name=tname
                         except: pass
@@ -1388,7 +1416,7 @@ def getConfiguredProxy():
 def playmediawithproxy(media_url, name, iconImage,proxyip,port, proxyuser=None, proxypass=None): #jairox
 
     if media_url==None or media_url=='':
-        xbmc.executebuiltin("XBMC.Notification(probando,Unable to play empty Url,5000,"+icon+")")
+        xbmc.executebuiltin("XBMC.Notification(tvchopo,Unable to play empty Url,5000,"+icon+")")
         return
     progress = xbmcgui.DialogProgress()
     progress.create('Progress', 'Playing with custom proxy')
@@ -1427,7 +1455,7 @@ def playmediawithproxy(media_url, name, iconImage,proxyip,port, proxyuser=None, 
                 xbmc.sleep(1000)       
                 if player.urlplayed==False and time.time()-beforestart>12:
                     print 'failed!!!'
-                    xbmc.executebuiltin("XBMC.Notification(probando,Unable to play check proxy,5000,"+icon+")")
+                    xbmc.executebuiltin("XBMC.Notification(tvchopo,Unable to play check proxy,5000,"+icon+")")
                     break
                 #xbmc.sleep(1000)
         except: pass
@@ -1444,41 +1472,6 @@ def playmediawithproxy(media_url, name, iconImage,proxyip,port, proxyuser=None, 
         print 'reset here'
     return ''
 
-def makeRequest(url, headers=None):
-        try:
-            if headers is None:
-                headers = {'User-Agent' : 'probando-zte'}
-                
-            if '|' in url:
-                url,header_in_page=url.split('|')
-                header_in_page=header_in_page.split('&')
-                
-                for h in header_in_page:
-                    if len(h.split('='))==2:
-                        n,v=h.split('=')
-                    else:
-                        vals=h.split('=')
-                        n=vals[0]
-                        v='='.join(vals[1:])
-                        #n,v=h.split('=')
-                    print n,v
-                    headers[n]=v
-                    
-            req = urllib2.Request(url,None,headers)
-            response = urllib2.urlopen(req)
-            data = response.read()
-            response.close()
-            return data
-        except urllib2.URLError, e:
-            addon_log('URL: '+url)
-            if hasattr(e, 'code'):
-                addon_log('We failed with error code - %s.' % e.code)
-                xbmc.executebuiltin("XBMC.Notification(probando,We failed with error code - "+str(e.code)+",10000,"+icon+")")
-            elif hasattr(e, 'reason'):
-                addon_log('We failed to reach a server.')
-                addon_log('Reason: %s' %e.reason)
-                xbmc.executebuiltin("XBMC.Notification(probando,We failed to reach a server. - "+str(e.reason)+",10000,"+icon+")")
-				
 
 def get_saw_rtmp(page_value, referer=None):
     if referer:
@@ -1903,20 +1896,39 @@ def doEval(fun_call,page_data,Cookie_Jar,m):
 
 def doEvalFunction(fun_call,page_data,Cookie_Jar,m):
 #    print 'doEvalFunction'
-    ret_val=''
-    if functions_dir not in sys.path:
-        sys.path.append(functions_dir)
-        
-    f=open(os.path.join(functions_dir,'LSProdynamicCode.py'),"wb")
-    f.write("# -*- coding: utf-8 -*-\n")
-    f.write(fun_call.encode("utf-8"));
-    
-    f.close()
-    import LSProdynamicCode
-    ret_val=LSProdynamicCode.GetLSProData(page_data,Cookie_Jar,m)
     try:
-        return str(ret_val)
-    except: return ret_val
+        global gLSProDynamicCodeNumber
+        gLSProDynamicCodeNumber=gLSProDynamicCodeNumber+1
+        ret_val=''
+        print 'doooodoo'
+        if functions_dir not in sys.path:
+            sys.path.append(functions_dir)
+
+        filename='LSProdynamicCode%s.py'%str(gLSProDynamicCodeNumber)
+        filenamewithpath=os.path.join(functions_dir,filename)
+        f=open(filenamewithpath,"wb")
+        f.write("# -*- coding: utf-8 -*-\n")
+        f.write(fun_call.encode("utf-8"));
+        f.close()
+        print 'before do'
+        LSProdynamicCode = import_by_string(filename.split('.')[0],filenamewithpath)
+        print 'after'
+         
+        ret_val=LSProdynamicCode.GetLSProData(page_data,Cookie_Jar,m)
+        try:
+            return str(ret_val)
+        except: return ret_val
+    except: traceback.print_exc()
+    return ""
+
+def import_by_string(full_name,filenamewithpath):
+    try:
+        
+        import importlib
+        return importlib.import_module(full_name, package=None)
+    except:
+        import imp
+        return imp.load_source(full_name,filenamewithpath)
 
 
 def getGoogleRecaptchaResponse(captchakey, cj,type=1): #1 for get, 2 for post, 3 for rawpost
@@ -2252,7 +2264,7 @@ def urlsolver(url):
         else:
             resolver = resolved
     else:
-        xbmc.executebuiltin("XBMC.Notification(probando,Urlresolver donot support this domain. - ,5000)")
+        xbmc.executebuiltin("XBMC.Notification(tvchopo,Urlresolver donot support this domain. - ,5000)")
         resolver=url
     return resolver
 def tryplay(url,listitem,pdialogue=None):    
@@ -2441,12 +2453,12 @@ def play_playlist(name, mu_playlist,queueVideo=None):
 def download_file(name, url):
         
         if addon.getSetting('save_location') == "":
-            xbmc.executebuiltin("XBMC.Notification('probando','Choose a location to save files.',15000,"+icon+")")
+            xbmc.executebuiltin("XBMC.Notification('tvchopo','Choose a location to save files.',15000,"+icon+")")
             addon.openSettings()
         params = {'url': url, 'download_path': addon.getSetting('save_location')}
         downloader.download(name, params)
         dialog = xbmcgui.Dialog()
-        ret = dialog.yesno('probando', 'Do you want to add this file as a source?')
+        ret = dialog.yesno('tvchopo', 'Do you want to add this file as a source?')
         if ret:
             addSource(os.path.join(addon.getSetting('save_location'), name))
 
@@ -2517,7 +2529,7 @@ def addDir(name,url,mode,iconimage,fanart,description,genre,date,credits,showcon
                 contextMenu.append(('Download','XBMC.RunPlugin(%s?url=%s&mode=9&name=%s)'
                                     %(sys.argv[0], urllib.quote_plus(url), urllib.quote_plus(name))))
             elif showcontext == 'fav':
-                contextMenu.append(('Remove from probando Favorites','XBMC.RunPlugin(%s?mode=6&name=%s)'
+                contextMenu.append(('Remove from tvchopo Favorites','XBMC.RunPlugin(%s?mode=6&name=%s)'
                                     %(sys.argv[0], urllib.quote_plus(name))))
             if showcontext == '!!update':
                 fav_params2 = (
@@ -2526,7 +2538,7 @@ def addDir(name,url,mode,iconimage,fanart,description,genre,date,credits,showcon
                     )
                 contextMenu.append(('[COLOR yellow]!!update[/COLOR]','XBMC.RunPlugin(%s)' %fav_params2))
             if not name in FAV:
-                contextMenu.append(('Add to probando Favorites','XBMC.RunPlugin(%s?mode=5&name=%s&url=%s&iconimage=%s&fanart=%s&fav_mode=%s)'
+                contextMenu.append(('Add to tvchopo Favorites','XBMC.RunPlugin(%s?mode=5&name=%s&url=%s&iconimage=%s&fanart=%s&fav_mode=%s)'
                          %(sys.argv[0], urllib.quote_plus(name), urllib.quote_plus(url), urllib.quote_plus(iconimage), urllib.quote_plus(fanart), mode)))
             liz.addContextMenuItems(contextMenu)
         ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=True)
@@ -2709,7 +2721,7 @@ def addLink(url,name,iconimage,fanart,description,genre,date,showcontext,playlis
             #contextMenu = []
             if showcontext == 'fav':
                 contextMenu.append(
-                    ('Remove from probando Favorites','XBMC.RunPlugin(%s?mode=6&name=%s)'
+                    ('Remove from tvchopo Favorites','XBMC.RunPlugin(%s?mode=6&name=%s)'
                      %(sys.argv[0], urllib.quote_plus(name)))
                      )
             elif not name in FAV:
@@ -2727,7 +2739,7 @@ def addLink(url,name,iconimage,fanart,description,genre,date,showcontext,playlis
                     fav_params += 'playlist='+urllib.quote_plus(str(playlist).replace(',','||'))
                 if regexs:
                     fav_params += "&regexs="+regexs
-                contextMenu.append(('Add to probando Favorites','XBMC.RunPlugin(%s)' %fav_params))
+                contextMenu.append(('Add to tvchopo Favorites','XBMC.RunPlugin(%s)' %fav_params))
             liz.addContextMenuItems(contextMenu)
         try:
             if not playlist is None:
@@ -3170,13 +3182,13 @@ elif mode==17 or mode==117:
                 else:
                     playsetresolved(url,name,iconimage,setresolved,regexs)
             else:
-                xbmc.executebuiltin("XBMC.Notification(probando,Failed to extract regex. - "+"this"+",4000,"+icon+")")
+                xbmc.executebuiltin("XBMC.Notification(tvchopo,Failed to extract regex. - "+"this"+",4000,"+icon+")")
 elif mode==18:
     addon_log("youtubedl")
     try:
         import youtubedl
     except Exception:
-        xbmc.executebuiltin("XBMC.Notification(probando,Please [COLOR yellow]install Youtube-dl[/COLOR] module ,10000,"")")
+        xbmc.executebuiltin("XBMC.Notification(tvchopo,Please [COLOR yellow]install Youtube-dl[/COLOR] module ,10000,"")")
     stream_url=youtubedl.single_YD(url)
     playsetresolved(stream_url,name,iconimage)
 elif mode==19:
@@ -3213,14 +3225,14 @@ elif mode==55:
         newStr = keyboard.getText()
         if newStr==parentalblockedpin:
             addon.setSetting('parentalblocked', "false")
-            xbmc.executebuiltin("XBMC.Notification(probando,Parental Block Disabled,5000,"+icon+")")
+            xbmc.executebuiltin("XBMC.Notification(tvchopo,Parental Block Disabled,5000,"+icon+")")
         else:
-            xbmc.executebuiltin("XBMC.Notification(probando,Wrong Pin??,5000,"+icon+")")
+            xbmc.executebuiltin("XBMC.Notification(tvchopo,Wrong Pin??,5000,"+icon+")")
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
 elif mode==56:
     addon_log("disable lock")
     addon.setSetting('parentalblocked', "true")
-    xbmc.executebuiltin("XBMC.Notification(probando,Parental block enabled,5000,"+icon+")")
+    xbmc.executebuiltin("XBMC.Notification(tvchopo,Parental block enabled,5000,"+icon+")")
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
 
 elif mode==53:
