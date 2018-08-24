@@ -159,7 +159,7 @@ https://t.me/sinbarreras
 
 <addon id="plugin.video.tvchopo"
        name="[COLOR fuchsia]T[/COLOR][COLOR green]V[/COLOR][COLOR yellow]C[/COLOR][COLOR orange]HO[/COLOR][COLOR pink]PO[/COLOR]"
-       version="6.7"
+       version="6.8"
        provider-name="equipo-chopo">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
