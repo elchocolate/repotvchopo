@@ -158,7 +158,7 @@ https://t.me/sinbarreras
 </addon>
 
 <addon id="plugin.video.tvchopo"
-       name="[COLOR fuchsia]T[/COLOR][COLOR green]V[/COLOR][COLOR yellow]C[/COLOR][COLOR orange]HO[/COLOR][COLOR pink]PO[/COLOR]"
+       name="[B][LOWERCASE][CAPITALIZE][COLOR white]T[COLOR aquamarine]V[COLOR yellow]C[COLOR orange]H[COLOR red]O[COLOR pink]P[COLOR fuchsia]O[/CAPITALIZE][/LOWERCASE][/B][/COLOR]"
        version="8.0"
        provider-name="equipo-chopo">
   <requires>
