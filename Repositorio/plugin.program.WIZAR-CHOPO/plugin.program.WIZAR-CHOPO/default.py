@@ -194,7 +194,7 @@ def index():
 	if AUTOUPDATE == 'Yes':
 		if wiz.workingURL(WIZARDFILE) == True:
 			ver = wiz.checkWizard('version')
-			if ver > VERSION: addFile('%s [v%s] [COLOR red][B][ACTUALIZACION v%s][/B][/COLOR]' % (ADDONTITLE, VERSION, ver), 'wizardupdate', themeit=THEME2)
+			if ver > VERSION: addFile('%s [v%s] [COLOR red][B][ACTUALIZACION v%s][/COLOR]' % (ADDONTITLE, VERSION, ver), 'wizardupdate', themeit=THEME2)
 			else: addFile('%s [v%s]' % (ADDONTITLE, VERSION), '', themeit=THEME2)
 		else: addFile('%s [v%s]' % (ADDONTITLE, VERSION), '', themeit=THEME2)
 	else: addFile('%s [v%s]' % (ADDONTITLE, VERSION), '', themeit=THEME2)
@@ -208,7 +208,7 @@ def index():
 			addFile('None' if BUILDTHEME == "" else BUILDTHEME, 'theme', BUILDNAME, themeit=THEME5)
 	else: addDir('No Instalada', 'builds', themeit=THEME4)
 	if HIDESPACERS == 'No': addFile(wiz.sep(), '', themeit=THEME3)
-	addDir ('Bases y Parches'        ,'builds',   icon=ICONBUILDS,   themeit=THEME1)
+	addDir ('wizards y actualizaciones'        ,'builds',   icon=ICONBUILDS,   themeit=THEME1)
 	addDir ('Mantenimiento'   ,'maint',    icon=ICONMAINT,    themeit=THEME1)
 	if wiz.platform() == 'android' or DEVELOPER == 'true': addDir ('Instalar Apps Android' ,'apk', icon=ICONAPK, themeit=THEME1)
 	
@@ -260,7 +260,7 @@ def buildMenu():
 			else:
 				if count18 > 0:
 					state = '+' if SHOW18 == 'false' else '-'
-					addFile('%s Base y Parches para Kodi 17 y 18 (%s)' % (state, count18), 'togglesetting',  'show18', themeit=THEME3)
+					addFile('[LOWERCASE][CAPITALIZE]%s wizar y actualizaciones para Kodi 17 y 18 (%s)' % (state, count18), 'togglesetting',  'show18', themeit=THEME3)
 					if SHOW18 == 'false':
 						for name, version, url, gui, kodi, theme, icon, fanart, adult, description in match:
 							if not SHOWADULT == 'true' and adult.lower() == 'yes': continue
@@ -282,7 +282,7 @@ def buildMenu():
 								addDir('[%s] %s (v%s)' % (float(kodi), name, version), 'viewbuild', name, description=description, fanart=fanart,icon=icon, menu=menu, themeit=THEME2)
 				if count16 > 0:
 					state = '+' if SHOW16 == 'false' else '-'
-					addFile('[B]%s Parches extra (%s)[/B]' % (state, count16), 'togglesetting',  'show16', themeit=THEME3)
+					addFile('[B]%s actualizacion extra (%s)[/B]' % (state, count16), 'togglesetting',  'show16', themeit=THEME3)
 					if SHOW16 == 'false':
 						for name, version, url, gui, kodi, theme, icon, fanart, adult, description in match:
 							if not SHOWADULT == 'true' and adult.lower() == 'yes': continue
@@ -340,10 +340,10 @@ def viewBuild(name):
             else: warning = True
         else: warning = False
         if warning == True:
-            addFile('(%s) [I]Comprueba que esta Base/Parche es para tu version de Kodi: %s)[/I]' % (str(kodi), str(KODIV)), '', fanart=fanart, icon=icon, themeit=THEME3)
+            addFile('(%s) Comprueba que este wizard/actualizacion es para tu version de Kodi: %s)' % (str(kodi), str(KODIV)), '', fanart=fanart, icon=icon, themeit=THEME3)
         addFile(wiz.sep('INSTALACION'), '', fanart=fanart, icon=icon, themeit=THEME3)
-        addFile('[COLOR lime]INSTALAR VERSION BASE[/COLOR]'   , 'install', name, 'fresh'  , description=description, fanart=fanart, icon=icon, themeit=THEME1)
-        addFile('[COLOR yellow]INSTALAR PARCHE[/COLOR]', 'install', name, 'normal' , description=description, fanart=fanart, icon=icon, themeit=THEME1)
+        addFile('[COLOR white]INSTALAR WIZARD[/COLOR]'   , 'install', name, 'fresh'  , description=description, fanart=fanart, icon=icon, themeit=THEME1)
+        addFile('[COLOR yellow]INSTALAR ACTUALIZACION[/COLOR]', 'install', name, 'normal' , description=description, fanart=fanart, icon=icon, themeit=THEME1)
         if not gui == 'http://': addFile('Apply guiFix'    , 'install', name, 'gui'     , description=description, fanart=fanart, icon=icon, themeit=THEME1)
         if not themefile == 'http://':
             themecheck = wiz.textCache(themefile)
@@ -795,7 +795,7 @@ def maintMenu(view=None):
     sizecache  = (wiz.getCacheSize())-archive
     totalsize  = sizepack+sizethumb+sizecache
     feq        = ['Siempre', 'Cada dia', 'Cada 3 dias', 'Semanalmente']
-    addDir ('[B]Herramientas de Limpieza[/B]'       ,'maint', 'clean',  icon=ICONMAINT, themeit=THEME1)
+    addDir ('Herramientas de Limpieza'       ,'maint', 'clean',  icon=ICONMAINT, themeit=THEME1)
     if view == "clean" or SHOWMAINT == 'true':
         addFile('Limpieza total: [COLOR springgreen][B]%s[/B][/COLOR]' % wiz.convertSize(totalsize),    'fullclean',       icon=ICONMAINT, themeit=THEME3)
         addFile('Limpiar Cache: [COLOR springgreen][B]%s[/B][/COLOR]' % wiz.convertSize(sizecache),       'clearcache',      icon=ICONMAINT, themeit=THEME3)
@@ -806,14 +806,14 @@ def maintMenu(view=None):
         addFile('Limpiar Crash Logs',               'clearcrash',      icon=ICONMAINT, themeit=THEME3)
         addFile('Purgar Base de Datos',                'purgedb',         icon=ICONMAINT, themeit=THEME3)
         addFile('Fresh Start (Borrar Todos los datos de Kodi)',                    'freshstart',      icon=ICONMAINT, themeit=THEME3)
-    addDir ('[B]Herramientas de Addons[/B]',       'maint', 'addon',  icon=ICONMAINT, themeit=THEME1)
+    addDir ('Herramientas de Addons',       'maint', 'addon',  icon=ICONMAINT, themeit=THEME1)
     if view == "addon" or SHOWMAINT == 'true':
         addFile('Borrrar Addons',                  'removeaddons',    icon=ICONMAINT, themeit=THEME3)
         addDir ('Borrar Addon_data',              'removeaddondata', icon=ICONMAINT, themeit=THEME3)
         addDir ('Activar/Desactivar Addons',          'enableaddons',    icon=ICONMAINT, themeit=THEME3)
         addFile('Activar/Desactivar Adddons porno',    'toggleadult',     icon=ICONMAINT, themeit=THEME3)
         addFile('Forzar Actualizacion de Addons',            'forceupdate',     icon=ICONMAINT, themeit=THEME3)
-    addDir ('[B]Otras Herramientas[/B]'     ,'maint', 'misc',   icon=ICONMAINT, themeit=THEME1)
+    addDir ('Otras Herramientas'     ,'maint', 'misc',   icon=ICONMAINT, themeit=THEME1)
     if view == "misc" or SHOWMAINT == 'true':
         addDir ('Test de Velocidad',                     'speedtest',       icon=ICONMAINT, themeit=THEME3)
         addFile('Escanear Repositorios rotos',   'checkrepos',      icon=ICONMAINT, themeit=THEME3)
@@ -825,7 +825,7 @@ def maintMenu(view=None):
         addFile('Ver el Log',                  'viewlog',         icon=ICONMAINT, themeit=THEME3)
         addFile('Ver el Log del wizard',           'viewwizlog',      icon=ICONMAINT, themeit=THEME3)
         addFile('Limpiar Log%s del wizard' % wizlogsize,'clearwizlog',     icon=ICONMAINT, themeit=THEME3)
-    addDir ('[B]Copias de Seguridad[/B]'     ,'maint', 'backup',   icon=ICONMAINT, themeit=THEME1)
+    addDir ('Copias de Seguridad'     ,'maint', 'backup',   icon=ICONMAINT, themeit=THEME1)
     if view == "backup" or SHOWMAINT == 'true':
         addFile('Limpiar carpeta de copias de seguridad',        'clearbackup',     icon=ICONMAINT,   themeit=THEME3)
         addFile('Ubicacion de las copias: [COLOR %s]%s[/COLOR]' % (COLOR2, MYBUILDS),'settings', 'Maintenance', icon=ICONMAINT, themeit=THEME3)
@@ -839,7 +839,7 @@ def maintMenu(view=None):
         addFile('[Restaurar]: Addon_data Local',    'restoreaddon',    icon=ICONMAINT,   themeit=THEME3)
         addFile('[Restaurar]: Build Externa',      'restoreextzip',   icon=ICONMAINT,   themeit=THEME3)
         addFile('[Restaurar]: Skin y Menus',     'restoretheme',   icon=ICONMAINT,   themeit=THEME3)
-    addDir ('[B]Buffer[/B]',       'maint', 'tweaks', icon=ICONMAINT, themeit=THEME1)
+    addDir ('Buffer',       'maint', 'tweaks', icon=ICONMAINT, themeit=THEME1)
     if view == "tweaks" or SHOWMAINT == 'true':
         if not ADVANCEDFILE == 'http://' and not ADVANCEDFILE == '':
             addDir ('Advanced Settings',            'advancedsetting',  icon=ICONMAINT, themeit=THEME3)
@@ -850,7 +850,7 @@ def maintMenu(view=None):
             addFile('Configuracion rapida de AdvancedSettings.xml',    'autoadvanced',    icon=ICONMAINT, themeit=THEME3)
 	addFile('Auto Limpieza al Inicio: %s' % autoclean.replace('true',on).replace('false',off) ,'togglesetting', 'autoclean',   icon=ICONMAINT, themeit=THEME3)
     if autoclean == 'true':
-        addFile('--- Frecuencia de Auto Limpieza: [B][COLOR springgreen]%s[/COLOR][/B]' % feq[AUTOFEQ], 'changefeq', icon=ICONMAINT, themeit=THEME3)
+        addFile('--- Frecuencia de Auto Limpieza: [COLOR springgreen]%s[/COLOR]' % feq[AUTOFEQ], 'changefeq', icon=ICONMAINT, themeit=THEME3)
         addFile('--- Limpiar Cache al inicio: %s' % cache.replace('true',on).replace('false',off), 'togglesetting', 'clearcache', icon=ICONMAINT, themeit=THEME3)
         addFile('--- Limpiar Paquetes al inicio: %s' % packages.replace('true',on).replace('false',off), 'togglesetting', 'clearpackages', icon=ICONMAINT, themeit=THEME3)
         addFile('--- Limpiar Imagenes Antiguas al inicio: %s' % thumbs.replace('true',on).replace('false',off), 'togglesetting', 'clearthumbs', icon=ICONMAINT, themeit=THEME3)
@@ -1450,10 +1450,10 @@ def buildWizard(name, type, theme=None, over=False):
             else: warning = True
         else: warning = False
         if warning == True:
-            yes_pressed = DIALOG.yesno("%s - [COLOR red]ATENCION[/COLOR]" % ADDONTITLE, '[COLOR %s]Vas a instalar un parche extra' % COLOR2, 'Quieres instalar: [COLOR %s]%s v%s[/COLOR]?[/COLOR]' % (COLOR1, name, wiz.checkBuild(name,'version')), nolabel='[B][COLOR red]Cancelar[/COLOR][/B]',yeslabel='[B][COLOR springgreen]Instalar[/COLOR][/B]')
+            yes_pressed = DIALOG.yesno("%s - [COLOR red]ATENCION[/COLOR]" % ADDONTITLE, '[COLOR %s]Vas a instalar una actualizacion' % COLOR2, 'Quieres instalar: [COLOR %s]%s v%s[/COLOR]?[/COLOR]' % (COLOR1, name, wiz.checkBuild(name,'version')), nolabel='[B][COLOR red]Cancelar[/COLOR][/B]',yeslabel='[B][COLOR springgreen]Instalar[/COLOR][/B]')
         else:
             if not over == False: yes_pressed = 1
-            else: yes_pressed = DIALOG.yesno(ADDONTITLE, '[COLOR %s]Estas a punto de instalar el [COLOR yellow][B]Parche[/B][/COLOR]' % COLOR2, '[COLOR %s]%s v%s[/COLOR]?[/COLOR]' % (COLOR1, name, wiz.checkBuild(name,'version')), nolabel='[B][COLOR red]Cancelar[/COLOR][/B]',yeslabel='[B][COLOR springgreen]Instalar[/COLOR][/B]')
+            else: yes_pressed = DIALOG.yesno(ADDONTITLE, '[COLOR %s]Estas a punto de instalar la [COLOR yellow][B]actualizacion[/B][/COLOR]' % COLOR2, '[COLOR %s]%s v%s[/COLOR]?[/COLOR]' % (COLOR1, name, wiz.checkBuild(name,'version')), nolabel='[B][COLOR red]Cancelar[/COLOR][/B]',yeslabel='[B][COLOR springgreen]Instalar[/COLOR][/B]')
         if yes_pressed:
             wiz.clearS('build')
             buildzip = wiz.checkBuild(name, 'url')

@@ -59,23 +59,23 @@ SPACER         = '='
 COLOR1         = 'red'
 COLOR2         = 'white'
 # Primary menu items   / %s is the menu item and is required
-THEME1         = '[LOWERCASE][CAPITALIZE][COLOR '+COLOR1+'][COLOR orange][COLOR orange]%s[/COLOR][/CAPITALIZE][/LOWERCASE]'
+THEME1         = '[B][LOWERCASE][CAPITALIZE][COLOR white][COLOR '+COLOR1+'][COLOR blue][/B][B][COLOR white]%s[/COLOR][/CAPITALIZE][/LOWERCASE][/B]'
 # Build Names          / %s is the menu item and is required
-THEME2         = '[LOWERCASE][CAPITALIZE][COLOR '+COLOR2+']%s[/COLOR][/CAPITALIZE][/LOWERCASE]'
+THEME2         = '[COLOR '+COLOR2+']%s[/COLOR]'
 # Alternate items      / %s is the menu item and is required
 THEME3         = '[LOWERCASE][CAPITALIZE][COLOR aquamarine]%s[/COLOR][/CAPITALIZE][/LOWERCASE]'
 # Current Build Header / %s is the menu item and is required
-THEME4         = '[B][LOWERCASE][CAPITALIZE][COLOR white]Version CHOPO-WIZARD Instalada: [COLOR aquamarine]%s[/COLOR][/CAPITALIZE][/LOWERCASE][/B]'
+THEME4         = '[LOWERCASE][CAPITALIZE][COLOR white]Version WIZARD Instalada: [COLOR aquamarine]%s[/COLOR][/CAPITALIZE][/LOWERCASE]'
 # Current Theme Header / %s is the menu item and is required
-THEME5         = '[B][LOWERCASE][CAPITALIZE][COLOR '+COLOR1+']Current Theme: [COLOR '+COLOR2+']%s[/COLOR][/CAPITALIZE][/LOWERCASE][/B]'
+THEME5         = '[LOWERCASE][CAPITALIZE][COLOR '+COLOR1+']Current Theme: [COLOR '+COLOR2+']%s[/COLOR][/CAPITALIZE][/LOWERCASE]'
 # Current Theme Header / %s is the menu item and is required
-THEME6         = '[B][LOWERCASE][CAPITALIZE][COLOR '+COLOR1+']Version CHOPO-WIZARD a instalar:[COLOR '+COLOR2+']%s[/COLOR][/CAPITALIZE][/LOWERCASE][/B]'
+THEME6         = '[LOWERCASE][CAPITALIZE][COLOR '+COLOR1+']Version CHOPO-WIZARD a instalar:[COLOR '+COLOR2+']%s[/COLOR][/CAPITALIZE][/LOWERCASE]'
 
 # Message for Contact Page
 # Enable 'Contact' menu item 'Yes' hide or 'No' dont hide
 HIDECONTACT    = 'No'
 # You can add \n to do line breaks
-CONTACT        = '[B][LOWERCASE][CAPITALIZE][COLOR white]Gracias por utilizar CHOPO-WIZARD \r\n\r\nSi quieres ponerte en contacto unete ha nuestro grupo de telegram[/COLOR][/CAPITALIZE][/LOWERCASE][/B][COLOR aquamarine] https://t.me/tvchopo[/COLOR]'
+CONTACT        = '[B][LOWERCASE][CAPITALIZE][COLOR white]Gracias por utilizar CHOPO-WIZARD \r\n\r\nSi quieres ponerte en contacto unete ha nuestro grupo de telegram[COLOR aquamarine] https://t.me/tvchopo[/COLOR]'
 #Images used for the contact window.  http:// for default icon and fanart
 CONTACTICON    = 'https://4.bp.blogspot.com/-aqnLnKC9RPc/XH5qR1hkW2I/AAAAAAAAJYw/KBBURjhbbgMflg5XAJWI503wBL7SxSjFwCK4BGAYYCw/s1600/Sin%2BT%25C3%25ADtulo.png'
 CONTACTFANART  = 'https://4.bp.blogspot.com/-aqnLnKC9RPc/XH5qR1hkW2I/AAAAAAAAJYw/KBBURjhbbgMflg5XAJWI503wBL7SxSjFwCK4BGAYYCw/s1600/Sin%2BT%25C3%25ADtulo.png'
