@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><settings><category label="Options"><setting default="" id="basesource" type="text" visible="false"></setting>
+<setting default="" id="URL_Base Source" label="URL Base Source: " type="text" visible="true"></setting>
+<setting default="true" id="Play_Media_Initial" label="Play Media Inicial" type="bool" visible="true"></setting>
+<setting default="true" id="Play_Media" label="Play Media" type="bool" visible="true"></setting>
+</category>
+<category label="Automatic_Update"><setting default="false" id="SkinCatana" label="Skin Catana" type="bool" visible="true"></setting>
+<setting default="false" id="OVNI" label="OVNI" type="bool" visible="true"></setting>
+<setting default="false" id="RepoDeco" label="Repo Decosub" type="bool" visible="true"></setting>
+<setting default="false" id="ALMA" label="ALMA" type="bool" visible="true"></setting>
+<setting default="false" id="MUNDOOSCURO" label="MUNDO OSCURO" type="bool" visible="true"></setting>
+<setting default="false" id="1X2" label="1X2" type="bool" visible="true"></setting>
+<setting default="false" id="RepoManiac" label="Repo Maniac" type="bool" visible="true"></setting>
+<setting default="false" id="Sports365" label="Sports 365" type="bool" visible="true"></setting>
+<setting default="false" id="RepoBuga" label="Repo Bugatsinho" type="bool" visible="true"></setting>
+<setting default="false" id="VideoFootbal" label="Video Footbal" type="bool" visible="true"></setting>
+<setting default="false" id="LaOla" label="La Ola" type="bool" visible="true"></setting>
+<setting default="false" id="Avezy" label="Avezy" type="bool" visible="true"></setting>
+<setting default="false" id="NBAonDemand" label="NBA on Demand" type="bool" visible="true"></setting>
+<setting default="false" id="DeportesalaCarta" label="Deportes a la Carta" type="bool" visible="true"></setting>
+<setting default="false" id="RedBull" label="RedBull" type="bool" visible="true"></setting>
+<setting default="false" id="RepoPlexus" label="Plexus Stream" type="bool" visible="true"></setting>
+<setting default="false" id="SportsExtreme" label="Sports Extreme" type="bool" visible="true"></setting>
+<setting default="false" id="RepoFOliver" label="Repo FOliver" type="bool" visible="true"></setting>
+<setting default="false" id="SportsDevil" label="Sports Devil" type="bool" visible="true"></setting>
+<setting default="false" id="SportsWA" label="Sports WA" type="bool" visible="true"></setting>
+<setting default="false" id="RepoMBebe" label="Repo MBebe" type="bool" visible="true"></setting>
+<setting default="false" id="Pequelandia" label="Pequelandia" type="bool" visible="true"></setting>
+<setting default="false" id="MundoInfantil" label="Mundo Infantil" type="bool" visible="true"></setting>
+<setting default="false" id="YouKids" label="YouKids" type="bool" visible="true"></setting>
+<setting default="false" id="Fusion" label="Fusion" type="bool" visible="true"></setting>
+<setting default="false" id="FusionReq" label="Fusion Req" type="bool" visible="true"></setting>
+<setting default="false" id="RepoFusion" label="Repo Fusion" type="bool" visible="true"></setting>
+<setting default="false" id="BrazucaPlay" label="Brazuca Play" type="bool" visible="true"></setting>
+<setting default="false" id="Music" label="Music" type="bool" visible="true"></setting>
+<setting default="false" id="RepoMrFree" label="Repo MrFree" type="bool" visible="true"></setting>
+<setting default="false" id="YouMusic" label="YouMusic" type="bool" visible="true"></setting>
+<setting default="false" id="YoutubeMusic" label="Youtube Music" type="bool" visible="true"></setting>
+<setting default="false" id="Dance" label="Dance" type="bool" visible="true"></setting>
+<setting default="false" id="Musicando" label="Musicando" type="bool" visible="true"></setting>
+<setting default="false" id="MyHR" label="MyHR" type="bool" visible="true"></setting>
+<setting default="false" id="HouseMixes" label="House Mixes" type="bool" visible="true"></setting>
+<setting default="false" id="NowMusic" label="Now Music" type="bool" visible="true"></setting>
+</category>
+</settings>
