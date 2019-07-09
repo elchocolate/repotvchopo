@@ -183,22 +183,23 @@ https://t.me/sinbarreras
 
 <addon id="plugin.video.tvchopo"
        name="[B][LOWERCASE][CAPITALIZE][COLOR white]T[COLOR aquamarine]V[COLOR yellow]C[COLOR orange]H[COLOR red]O[COLOR pink]P[COLOR fuchsia]O[/CAPITALIZE][/LOWERCASE][/B][/COLOR]"
-       version="9.0"
+       version="10.0"
        provider-name="equipo-chopo">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.beautifulsoup" version="3.2.1"/>
     <import addon="script.module.simple.downloader" version="0.9.4"/>
-    <import addon="script.module.beautifulsoup4" />
     <import addon="script.module.requests" />
     <import addon="script.module.httplib2" />
     <import addon="script.module.liveresolver" version="0.1.24" optional="true"/>
     <import addon="script.module.youtube.dl" optional="true"/>
     <import addon="plugin.video.youtube" optional="true" />
-    <import addon="script.module.urlresolver" optional="true"/>
+    <import addon="script.module.resolveurl" optional="true"/>
+	<import addon="script.module.urlresolver" optional="true"/>
     <import addon="script.module.simplejson" />
-     <import addon="script.module.livestreamer" optional="true"/>
-     <import addon="script.module.pyamf" optional="true"/>
+    <import addon="script.module.livestreamer" optional="true"/>
+    <import addon="script.module.slproxy" optional="true"/>
+    <import addon="script.module.pyamf" optional="true"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
     <provides>video</provides>
@@ -210,11 +211,19 @@ https://t.me/sinbarreras
         <datadir zip="true">https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/</datadir>
     </extension>
 
+
+
+
   <extension point="xbmc.addon.metadata">
-    <summary>Creado por equipo-chopo</summary>
-    <description>Tvchopo  es un proyecto sin ánimo de lucro, no se aceptan donativos.
-Este complemento no aloja ningún contenido en servidores propios, todos los links que comparte pueden encontrarse libremente en la red.
-No nos hacemos responsables de la  distribución del mismo por parte de terceros.</description>
+    <summary>tvchopo addon familiar</summary>
+    <description>
+        addon tvchopo no contiene ningun material propio..
+		todo el contenido es enlazado a las webs mas conocidas
+		de internet.....
+
+	tvchopo ni se vender ni se cobra ni acepta donaciones... si ha sido es el caso  ha sido usted estafado,...para mas informacion entra en nuestro grupo de telegram https://t.me/tvchopo
+
+    </description>
     <platform>all</platform>
 	<assets>
         <icon>icon.gif</icon>
