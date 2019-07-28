@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.tvchopo"
-       name="[B][LOWERCASE][CAPITALIZE][COLOR white]T[COLOR aquamarine]V[COLOR yellow]C[COLOR orange]H[COLOR red]O[COLOR pink]P[COLOR fuchsia]O[/CAPITALIZE][/LOWERCASE][/B][/COLOR]"
-       version="10.0"
+<addon id="plugin.video.tvchopokids"
+       name="[B][LOWERCASE][CAPITALIZE][COLOR white]Tvchopokids[/CAPITALIZE][/LOWERCASE][/B][/COLOR]"
+       version="5.0"
        provider-name="equipo-chopo">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -32,25 +32,9 @@
   
 
 
-  <extension point="xbmc.addon.metadata">
-    <summary>tvchopo addon familiar</summary>
-    <description>
-        addon tvchopo no contiene ningun material propio..
-		todo el contenido es enlazado a las webs mas conocidas
-		de internet.....
-		
-	tvchopo ni se vender ni se cobra ni acepta donaciones... si ha sido es el caso  ha sido usted estafado,...para mas informacion entra en nuestro grupo de telegram https://t.me/tvchopo
-        
-    </description>
+ <extension point="xbmc.addon.metadata">
+    <summary>Tvchopo</summary>
+    <description>Dedicado a los más pequeños de la familia chopera.</description>
     <platform>all</platform>
-	<assets>
-        <icon>icon.gif</icon>
-  <screenshot>resources/screenshots/screenshot1.jpg</screenshot>
-  <screenshot>resources/screenshots/screenshot2.jpg</screenshot>
-  <screenshot>resources/screenshots/screenshot3.jpg</screenshot>
-  <screenshot>resources/screenshots/screenshot4.jpg</screenshot>
-  <screenshot>resources/screenshots/screenshot5.jpg</screenshot>
-        <fanart>fanart.gif</fanart>
-    </assets>
   </extension>
 </addon>
