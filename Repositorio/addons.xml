@@ -237,10 +237,10 @@ https://t.me/sinbarreras
   </extension>
 </addon>
 
-<addon id="plugin.video.tvchopokids"
-       name="[B][LOWERCASE][CAPITALIZE][COLOR white]Tvchopokids[/CAPITALIZE][/LOWERCASE][/B][/COLOR]"
-       version="6.0"
-       provider-name="equipo-chopo">
+<addon id="plugin.video.Tvchopo.Kids"
+       name="[COLOR pink]Tvchopo Kids[/COLOR]"
+       version="7.0"
+       provider-name="Tvchopo team">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.beautifulsoup" version="3.2.1"/>
@@ -267,12 +267,9 @@ https://t.me/sinbarreras
         <datadir zip="true">https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/</datadir>
     </extension>
 
-
-
-
  <extension point="xbmc.addon.metadata">
     <summary>Tvchopo</summary>
-    <description>Dedicado a los más pequeños de la familia chopera......</description>
+    <description>Dedicado a los más pequeños de la familia chopera.  para los peques</description>
     <platform>all</platform>
   </extension>
 </addon>
