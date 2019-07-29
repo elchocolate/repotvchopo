@@ -34,7 +34,7 @@
 
  <extension point="xbmc.addon.metadata">
     <summary>Tvchopo</summary>
-    <description>Dedicado a los más pequeños de la familia chopera.</description>
+    <description>Dedicado a los más pequeños de la familia chopera.....</description>
     <platform>all</platform>
   </extension>
 </addon>
