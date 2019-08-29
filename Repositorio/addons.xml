@@ -290,7 +290,7 @@ https://t.me/sinbarreras
 
 <addon id="script.kelebek"
        name="KELEBEK"
-       version="1.0.0"
+       version="3.0.0"
        provider-name="Anabel">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -298,19 +298,24 @@ https://t.me/sinbarreras
     <import addon="script.module.beautifulsoup" version="3.2.1"/>
     <import addon="script.module.beautifulsoup4" />
     <import addon="script.module.requests" />
+    <import addon="script.module.myconnpy" version="1.1.7"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="main.py">
 	<provides>executable</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
     <platform>all</platform>
-    <summary>KELEBEK</summary>
+    <summary>KELEBEK V3</summary>
     <description>Scan Sources searching changes and addons</description>
     <language></language>
     <license></license>
     <source></source>
     <forum></forum>
     <website></website>
+	<assets>
+		<icon>resources/icon.png</icon>
+		<fanart>resources/fanart.jpg</fanart>
+	</assets>
   </extension>
 </addon>
 
