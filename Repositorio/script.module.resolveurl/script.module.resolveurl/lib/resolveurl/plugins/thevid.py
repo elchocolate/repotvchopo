@@ -23,10 +23,11 @@ logger.disable()
 VID_SOURCE = 'https://raw.githubusercontent.com/jsergio123/script.module.resolveurl/master/lib/resolveurl/plugins/thevid_gmu.py'
 VID_PATH = os.path.join(common.plugins_path, 'thevid_gmu.py')
 
+
 class TheVidResolver(ResolveUrl):
     name = "TheVid"
-    domains = ["thevid.net"]
-    pattern = '(?://|\.)(thevid\.net)/(?:video|e|v)/([A-Za-z0-9]+)'
+    domains = ["thevid.net", "thevid.tv"]
+    pattern = '(?://|\.)(thevid\.(?:net|tv))/(?:video|e|v)/([A-Za-z0-9]+)'
     
     def __init__(self):
         self.net = common.Net()
