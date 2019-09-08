@@ -260,7 +260,7 @@ def buildMenu():
 			else:
 				if count18 > 0:
 					state = '+' if SHOW18 == 'false' else '-'
-					addFile('[LOWERCASE][CAPITALIZE]%s wizar y actualizaciones para Kodi 17 y 18 (%s)' % (state, count18), 'togglesetting',  'show18', themeit=THEME3)
+					addFile('[B][LOWERCASE][CAPITALIZE][COLOR yellow]%s wizar para Kodi18 (%s)[/COLOR][/B]' % (state, count18), 'togglesetting',  'show18', themeit=THEME3)
 					if SHOW18 == 'false':
 						for name, version, url, gui, kodi, theme, icon, fanart, adult, description in match:
 							if not SHOWADULT == 'true' and adult.lower() == 'yes': continue
@@ -271,7 +271,7 @@ def buildMenu():
 								addDir('[%s] %s (v%s)' % (float(kodi), name, version), 'viewbuild', name, description=description, fanart=fanart,icon=icon, menu=menu, themeit=THEME2)
 				if count17 > 0:
 					state = '+' if SHOW17 == 'false' else '-'
-					addFile('[B]%s Base y Parches para Kodi 17 Krypton (%s)[/B]' % (state, count17), 'togglesetting',  'show17', themeit=THEME3)
+					addFile('[B][LOWERCASE][CAPITALIZE][COLOR yellow]%s wizard para Kodi 17 Krypton (%s)[/COLOR][/B]' % (state, count17), 'togglesetting',  'show17', themeit=THEME3)
 					if SHOW17 == 'false':
 						for name, version, url, gui, kodi, theme, icon, fanart, adult, description in match:
 							if not SHOWADULT == 'true' and adult.lower() == 'yes': continue
