@@ -37,18 +37,18 @@ ADVANCEDFILE   = 'https://'
 ### Theming Menu Items ##################################
 #########################################################
 
-ICONBUILDS     = 'https://4.bp.blogspot.com/-aqnLnKC9RPc/XH5qR1hkW2I/AAAAAAAAJYw/KBBURjhbbgMflg5XAJWI503wBL7SxSjFwCK4BGAYYCw/s1600/Sin%2BT%25C3%25ADtulo.png'
-ICONMAINT      = 'https://4.bp.blogspot.com/-aqnLnKC9RPc/XH5qR1hkW2I/AAAAAAAAJYw/KBBURjhbbgMflg5XAJWI503wBL7SxSjFwCK4BGAYYCw/s1600/Sin%2BT%25C3%25ADtulo.png'
-ICONAPK        = 'https://4.bp.blogspot.com/-aqnLnKC9RPc/XH5qR1hkW2I/AAAAAAAAJYw/KBBURjhbbgMflg5XAJWI503wBL7SxSjFwCK4BGAYYCw/s1600/Sin%2BT%25C3%25ADtulo.png'
-ICONADDONS     = 'https://4.bp.blogspot.com/-aqnLnKC9RPc/XH5qR1hkW2I/AAAAAAAAJYw/KBBURjhbbgMflg5XAJWI503wBL7SxSjFwCK4BGAYYCw/s1600/Sin%2BT%25C3%25ADtulo.png'
-ICONYOUTUBE    = 'https://4.bp.blogspot.com/-aqnLnKC9RPc/XH5qR1hkW2I/AAAAAAAAJYw/KBBURjhbbgMflg5XAJWI503wBL7SxSjFwCK4BGAYYCw/s1600/Sin%2BT%25C3%25ADtulo.png'
-ICONSAVE       = 'https://4.bp.blogspot.com/-aqnLnKC9RPc/XH5qR1hkW2I/AAAAAAAAJYw/KBBURjhbbgMflg5XAJWI503wBL7SxSjFwCK4BGAYYCw/s1600/Sin%2BT%25C3%25ADtulo.png'
-ICONCONTACT    = 'https://4.bp.blogspot.com/-aqnLnKC9RPc/XH5qR1hkW2I/AAAAAAAAJYw/KBBURjhbbgMflg5XAJWI503wBL7SxSjFwCK4BGAYYCw/s1600/Sin%2BT%25C3%25ADtulo.png'
-ICONSETTINGS   = 'https://4.bp.blogspot.com/-aqnLnKC9RPc/XH5qR1hkW2I/AAAAAAAAJYw/KBBURjhbbgMflg5XAJWI503wBL7SxSjFwCK4BGAYYCw/s1600/Sin%2BT%25C3%25ADtulo.png'
-ICONSPEED      = 'https://4.bp.blogspot.com/-aqnLnKC9RPc/XH5qR1hkW2I/AAAAAAAAJYw/KBBURjhbbgMflg5XAJWI503wBL7SxSjFwCK4BGAYYCw/s1600/Sin%2BT%25C3%25ADtulo.png'
-ICONTRAKT      = 'https://4.bp.blogspot.com/-aqnLnKC9RPc/XH5qR1hkW2I/AAAAAAAAJYw/KBBURjhbbgMflg5XAJWI503wBL7SxSjFwCK4BGAYYCw/s1600/Sin%2BT%25C3%25ADtulo.png'
-ICONREAL       = 'https://4.bp.blogspot.com/-aqnLnKC9RPc/XH5qR1hkW2I/AAAAAAAAJYw/KBBURjhbbgMflg5XAJWI503wBL7SxSjFwCK4BGAYYCw/s1600/Sin%2BT%25C3%25ADtulo.png'
-ICONLOGIN      = 'https://4.bp.blogspot.com/-aqnLnKC9RPc/XH5qR1hkW2I/AAAAAAAAJYw/KBBURjhbbgMflg5XAJWI503wBL7SxSjFwCK4BGAYYCw/s1600/Sin%2BT%25C3%25ADtulo.png'
+ICONBUILDS     = 'https://i.imgur.com/nlNeHIc.jpg'
+ICONMAINT      = 'https://ih0.redbubble.net/image.382735244.0192/poster,840x830,f8f8f8-pad,750x1000,f8f8f8.u1.jpg'
+ICONAPK        = 'https://i.imgur.com/RdOWl4p.jpg'
+ICONADDONS     = 'https://i.imgur.com/RdOWl4p.jpg'
+ICONYOUTUBE    = 'https://i.imgur.com/RdOWl4p.jpg'
+ICONSAVE       = 'https://i.imgur.com/I6eo0eJ.jpg'
+ICONCONTACT    = 'https://iwheelsurvive.com/wp-content/uploads/Telegram-logo.png'
+ICONSETTINGS   = 'https://lh5.ggpht.com/gv992ET6R_InCoMXXwIbdRLJczqOHFfLxIeY-bN2nFq0r8MDe-y-cF2aWq6Qy9P_K-4=w300'
+ICONSPEED      = 'https://i.imgur.com/RdOWl4p.jpg'
+ICONTRAKT      = 'https://i.imgur.com/RdOWl4p.jpg'
+ICONREAL       = 'https://i.imgur.com/RdOWl4p.jpg'
+ICONLOGIN      = 'https://i.imgur.com/RdOWl4p.jpg'
 # Hide the ====== seperators 'Yes' or 'No'
 HIDESPACERS    = 'No'
 # Character used in seperator
@@ -75,10 +75,10 @@ THEME6         = '[LOWERCASE][CAPITALIZE][COLOR '+COLOR1+']Version CHOPO-WIZARD 
 # Enable 'Contact' menu item 'Yes' hide or 'No' dont hide
 HIDECONTACT    = 'No'
 # You can add \n to do line breaks
-CONTACT        = '[B][LOWERCASE][CAPITALIZE][COLOR white]Gracias por utilizar CHOPO-WIZARD \r\n\r\nSi quieres ponerte en contacto unete ha nuestro grupo de telegram[COLOR aquamarine] https://t.me/tvchopo[/COLOR]'
+CONTACT        = '[B][LOWERCASE][CAPITALIZE][COLOR lime]\r\n\r\nGracias por utilizar CHOPO-WIZARD \r\n\r\nSi quieres ponerte en contacto unete ha nuestro grupo de telegram[COLOR yellow] https://t.me/tvchopo[/COLOR][/CAPITALIZE][/LOWERCASE][/B]'
 #Images used for the contact window.  http:// for default icon and fanart
-CONTACTICON    = 'https://4.bp.blogspot.com/-aqnLnKC9RPc/XH5qR1hkW2I/AAAAAAAAJYw/KBBURjhbbgMflg5XAJWI503wBL7SxSjFwCK4BGAYYCw/s1600/Sin%2BT%25C3%25ADtulo.png'
-CONTACTFANART  = 'https://4.bp.blogspot.com/-aqnLnKC9RPc/XH5qR1hkW2I/AAAAAAAAJYw/KBBURjhbbgMflg5XAJWI503wBL7SxSjFwCK4BGAYYCw/s1600/Sin%2BT%25C3%25ADtulo.png'
+CONTACTICON    = 'https://i.imgur.com/RdOWl4p.jpg'
+CONTACTFANART  = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaSP9B5B2ljInyudorKEcpCR5DL0E5OQ7aRY0VYB-3DAx9QsGh'
 #########################################################
 
 #########################################################
@@ -88,7 +88,7 @@ CONTACTFANART  = 'https://4.bp.blogspot.com/-aqnLnKC9RPc/XH5qR1hkW2I/AAAAAAAAJYw
 # Enable Auto Update 'Yes' or 'No'
 AUTOUPDATE     = 'No'
 # Url to wizard version
-WIZARDFILE     = 'https://4.bp.blogspot.com/-aqnLnKC9RPc/XH5qR1hkW2I/AAAAAAAAJYw/KBBURjhbbgMflg5XAJWI503wBL7SxSjFwCK4BGAYYCw/s1600/Sin%2BT%25C3%25ADtulo.png'
+WIZARDFILE     = 'https://i.imgur.com/RdOWl4p.jpg'
 #########################################################
 
 #########################################################
@@ -122,5 +122,5 @@ HEADERIMAGE    = 'http://'
 # Font for Notification Window
 FONTSETTINGS   = 'Font13'
 # Background for Notification Window
-BACKGROUND     = 'https://4.bp.blogspot.com/-aqnLnKC9RPc/XH5qR1hkW2I/AAAAAAAAJYw/KBBURjhbbgMflg5XAJWI503wBL7SxSjFwCK4BGAYYCw/s1600/Sin%2BT%25C3%25ADtulo.png'
+BACKGROUND     = 'https://i.imgur.com/RdOWl4p.jpg'
 #########################################################

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="plugin.program.WIZAR-CHOPO" name="[B][LOWERCASE][CAPITALIZE][COLOR white]CHOPO[COLOR aquamarine]WIZARD[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" version="2.0" provider-name="CHOPO">
+<addon id="plugin.program.WIZAR-CHOPO" name="[B][LOWERCASE][CAPITALIZE][COLOR white]WIZARD-[COLOR aquamarine]CHOPO[/CAPITALIZE][/B][/LOWERCASE][/COLOR]" version="3.0" provider-name="CHOPO">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>
@@ -8,18 +8,17 @@
     <provides>executable</provides>
   </extension>
 
- <extension point="xbmc.addon.repository" name="tvchoco Jose">
+ <extension point="xbmc.addon.repository" name="tvchopo">
         <info>https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/addons.xml</info>
         <checksum>https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/addons.xml.md5</checksum>
         <datadir zip="true">https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/</datadir>
     </extension>
   <extension point="xbmc.service" library="startup.py" start="startup" />
   <extension point="xbmc.addon.metadata">
-    <summary lang="en">CHOPO [COLOR orange]WIZARD[/COLOR]</summary>
-    <description lang="en">wizard-chopo para Kodi
-	equipotvchopo
-
-Telegram: https://t.me/tvchopo</description>
+    <summary lang="en">[B][LOWERCASE][CAPITALIZE][COLOR white]WIZARD CHOPO[/CAPITALIZE][/B][/LOWERCASE][/COLOR]</summary>
+    <description lang="en">[B][LOWERCASE][CAPITALIZE][COLOR white]instalador del wizardchopo para kodi 17 y kodi 18..
+para  estar al dia  unete a nuestro grupo de Telegram:
+ [COLOR lime]https://t.me/tvchopo[/CAPITALIZE][/LOWERCASE][/B][/COLOR]</description>
     <platform>all</platform>
   </extension>
 </addon>
