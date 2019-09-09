@@ -435,7 +435,7 @@ def firstRun():
 	class MyWindow(xbmcgui.WindowXMLDialog):
 		def __init__(self, *args, **kwargs):
 			self.title = THEME3 % ADDONTITLE
-			self.msg   = "[B][COLOR white]No se ha detectado ninguna Build %s instalada.\n\nElige 'Build Menu' para instalar la Build de tvchopo o 'Ignorar' para no volver a ver este mensaje.\nSi ya tienes una version anterior de la Build, instala solo el parche.\n\nGracias por escoger %s.[/COLOR]" % (ADDONTITLE, ADDONTITLE)
+			self.msg   = "[B][COLOR white]NO SE HA DETECTADO NINGUNA BUILD %s INSTALADA.\n\nELIGE 'BUILD MENU' PARA INSTALAR LA BUILD DE TVCHOPO O 'IGNORAR' PARA NO VOLVER A VER ESTE MENSAJE.\n\nGRACIAS POR ESCOGER %s.[/B][/COLOR]" % (ADDONTITLE, ADDONTITLE)
 			self.msg   = THEME2 % self.msg
 
 		def onInit(self):
