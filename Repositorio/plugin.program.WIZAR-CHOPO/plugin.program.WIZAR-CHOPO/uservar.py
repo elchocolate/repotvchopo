@@ -100,9 +100,9 @@ AUTOINSTALL    = 'No'
 # Addon ID for the repository
 REPOID         = 'repository.repoCHOPO-WIZARD'
 # Url to Addons.xml file in your repo folder(this is so we can get the latest version)
-REPOADDONXML   = 'https://raw.githubusercontent.com/CHOPO-WIZARDbuild/Repo-CHOPO-WIZARD/master/addons.xml'
+REPOADDONXML   = 'https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/addons.xml'
 # Url to folder zip is located in
-REPOZIPURL     = 'https://raw.githubusercontent.com/CHOPO-WIZARDbuild/Repo-CHOPO-WIZARD/master/repository.repoCHOPO-WIZARD/'
+REPOZIPURL     = 'https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/'
 #########################################################
 
 #########################################################
