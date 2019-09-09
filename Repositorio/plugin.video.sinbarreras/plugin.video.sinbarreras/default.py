@@ -45,7 +45,7 @@ if REMOTE_DBG:
         sys.exit(1)
 
 
-addon = xbmcaddon.Addon('plugin.video.sin.barreras')
+addon = xbmcaddon.Addon('plugin.video.sinbarreras')
 addon_version = addon.getAddonInfo('version')
 profile = xbmc.translatePath(addon.getAddonInfo('profile').decode('utf-8'))
 home = xbmc.translatePath(addon.getAddonInfo('path').decode('utf-8'))
@@ -70,7 +70,7 @@ else: SOURCES = []
 
 def addon_log(string):
     if debug == 'true':
-        xbmc.log("[addon.sin.barreras-%s]: %s" %(addon_version, string))
+        xbmc.log("[addon.cristalazul-%s]: %s" %(addon_version, string))
 
 
 def makeRequest(url, headers=None):
@@ -102,11 +102,11 @@ def makeRequest(url, headers=None):
             addon_log('URL: '+url)
             if hasattr(e, 'code'):
                 addon_log('We failed with error code - %s.' % e.code)
-                xbmc.executebuiltin("XBMC.Notification(Sin Barreras ha fallado. Código de error - "+str(e.code)+",10000,"+icon+")")
+                xbmc.executebuiltin("XBMC.Notification(cristalazul ha fallado. Código de error - "+str(e.code)+",10000,"+icon+")")
             elif hasattr(e, 'reason'):
                 addon_log('We failed to reach a server.')
                 addon_log('Reason: %s' %e.reason)
-                xbmc.executebuiltin("XBMC.Notification(Sin Barreras, fallo del servidor. - "+str(e.reason)+",10000,"+icon+")")
+                xbmc.executebuiltin("XBMC.Notification(cristalazul, fallo del servidor. - "+str(e.reason)+",10000,"+icon+")")
 
 def getSources():
         try:
@@ -227,7 +227,7 @@ def addSource(url=None):
             b.close()
         addon.setSetting('new_url_source', "")
         addon.setSetting('new_file_source', "")
-        xbmc.executebuiltin("XBMC.Notification(Sin Barreras,Nueva fuente añadida.,5000,"+icon+")")
+        xbmc.executebuiltin("XBMC.Notification(cristalazul,Nueva fuente añadida.,5000,"+icon+")")
         if not url is None:
             if 'xbmcplus.xb.funpic.de' in url:
                 xbmc.executebuiltin("XBMC.Container.Update(%s?mode=14,replace)" %sys.argv[0])
@@ -1416,7 +1416,7 @@ def getConfiguredProxy():
 def playmediawithproxy(media_url, name, iconImage,proxyip,port, proxyuser=None, proxypass=None): #jairox
 
     if media_url==None or media_url=='':
-        xbmc.executebuiltin("XBMC.Notification(Sin Barreras,No se puede reproducir una URL vacia,5000,"+icon+")")
+        xbmc.executebuiltin("XBMC.Notification(cristalazul,No se puede reproducir una URL vacia,5000,"+icon+")")
         return
     progress = xbmcgui.DialogProgress()
     progress.create('Progress', 'Playing with custom proxy')
@@ -1455,7 +1455,7 @@ def playmediawithproxy(media_url, name, iconImage,proxyip,port, proxyuser=None, 
                 xbmc.sleep(1000)       
                 if player.urlplayed==False and time.time()-beforestart>12:
                     print 'failed!!!'
-                    xbmc.executebuiltin("XBMC.Notification(Sin Barreras, no se puede reproducir el proxy,5000,"+icon+")")
+                    xbmc.executebuiltin("XBMC.Notification(cristalazul, no se puede reproducir el proxy,5000,"+icon+")")
                     break
                 #xbmc.sleep(1000)
         except: pass
@@ -2264,7 +2264,7 @@ def urlsolver(url):
         else:
             resolver = resolved
     else:
-        xbmc.executebuiltin("XBMC.Notification(Sin Barreras,Urlresolver no soporta este dominio. - ,5000)")
+        xbmc.executebuiltin("XBMC.Notification(cristalazul,Urlresolver no soporta este dominio. - ,5000)")
         resolver=url
     return resolver
 def tryplay(url,listitem,pdialogue=None):    
@@ -2453,12 +2453,12 @@ def play_playlist(name, mu_playlist,queueVideo=None):
 def download_file(name, url):
         
         if addon.getSetting('save_location') == "":
-            xbmc.executebuiltin("XBMC.Notification('sin.barreras','Elige una ruta para guardar archivos.',15000,"+icon+")")
+            xbmc.executebuiltin("XBMC.Notification('cristalazul','Elige una ruta para guardar archivos.',15000,"+icon+")")
             addon.openSettings()
         params = {'url': url, 'download_path': addon.getSetting('save_location')}
         downloader.download(name, params)
         dialog = xbmcgui.Dialog()
-        ret = dialog.yesno('sin.barreras', '¿Quieres añadir este archivo como fuente?')
+        ret = dialog.yesno('cristalazul', '¿Quieres añadir este archivo como fuente?')
         if ret:
             addSource(os.path.join(addon.getSetting('save_location'), name))
 
@@ -2529,7 +2529,7 @@ def addDir(name,url,mode,iconimage,fanart,description,genre,date,credits,showcon
                 contextMenu.append(('Download','XBMC.RunPlugin(%s?url=%s&mode=9&name=%s)'
                                     %(sys.argv[0], urllib.quote_plus(url), urllib.quote_plus(name))))
             elif showcontext == 'fav':
-                contextMenu.append(('Remove from sin.barreras Favorites','XBMC.RunPlugin(%s?mode=6&name=%s)'
+                contextMenu.append(('Remove from cristalazul Favorites','XBMC.RunPlugin(%s?mode=6&name=%s)'
                                     %(sys.argv[0], urllib.quote_plus(name))))
             if showcontext == '!!update':
                 fav_params2 = (
@@ -2538,7 +2538,7 @@ def addDir(name,url,mode,iconimage,fanart,description,genre,date,credits,showcon
                     )
                 contextMenu.append(('[COLOR yellow]!!update[/COLOR]','XBMC.RunPlugin(%s)' %fav_params2))
             if not name in FAV:
-                contextMenu.append(('Add to sin.barreras Favorites','XBMC.RunPlugin(%s?mode=5&name=%s&url=%s&iconimage=%s&fanart=%s&fav_mode=%s)'
+                contextMenu.append(('Add to cristalazul Favorites','XBMC.RunPlugin(%s?mode=5&name=%s&url=%s&iconimage=%s&fanart=%s&fav_mode=%s)'
                          %(sys.argv[0], urllib.quote_plus(name), urllib.quote_plus(url), urllib.quote_plus(iconimage), urllib.quote_plus(fanart), mode)))
             liz.addContextMenuItems(contextMenu)
         ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=True)
@@ -2721,7 +2721,7 @@ def addLink(url,name,iconimage,fanart,description,genre,date,showcontext,playlis
             #contextMenu = []
             if showcontext == 'fav':
                 contextMenu.append(
-                    ('Remove from sin.barreras Favorites','XBMC.RunPlugin(%s?mode=6&name=%s)'
+                    ('Remove from cristalazul Favorites','XBMC.RunPlugin(%s?mode=6&name=%s)'
                      %(sys.argv[0], urllib.quote_plus(name)))
                      )
             elif not name in FAV:
@@ -2739,7 +2739,7 @@ def addLink(url,name,iconimage,fanart,description,genre,date,showcontext,playlis
                     fav_params += 'playlist='+urllib.quote_plus(str(playlist).replace(',','||'))
                 if regexs:
                     fav_params += "&regexs="+regexs
-                contextMenu.append(('Add to sin.barreras Favorites','XBMC.RunPlugin(%s)' %fav_params))
+                contextMenu.append(('Add to cristalazul Favorites','XBMC.RunPlugin(%s)' %fav_params))
             liz.addContextMenuItems(contextMenu)
         try:
             if not playlist is None:
@@ -3182,13 +3182,13 @@ elif mode==17 or mode==117:
                 else:
                     playsetresolved(url,name,iconimage,setresolved,regexs)
             else:
-                xbmc.executebuiltin("XBMC.Notification(sin.barreras,Failed to extract regex. - "+"this"+",4000,"+icon+")")
+                xbmc.executebuiltin("XBMC.Notification(cristalazul,Failed to extract regex. - "+"this"+",4000,"+icon+")")
 elif mode==18:
     addon_log("youtubedl")
     try:
         import youtubedl
     except Exception:
-        xbmc.executebuiltin("XBMC.Notification(sin.barreras,Please [COLOR yellow]install Youtube-dl[/COLOR] module ,10000,"")")
+        xbmc.executebuiltin("XBMC.Notification(cristalazul,Please [COLOR yellow]install Youtube-dl[/COLOR] module ,10000,"")")
     stream_url=youtubedl.single_YD(url)
     playsetresolved(stream_url,name,iconimage)
 elif mode==19:
@@ -3225,14 +3225,14 @@ elif mode==55:
         newStr = keyboard.getText()
         if newStr==parentalblockedpin:
             addon.setSetting('parentalblocked', "false")
-            xbmc.executebuiltin("XBMC.Notification(sin.barreras,Bloqueo Parental Desactivado,5000,"+icon+")")
+            xbmc.executebuiltin("XBMC.Notification(cristalazul,Bloqueo Parental Desactivado,5000,"+icon+")")
         else:
-            xbmc.executebuiltin("XBMC.Notification(sin.barreras, ¿Error Pin?,5000,"+icon+")")
+            xbmc.executebuiltin("XBMC.Notification(cristalazul, ¿Error Pin?,5000,"+icon+")")
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
 elif mode==56:
     addon_log("disable lock")
     addon.setSetting('parentalblocked', "true")
-    xbmc.executebuiltin("XBMC.Notification(sin.barreras,Bloqueo parental activado,5000,"+icon+")")
+    xbmc.executebuiltin("XBMC.Notification(cristalazul,Bloqueo parental activado,5000,"+icon+")")
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
 
 elif mode==53:
