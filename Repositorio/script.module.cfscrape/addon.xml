@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.module.cfscrape"
+       name="cfscrape"
+       version="1.9.4.4"
+       provider-name="jdollar, Kodi4VN, thuongtin">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.requests" version="2.9.1"/>
+  </requires>
+  <extension point="xbmc.python.module"
+             library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary>Scraper that bypasses cloudflare's anti bot security</summary>
+    <description>Packed for Kodi from https://github.com/Anorov/cloudflare-scrape</description>
+    <platform>all</platform>
+    <language></language>
+    <license>MIT</license>
+    <forum></forum>
+    <website>https://github.com/Anorov/cloudflare-scrape</website>
+    <source>http://github.com/Anorov/cloudflare-scrape</source>
+    <email>ionizedwarhead10 AT gmail.com</email>
+  </extension>
+</addon>
