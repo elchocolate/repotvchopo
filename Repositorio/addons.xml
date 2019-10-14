@@ -288,7 +288,7 @@ para  estar al dia  unete a nuestro grupo de Telegram:
 
 <addon id="script.kelebek"
        name="KELEBEK"
-       version="3.0.0"
+       version="3.2.2"
        provider-name="Anabel">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -303,7 +303,7 @@ para  estar al dia  unete a nuestro grupo de Telegram:
   </extension>
   <extension point="xbmc.addon.metadata">
     <platform>all</platform>
-    <summary>KELEBEK V3</summary>
+    <summary>KELEBEK V3.2</summary>
     <description>Scan Sources searching changes and addons</description>
     <language></language>
     <license></license>

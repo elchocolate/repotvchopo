@@ -15,25 +15,15 @@
   </setting>
   <setting default="false" id="OVNI" label="OVNI" type="bool" visible="true">
   </setting>
-  <setting default="false" id="RepoDeco" label="Repo Decosub" type="bool" visible="true">
-  </setting>
   <setting default="false" id="ALMA" label="ALMA" type="bool" visible="true">
   </setting>
   <setting default="false" id="MUNDOOSCURO" label="MUNDO OSCURO" type="bool" visible="true">
   </setting>
   <setting default="false" id="1X2" label="1X2" type="bool" visible="true">
   </setting>
-  <setting default="false" id="RepoManiac" label="Repo Maniac" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="Sports365" label="Sports 365" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="RepoBuga" label="Repo Bugatsinho" type="bool" visible="true">
-  </setting>
   <setting default="false" id="VideoFootbal" label="Video Footbal" type="bool" visible="true">
   </setting>
   <setting default="false" id="LaOla" label="La Ola" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="Avezy" label="Avezy" type="bool" visible="true">
   </setting>
   <setting default="false" id="NBAonDemand" label="NBA on Demand" type="bool" visible="true">
   </setting>
@@ -43,13 +33,7 @@
   </setting>
   <setting default="false" id="SportsExtreme" label="Sports Extreme" type="bool" visible="true">
   </setting>
-  <setting default="false" id="RepoFOliver" label="Repo FOliver" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="SportsDevil" label="Sports Devil" type="bool" visible="true">
-  </setting>
   <setting default="false" id="SportsWA" label="Sports WA" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="RepoMBebe" label="Repo MBebe" type="bool" visible="true">
   </setting>
   <setting default="false" id="Pequelandia" label="Pequelandia" type="bool" visible="true">
   </setting>
@@ -63,12 +47,6 @@
   </setting>
   <setting default="false" id="Fusion" label="Fusion" type="bool" visible="true">
   </setting>
-  <setting default="false" id="FusionReq" label="Fusion Req" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="RepoFusion" label="Repo Fusion" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="RepoBrazilTV" label="Repo BrazilTV" type="bool" visible="true">
-  </setting>
   <setting default="false" id="BrazucaPlay" label="Brazuca Play" type="bool" visible="true">
   </setting>
   <setting default="false" id="ColombiaTV" label="Colombia TV" type="bool" visible="true">
@@ -76,8 +54,6 @@
   <setting default="false" id="DiscoKelebek" label="Disco Kelebek" type="bool" visible="true">
   </setting>
   <setting default="false" id="Music" label="Music" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="RepoMrFree" label="Repo MrFree" type="bool" visible="true">
   </setting>
   <setting default="false" id="YouMusic" label="YouMusic" type="bool" visible="true">
   </setting>
@@ -97,15 +73,7 @@
   </setting>
   <setting default="false" id="Palantir" label="Palantir" type="bool" visible="true">
   </setting>
-  <setting default="false" id="Balandro" label="Balandro" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="iNovelas" label="iNovelas" type="bool" visible="true">
-  </setting>
   <setting default="false" id="Alfa" label="Alfa" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="LanguageSpanish" label="Resource Language Spanish" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="RepoAlfa" label="Repo Alfa" type="bool" visible="true">
   </setting>
   <setting default="false" id="MediaExplorer" label="MediaExplorer" type="bool" visible="true">
   </setting>
@@ -113,211 +81,21 @@
   </setting>
   <setting default="false" id="Agora" label="Agora" type="bool" visible="true">
   </setting>
-  <setting default="false" id="SCMSignals" label="Script Module Signals" type="bool" visible="true">
-  </setting>
   <setting default="false" id="Tesla" label="Tesla" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="AutoFrame" label="AutoFrame" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="SpeedTest" label="Speed Test" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="LimpiarKodi" label="Limpiar Kodi" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="Backup" label="Backup" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="Plexus" label="Plexus" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="Merlin" label="Merlin" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="LogViewer" label="Log Viewer" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="TubeCast" label="TubeCast" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="USBWizard" label="USB Wizard" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="AutoCompletion" label="AutoCompletion" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="SMAutoC" label="Script Module AutoCompletion" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="EstablecerclaveenAddons" label="Establecer clave en Addons" type="bool" visible="true">
   </setting>
   <setting default="false" id="TempTV" label="Temp TV" type="bool" visible="true">
   </setting>
-  <setting default="false" id="RepoTempTV" label="Repo TempTV" type="bool" visible="true">
-  </setting>
   <setting default="false" id="CCloudTV" label="CCloudTV" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="RepoKodiBae" label="Repo KodiBae" type="bool" visible="true">
   </setting>
   <setting default="false" id="Magellan" label="Magellan" type="bool" visible="true">
   </setting>
-  <setting default="false" id="RepoMagellan" label="Repo Magellan" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="STRBase" label="StreamLink Base" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="STRCrypto" label="StreamLink Crypto" type="bool" visible="true">
-  </setting>
   <setting default="false" id="Iberika" label="Iberika" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="F4MTesteryF4MProxy" label="F4MTester y F4MProxy" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="ResolveURL" label="ResolveURL" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="URLResolver" label="URLResolver" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="Python2.25.0" label="Python 2.25.0" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="SimpleDownloader" label="Simple Downloader" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="LiveResolver" label="Live Resolver" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="MetaHandler" label="MetaHandler" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="SCMSingleDispatch" label="Script Module Single Dispatch" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="t0mm0" label="Script Module t0mm0" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="Futures" label="Script Module Futures" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="SCMBeautifulSoup" label="Script Module BeautifulSoup noinfo" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="SCMBeautifulSoup4" label="Script Module BeautifulSoup4" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="SCMRequest" label="Script Module Request" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="SCMHttplib2" label="Script Module Httplib2" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="PVYoutube" label="Plugin Video Youtube" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="SCMInputStreamHelper" label="Script Module InputStreamHelper" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="SCMSimpleJSON" label="Script Module SimpleJSON" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="SCMLiveStreamer" label="Script Module LiveStreamer" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="SCMPyAMF" label="Script Module PyAMF" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="Certifi" label="certifi" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="addoncommon" label="Addon Common" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="HBORepo" label="HBO Repo" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="Netflix" label="Netflix" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="SCMPyCryptoDome" label="Script Module PyCryptoDome" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="AeonLeiAnMC" label="Aeon LeiAnMC" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="AeonWLeiAnMC" label="Aeon WLeiAnMC" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="RapierMariposa" label="Rapier Mariposa" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="RepoXonfluence" label="Repo Xonfluence" type="bool" visible="true">
   </setting>
   <setting default="false" id="ElementumU" label="Elementum Universal" type="bool" visible="true">
   </setting>
-  <setting default="false" id="ElementumA" label="Elementum Android" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="ElementumW32" label="Elementum Windows 32 Bits" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="ElementumW64" label="Elementum Windows 64 Bits" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="EleBurst" label="Elementum Burst" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="RepoElementum" label="Repo Elementum" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="Quasar" label="Quasar" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="Torrenter" label="Torrenter" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="SCChardet" label="Script Module Chardet" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="SCLibTorrent" label="Script Module LibTorrent" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="SCMcTools" label="Script Module McTools" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="SCPyrrent" label="Script Module Pyrrent2HTTP" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="SCPyxbmct" label="Script Module Pyxbmct" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="SCTorrentTS" label="Script Module TorrentTS" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="SCTorrent2HTTP" label="Script Module Torrent2HTTP" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="Torrentin" label="Torrentin" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="RepoZachMorris" label="Repo ZachMorris" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="RepoPalantir" label="Repo Palantir" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="Repokodiadult" label="Repo kodiadult" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="RepoCanalNereo" label="Repo Canal Nereo" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="RepoMyShows" label="Repo MyShows" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="RepoXBMCHub" label="Repo XBMCHub" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="RepoJSergio" label="Repo JSergio" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="RepoFirestickplusman" label="Repo Firestickplusman" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="RepoXXTrep" label="Repo XXTrep" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="RepoKodil" label="Repo Kodil" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="RepoMaverick" label="Repo Maverick" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="RepoVStream" label="Repo VStream" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="SkinCatana" label="Skin Catana" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="SkinECatoal" label="Skin Estuary Catoal" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="SkinHSKKonfluence" label="Skin HSK Konfluence" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="SkinRapierMariposa17" label="Skin Rapier Mariposa 17" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="SkinRapierMariposa18" label="Skin Rapier Mariposa 18" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="SkinKMariposa" label="Skin Krypton Mariposa" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="SkinSkyPalomitas" label="Skin Sky Palomitas" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="WizardCatana" label="Wizard Catana" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="WizardPalantir" label="Wizard Palantir" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="WizardPalomitas" label="Wizard Palomitas" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="WizardTaox" label="Wizard Taox" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="WizardChopo" label="Wizard Chopo" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="AdvancedSettings" label="Plugin Advanced Settings" type="bool" visible="true">
-  </setting>
   <setting default="false" id="tvchopo" label="TvChopo" type="bool" visible="true">
   </setting>
-  <setting default="false" id="RepoTVChopo" label="Repo TVChopo" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="cometelo" label="Cometelo" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="googledrive" label="Google Drive" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="aprendiendokodi" label="Aprendiendo Kodi" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="justforlaughs" label="Just For Laughs" type="bool" visible="true">
-  </setting>
   <setting default="false" id="Magyck" label="Magyc" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="orchestra" label="Orchestra" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="angelaaron" label="Angel Aaron" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="canalcocina" label="Canal Cocina" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="comics" label="Comics" type="bool" visible="true">
   </setting>
   <setting default="false" id="cristalazul" label="Cristal Azul" type="bool" visible="true">
   </setting>
@@ -325,99 +103,33 @@
   </setting>
   <setting default="false" id="Alma" label="Alma" type="bool" visible="true">
   </setting>
-  <setting default="false" id="Amazon" label="Amazon" type="bool" visible="true">
-  </setting>
   <setting default="false" id="ccloudtv" label="CCloudTV" type="bool" visible="true">
   </setting>
   <setting default="false" id="festa" label="Festa" type="bool" visible="true">
   </setting>
-  <setting default="false" id="RepoFesta" label="Repo Festa" type="bool" visible="true">
-  </setting>
   <setting default="false" id="tvalacarta" label="Tvalacarta" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="ContextAC" label="Agrega Contenido" type="bool" visible="true">
   </setting>
   <setting default="false" id="F4MTester" label="F4M Tester" type="bool" visible="true">
   </setting>
-  <setting default="false" id="commoncache" label="Common Cache" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="ExtendedInfo" label="Extended Info" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="globalsearch" label="Global Search" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="kodispeedtest" label="Kodi Speed Test" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="cherrypy" label="Cherrypy" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="cryptopy" label="Cryptopy" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="libtorrente" label="Libtorrent" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="liveresolver" label="Liveresolver" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="metahandler" label="Metahandler" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="SMParsedom" label="Script Module Parsedom" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="Six" label="Six" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="youtubedll" label="Youtubedll" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="SCSkinHS" label="Skin Helper Service" type="bool" visible="true">
-  </setting>
   <setting default="false" id="F4MProxy" label="F4M Proxy" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="xbmcpython" label="Xbmc python" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="xmltodict" label="xmltodict" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="myconnpy" label="myconnpy" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="Kodi65" label="Script Module Kodi65" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="KodiSix" label="Script Module Kodi Six" type="bool" visible="true">
   </setting>
   <setting default="false" id="uwc" label="Ultimate WhiteCream" type="bool" visible="true">
   </setting>
-  <setting default="false" id="adultsonly" label="Adults Only" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="videodevil" label="Videodevil" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="gaymods" label="GayMods" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="69" label="69" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="ayayay" label="AyAyAy" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="fantasticc" label="Fantasticc" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="theknob" label="The Knob" type="bool" visible="true">
-  </setting>
   <setting default="false" id="CatchUpTVK" label="CatchUp TV Krypton" type="bool" visible="true">
   </setting>
-  <setting default="false" id="CUTVK" label="CatchUp TV Krypton Dependency" type="bool" visible="true">
+  <setting default="false" id="Motor99" label="Motor99" type="bool" visible="true">
   </setting>
-  <setting default="false" id="Poseidon" label="Poseidon Ingles" type="bool" visible="true">
+  <setting default="false" id="Noise" label="Noise" type="bool" visible="true">
   </setting>
-  <setting default="false" id="SCPoseidonAW" label="SC Poseidon ArtWork" type="bool" visible="true">
+  <setting default="false" id="Vikir" label="Vikir" type="bool" visible="true">
   </setting>
-  <setting default="false" id="SCPoseidonMD" label="SC Poseidon MetaData" type="bool" visible="true">
+  <setting default="false" id="Explora" label="Explora" type="bool" visible="true">
   </setting>
-  <setting default="false" id="SCNanscrapers" label="SC Module Nanscrapers" type="bool" visible="true">
+  <setting default="false" id="cometelo" label="Cometelo" type="bool" visible="true">
   </setting>
-  <setting default="false" id="SCSchism" label="SC Module Schism" type="bool" visible="true">
+  <setting default="false" id="justforlaughs" label="Just For Laughs" type="bool" visible="true">
   </setting>
-  <setting default="false" id="MMFilmesHD" label="MMFilmesHD Portugues" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="RepoVikings" label="Repo Vikings" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="Frances" label="Frances (Repositorio VStream)" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="Aleman" label="Aleman (Repositorio Lastship)" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="ATOMREBORN" label="ATOMREBORN" type="bool" visible="true">
-  </setting>
-  <setting default="false" id="Basicos" label="Scripts Basicos" type="bool" visible="true">
+  <setting default="false" id="canalcocina" label="Canal Cocina" type="bool" visible="true">
   </setting>
  </category>
 </settings>
