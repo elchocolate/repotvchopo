@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="plugin.video.Tvchopo.Kids"
-       name="[COLOR pink]Tvchopo Kids[/COLOR]"
-       version="5.0"
-       provider-name="Tvchopo team">
-  <requires>
+       name="[B][LOWERCASE][CAPITALIZE][COLOR white]TVCHOPO[COLOR fuchsia] KIDS[/CAPITALIZE][/LOWERCASE][/B][/COLOR]"
+       version="9"
+       provider-name="equipo-chopo">
+ <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.beautifulsoup" version="3.2.1"/>
     <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.beautifulsoup4" />
     <import addon="script.module.requests" />
     <import addon="script.module.httplib2" />
     <import addon="script.module.liveresolver" version="0.1.24" optional="true"/>
     <import addon="script.module.youtube.dl" optional="true"/>
-    <import addon="plugin.video.youtube" optional="true" />
-    <import addon="script.module.resolveurl" optional="true"/>
-	<import addon="script.module.urlresolver" optional="true"/>
-    <import addon="script.module.simplejson" />    
+    <import addon="plugin.video.youtube" />
+    <import addon="script.module.urlresolver" />
+	<import addon="script.module.resolveurl" optional="true"/>
+	<import addon="script.module.simplejson" />
     <import addon="script.module.livestreamer" optional="true"/>
-    <import addon="script.module.slproxy" optional="true"/>
     <import addon="script.module.pyamf" optional="true"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
@@ -29,9 +29,28 @@
         <datadir zip="true">https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/</datadir>
     </extension>
 	
- <extension point="xbmc.addon.metadata">
-    <summary>Tvchopo</summary>
-    <description>Dedicado a los más pequeños de la familia chopera.  para los pequeñitos</description>
+  
+
+
+  <extension point="xbmc.addon.metadata">
+    <summary>Tvchopo.Kids addon familiar</summary>
+    <description>
+        addon Tvchopo.Kids no contiene ningun material propio..
+		todo el contenido es enlazado a las webs mas conocidas
+		de internet.....
+		
+	tvchopo ni se vender ni se cobra ni acepta donaciones... si ha sido es el caso  ha sido usted estafado,...para mas informacion entra en nuestro grupo de telegram https://t.me/tvchopo
+        
+    </description>
     <platform>all</platform>
+	<assets>
+        <icon>icon.gif</icon>
+  <screenshot>resources/screenshots/screenshot1.jpg</screenshot>
+  <screenshot>resources/screenshots/screenshot2.jpg</screenshot>
+  <screenshot>resources/screenshots/screenshot3.jpg</screenshot>
+  <screenshot>resources/screenshots/screenshot4.jpg</screenshot>
+  <screenshot>resources/screenshots/screenshot5.jpg</screenshot>
+        <fanart>fanart.gif</fanart>
+    </assets>
   </extension>
 </addon>
