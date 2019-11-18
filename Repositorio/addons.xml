@@ -378,7 +378,7 @@ para  estar al dia  unete a nuestro grupo de Telegram:
   </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.0.34" provider-name="jsergio">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.0.35" provider-name="jsergio">
     <requires>
         <import addon="xbmc.python" version="2.1.0" />
         <import addon="plugin.video.youtube" optional="true" />
@@ -399,7 +399,7 @@ para  estar al dia  unete a nuestro grupo de Telegram:
     </extension>
 </addon>
 
-<addon id="script.module.urlresolver" name="URLResolver" version="5.0.41" provider-name="tvaddons">
+<addon id="script.module.urlresolver" name="URLResolver" version="5.0.44" provider-name="tvaddons">
     <requires>
         <import addon="xbmc.python" version="2.1.0" />
         <import addon="plugin.video.youtube" optional="true" />
