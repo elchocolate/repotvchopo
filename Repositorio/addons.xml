@@ -181,7 +181,7 @@ para  estar al dia  unete a nuestro grupo de Telegram:
 
 <addon id="plugin.video.tvchopo"
        name="[B][LOWERCASE][CAPITALIZE][COLOR white]T[COLOR aquamarine]V[COLOR yellow]C[COLOR orange]H[COLOR red]O[COLOR pink]P[COLOR fuchsia]O[/CAPITALIZE][/LOWERCASE][/B][/COLOR]"
-       version="13"
+       version="14"
        provider-name="equipo-chopo">
  <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -230,7 +230,7 @@ para  estar al dia  unete a nuestro grupo de Telegram:
   <screenshot>resources/screenshots/screenshot3.jpg</screenshot>
   <screenshot>resources/screenshots/screenshot4.jpg</screenshot>
   <screenshot>resources/screenshots/screenshot5.jpg</screenshot>
-        <fanart>fanart.gif</fanart>
+        <fanart>fanart.png</fanart>
     </assets>
   </extension>
 </addon>
