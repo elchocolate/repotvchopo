@@ -22,6 +22,12 @@
     <provides>video audio</provides>
   </extension> 
   
+   <extension point="xbmc.addon.repository" name="tvchoco Jose">
+        <info>https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/</datadir>
+    </extension>
+  
   <extension point="xbmc.addon.metadata">
     <summary>Este addon no aloja ningun tipo de contenido, todo son recopilaciones de internet.</summary>
     <description>Este addon no aloja ningun tipo de contenido, todo son recopilaciones de internet.</description>
