@@ -1,0 +1,116 @@
+v3.1 2/3/19
+- Reparado fallo en url del wizard
+
+v3.0 2/3/19
+- Completadas algunas traducciones del addon
+- Realizadas algunas correcciones y cambios internos
+- Cambios visuales en logos y fondos
+
+v2.8.2 13/2/19
+- Restaurada función de mantener videoteca
+
+v2.8.1 2/2/19
+- Corregido error al crear carpeta de backups.
+- Es posible que en algunos casos requiera reinstalar el addon stva.
+
+v2.8 30/1/19
+- Ahora se puede instalar la Build en Kodi 18
+- Agregado SpeedTest
+- Agregadas algunas funciones en mantenimiento
+- Eliminados videos de las Builds
+
+v2.7 3/12/18
+- Cambiadas opciones por defecto para conservar informacion.
+- Cambiadas algunas traducciones
+
+V2.6 28/11/18
+- Reparado un error interno que interferia en los perfiles
+
+v2.5 26/11/18
+- Agregada ventana en la primera instalacion para mantener data
+- Mdificacion de algunos textos para hacerlo mas claro
+- Reparado backup de skin y menu
+- Copia de seguridad del menu principal lleva a todas las opciones de Backup
+
+v2.4 13/9/18
+- Nueva funcion: Agrega tu wizard
+
+v2.3 6/6/18
+- Nuevo servidor
+
+v2.2 31/5/18
+- Añadida seccion Instalador de Addons
+- Cambiada estructura de stva Buffer.
+- Añadidos nuevos archivos advanced settings
+- Ahora el addon instala la repo
+
+v2.1 (17/5/18)
+- Pequeños cambios en los menus y ventanas del addon
+
+v2.0 (31/3/18)
+- Nuevo Addon STVA
+
+v1.3.3 (30/3/18)
+- Corregidos errores internos Alfa
+
+v1.3.2 (29/3/18)
+- Cambiado modo de reproducción del addon Alfa
+- Cambiados ajustes de sonido
+
+v1.3.1 (24/3/18)
+– Configurado Autoplay canal Cinefox en todos los perfiles
+– Cambiado configuración color perfil Kids
+– Añadido widget Youtube en todos los perfiles
+– Corregidos errores internos
+
+v1.3 (21/3/18)
+- Eliminados addons Palantir, MP3Streams, Explora, AddtoLib y Ultimate WhiteCream
+- Añadido mensaje al inicio de Kodi sobre actualizaciones de la Build
+- Añadido widget de Youtube
+- Añadido Skin Eminence Tactil para dispositivos tactiles.
+- Imagenes addon Avezy cambiadas a las originales
+- Corregidos errores internos
+- Añadido Canal Cinefox a submenu Series, Peliculas y Buscador. Autoplay configurado
+- Añadido widget Documentales en menu varios, enlaza a Descargasmix
+- Canales de TV para adultos, ocultos
+- Añadida opción Buffer Palantir al addon STVA Buffer
+
+v1.2.1 (22/2/18)
+- Reparado Error configuracion Videoteca
+- Reparado fallo en popup siguiente capitulo.
+
+v1.2 (21/2/18)
+- Addon y repo Adryanlist eliminados
+- Añadido favorito a submenu videoteca
+- Añadido Actualizar videoteca a submenu videoteca
+- Añadido addon Cine
+- Añadido addon addtolib
+- Añadido addon STVA-Backups
+- Añadido perfil MiBuild
+- Modificado addon STVA
+- Añadido addon Update Checker
+
+v1.1 (12/2/18
+- Enlace de Videoteca cambiado
+- Añadido addon backup wizard
+- Reparado errores Youtube
+- Añadido Addons de programas en submenu ajustes
+- Añadida seccion Pelis 3d en submenu Cine
+- Cambiada ubicacion videoteca Alfa
+- Eliminado addon backup
+- Cambiado icono Inicio
+- Cambiado el color del skin
+- Aviso de version en addon STVA
+
+v1.0.3 (5/2/18)
+- Cambiado widget seccion 'varios' y submenu Documentales
+- Añadido addon Explora, para seccion documentales
+- Añadido addon Kodispaintv en submenu 'television'
+- Cambiado widget seccion 'cine' de trakt.tv a tmdb
+- Actualizado addon stva a version 1.0.3
+- Añadido repositorio MagyckPi
+- Añadido repositorio KodiSpain
+
+v1.0.0 (24/1/18)
+Version inicial
+
