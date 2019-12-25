@@ -46,46 +46,6 @@ para  estar al dia  unete a nuestro grupo de Telegram:
   </extension>
 </addon>
 
-<addon id="plugin.video.Armageddon"
-       name="[COLOR gold][B]Armageddon[/B][/COLOR]"
-       version="0.0.6"
-       provider-name="[COLOR aqua][B]Hectobo Y David[/B][/COLOR]">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.module.beautifulsoup" version="3.2.1"/>
-    <import addon="script.module.simple.downloader" version="0.9.4"/>
-    <import addon="script.module.beautifulsoup4" />
-    <import addon="script.module.requests" />
-    <import addon="script.module.httplib2" />
-    <import addon="script.module.liveresolver" version="0.1.24" optional="true"/>
-    <import addon="script.module.youtube.dl" />
-    <import addon="plugin.video.youtube"  />
-    <import addon="script.module.urlresolver" />
-    <import addon="script.module.simplejson" />
-     <import addon="script.module.livestreamer" optional="true"/>
-     <import addon="script.module.pyamf" optional="true"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>video audio</provides>
-  </extension>
-
-   <extension point="xbmc.addon.repository" name="tvchoco Jose">
-        <info>https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/addons.xml</info>
-        <checksum>https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/addons.xml.md5</checksum>
-        <datadir zip="true">https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/</datadir>
-    </extension>
-
-  <extension point="xbmc.addon.metadata">
-    <summary>Este addon no aloja ningun tipo de contenido, todo son recopilaciones de internet.</summary>
-    <description>Este addon no aloja ningun tipo de contenido, todo son recopilaciones de internet.</description>
-    <platform>all</platform>
-	  <assets>
-		<icon>icon.png</icon>
-		<fanart>fanart.jpg</fanart>
-	  </assets>
-  </extension>
-</addon>
-
 <addon id="plugin.video.f4mTester" version="3.0.0" name="F4mTester" provider-name="Shani">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
@@ -366,29 +326,6 @@ para  estar al dia  unete a nuestro grupo de Telegram:
         <disclaimer></disclaimer>
         <platform>all</platform>
     </extension>
-</addon>
-
-<addon id="script.module.cfscrape"
-       name="cfscrape"
-       version="1.9.4.4"
-       provider-name="jdollar, Kodi4VN, thuongtin">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.module.requests" version="2.9.1"/>
-  </requires>
-  <extension point="xbmc.python.module"
-             library="lib" />
-  <extension point="xbmc.addon.metadata">
-    <summary>Scraper that bypasses cloudflare's anti bot security</summary>
-    <description>Packed for Kodi from https://github.com/Anorov/cloudflare-scrape</description>
-    <platform>all</platform>
-    <language></language>
-    <license>MIT</license>
-    <forum></forum>
-    <website>https://github.com/Anorov/cloudflare-scrape</website>
-    <source>http://github.com/Anorov/cloudflare-scrape</source>
-    <email>ionizedwarhead10 AT gmail.com</email>
-  </extension>
 </addon>
 
 <addon id="script.module.liveresolver"
