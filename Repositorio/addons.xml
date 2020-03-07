@@ -160,9 +160,9 @@ para  estar al dia  unete a nuestro grupo de Telegram:
 
 <addon id="plugin.video.sinbarreras"
        name="[COLOR chartreuse]SIN BARRERAS[/COLOR]"
-       version="1.6"
+       version="1.7"
        provider-name="SinBarreras">
-  <requires>
+ <requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.beautifulsoup" version="3.2.1"/>
     <import addon="script.module.simple.downloader" version="0.9.4"/>
@@ -173,6 +173,7 @@ para  estar al dia  unete a nuestro grupo de Telegram:
     <import addon="script.module.youtube.dl" optional="true"/>
     <import addon="plugin.video.youtube" />
     <import addon="script.module.urlresolver" />
+	<import addon="script.module.resolveurl" optional="true"/>
 	<import addon="script.module.simplejson" />
     <import addon="script.module.livestreamer" optional="true"/>
     <import addon="script.module.pyamf" optional="true"/>
@@ -181,11 +182,14 @@ para  estar al dia  unete a nuestro grupo de Telegram:
     <provides>video</provides>
   </extension>
 
-   <extension point="xbmc.addon.repository" name="Mi repositorio">
+    <extension point="xbmc.addon.repository" name="Mi repositorio">
         <info>https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/addons.xml</info>
         <checksum>https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/addons.xml.md5</checksum>
         <datadir zip="true">https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/</datadir>
     </extension>
+
+
+
 
   <extension point="xbmc.addon.metadata">
     <summary>creado por Team Festa y Tvchopo</summary>
