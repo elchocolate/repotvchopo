@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #------------------------------------------------------------
-# chopocine - XBMC Add-on by Juarrox (juarrox@gmail.com)
+# choposeries - XBMC Add-on by Juarrox (juarrox@gmail.com)
 # Version 0.2.5 (15.05.2014)
 #------------------------------------------------------------
 # License: GPL (http://www.gnu.org/licenses/gpl-3.0.html)
@@ -23,7 +23,7 @@ import plugintools
 addon = xbmcaddon.Addon()
 addonname = '[B][LOWERCASE][CAPITALIZE][COLOR white]chopo[COLOR gold]cine[/CAPITALIZE][/LOWERCASE][/B][/COLOR]'
 icon = addon.getAddonInfo('icon')
-myaddon = xbmcaddon.Addon("plugin.video.chopocine")
+myaddon = xbmcaddon.Addon("plugin.video.choposeries")
 Set_Color = myaddon.getSetting('SetColor')
 Set_View = myaddon.getSetting('SetView')
 
@@ -32,7 +32,7 @@ Set_View = myaddon.getSetting('SetView')
 # Entry point
 def run():
     
-    plugintools.log("---> chopocine.run <---")
+    plugintools.log("---> choposeries.run <---")
     plugintools.set_view(plugintools.LIST)
     
     # Get params
@@ -54,7 +54,7 @@ def run():
 
    
 def main_list(params):
-    plugintools.log("chopocine.main_list ")    
+    plugintools.log("choposeries.main_list ")    
     plugintools.set_view(plugintools.LIST)  
 
 
@@ -126,7 +126,7 @@ def main_list(params):
 
 
 def serie_mitele(params):  
-    plugintools.log("chopocine.miniserie_mitele")    
+    plugintools.log("choposeries.miniserie_mitele")    
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR aqua]------------------------------[COLOR yellow]series mitele[COLOR aqua]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://album.mediaset.es//parrillas/2019/10/04/e3ceb5881a0a1fdaad01296d7554868d1570194115.jpg", fanart = "https://album.mediaset.es/eimg/2017/11/03/RDrSzFS5nu4Eyyq5gGEES2.jpg",  folder = False ) 
     numero= params.get("url")    
     url= "https://mab.mediaset.es/1.0.0/get?oid=bitban&eid=%2FautomaticIndex%2Fmtweb%3Furl%3Dwww%252Emitele%252Ees%252Fseries%252Donline%252F%26page%3D"+numero+"%26id%3Da-z%26size%3D24"
@@ -156,7 +156,7 @@ def serie_mitele(params):
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR aqua]------------------------------[COLOR yellow]series mitele[COLOR aqua]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://album.mediaset.es//parrillas/2019/10/04/e3ceb5881a0a1fdaad01296d7554868d1570194115.jpg", fanart = "https://album.mediaset.es/eimg/2017/11/03/RDrSzFS5nu4Eyyq5gGEES2.jpg",  folder = False )
 
 def serie_mitele_temporadas(params):  
-    plugintools.log("chopocine.miniserie_mitele")    
+    plugintools.log("choposeries.miniserie_mitele")    
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR aqua]------------------------------[COLOR yellow]series mitele[COLOR aqua]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://album.mediaset.es//parrillas/2019/10/04/e3ceb5881a0a1fdaad01296d7554868d1570194115.jpg", fanart = "https://album.mediaset.es/eimg/2017/11/03/RDrSzFS5nu4Eyyq5gGEES2.jpg",  folder = False )
     url= params.get("url") 
     thumbnail= params.get("thumbnail")    
@@ -189,7 +189,7 @@ def serie_mitele_temporadas(params):
 #------------------------------------dilo----------------------------dilo------------------------dilo----------------dilo-------------------------
 
 def series_dilo_menu(params):
-    plugintools.log("chopocine.series_netflix_series "+repr(params))
+    plugintools.log("choposeries.series_netflix_series "+repr(params))
     plugintools.add_item(action = "" , title ="[B][LOWERCASE][CAPITALIZE][COLOR yellow]----------[COLOR white] series [COLOR red]dilo[COLOR yellow]----------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://i.imgur.com/bEWd9YM.jpg", fanart = "https://i.imgur.com/bEWd9YM.jpg",  folder = False ) 
 
     plugintools.add_item(action = "seriesdilo_busca" , title = "[B][LOWERCASE][CAPITALIZE][COLOR %s]series dilo buscador[/CAPITALIZE][/LOWERCASE][/B][/COLOR]"% Set_Color,  thumbnail ="https://i.imgur.com/bEWd9YM.jpg", fanart = "https://i.imgur.com/bEWd9YM.jpg", url="?country%5B0%5D=ES", folder = True )
@@ -220,7 +220,7 @@ def series_dilo_menu(params):
 
 
 def seriesdilo_lonuevo(params):  
-    plugintools.log("chopocine.series_netflix_series "+repr(params))
+    plugintools.log("choposeries.series_netflix_series "+repr(params))
     plugintools.add_item(action = "" , title ="[B][LOWERCASE][CAPITALIZE][COLOR yellow]----------[COLOR white] series dilo[COLOR red] busqueda[COLOR yellow]----------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://i.imgur.com/bEWd9YM.jpg", fanart = "https://i.imgur.com/bEWd9YM.jpg",  folder = False ) 
     request_headers=[]
     request_headers.append(["User-Agent","Mozilla/5.0 (Windows NT 10.0; rv:75.0) Gecko/20100101 Firefox/75.0"])
@@ -236,7 +236,7 @@ def seriesdilo_lonuevo(params):
     plugintools.add_item(action = "" , title ="[B][LOWERCASE][CAPITALIZE][COLOR yellow]----------[COLOR white] series dilo[COLOR red] busqueda[COLOR yellow]----------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://i.imgur.com/bEWd9YM.jpg", fanart = "https://i.imgur.com/bEWd9YM.jpg",  folder = False ) 
 
 def seriesdilo_busca(params):  
-    plugintools.log("chopocine.series_netflix_series "+repr(params))
+    plugintools.log("choposeries.series_netflix_series "+repr(params))
     plugintools.add_item(action = "" , title ="[B][LOWERCASE][CAPITALIZE][COLOR yellow]----------[COLOR white] series dilo[COLOR red] busqueda[COLOR yellow]----------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://i.imgur.com/bEWd9YM.jpg", fanart = "https://i.imgur.com/bEWd9YM.jpg",  folder = False ) 
     dialog = xbmcgui.Dialog()
     d = dialog.input('[B][LOWERCASE][CAPITALIZE][COLOR orange]buscar una peli: ejemplo: [COLOR white]la casa de papel[/COLOR][/CAPITALIZE][/LOWERCASE][/B]', type=xbmcgui.INPUT_ALPHANUM).replace(" ", "+")
@@ -258,7 +258,7 @@ def seriesdilo_busca(params):
 
     
 def series_dilo_paises(params):
-    plugintools.log("chopocine.series_netflix_series "+repr(params))
+    plugintools.log("choposeries.series_netflix_series "+repr(params))
     plugintools.add_item(action = "" , title ="[B][LOWERCASE][CAPITALIZE][COLOR yellow]----------[COLOR white] series [COLOR red]dilo[COLOR yellow]----------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://i.imgur.com/bEWd9YM.jpg", fanart = "https://i.imgur.com/bEWd9YM.jpg",  folder = False ) 
     thumbnail = params.get("thumbnail")
     request_headers=[]
@@ -275,7 +275,7 @@ def series_dilo_paises(params):
     
 
 def series_dilo_generos(params):
-    plugintools.log("chopocine.series_netflix_series "+repr(params))
+    plugintools.log("choposeries.series_netflix_series "+repr(params))
     plugintools.add_item(action = "" , title ="[B][LOWERCASE][CAPITALIZE][COLOR yellow]----------[COLOR white] series [COLOR red]dilo[COLOR yellow]----------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://i.imgur.com/bEWd9YM.jpg", fanart = "https://i.imgur.com/bEWd9YM.jpg",  folder = False ) 
     thumbnail = params.get("thumbnail")
     request_headers=[]
@@ -289,7 +289,7 @@ def series_dilo_generos(params):
         plugintools.add_item(action = "series_dilo" ,url= "?genre%5B%5D="+url, title ="[B][LOWERCASE][CAPITALIZE][COLOR white]series del genero  [COLOR aqua]"+url+"[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" ,thumbnail =thumbnail, fanart = thumbnail, folder = True ) 
     plugintools.add_item(action = "" , title ="[B][LOWERCASE][CAPITALIZE][COLOR yellow]----------[COLOR white] series [COLOR red]dilo[COLOR yellow]----------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://i.imgur.com/bEWd9YM.jpg", fanart = "https://i.imgur.com/bEWd9YM.jpg",  folder = False ) 
 def series_dilo_anios(params):
-    plugintools.log("chopocine.series_netflix_series "+repr(params))
+    plugintools.log("choposeries.series_netflix_series "+repr(params))
     plugintools.add_item(action = "" , title ="[B][LOWERCASE][CAPITALIZE][COLOR yellow]----------[COLOR white] series [COLOR red]dilo[COLOR yellow]----------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://i.imgur.com/bEWd9YM.jpg", fanart = "https://i.imgur.com/bEWd9YM.jpg",  folder = False ) 
     thumbnail = params.get("thumbnail")
     request_headers=[]
@@ -302,11 +302,11 @@ def series_dilo_anios(params):
         
         plugintools.add_item(action = "series_dilo" ,url= "?year%5B%5D="+url, title ="[B][LOWERCASE][CAPITALIZE][COLOR white]series del año [COLOR aqua] "+url+"[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" ,thumbnail =thumbnail, fanart = thumbnail, folder = True ) 
     
-    plugintools.log("chopocine.series_netflix_series "+repr(params))
+    plugintools.log("choposeries.series_netflix_series "+repr(params))
     plugintools.add_item(action = "" , title ="[B][LOWERCASE][CAPITALIZE][COLOR yellow]----------[COLOR white] series [COLOR red]dilo[COLOR yellow]----------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://i.imgur.com/bEWd9YM.jpg", fanart = "https://i.imgur.com/bEWd9YM.jpg",  folder = False )     
 
 def series_dilo(params):
-    plugintools.log("chopocine.series_netflix_series "+repr(params))
+    plugintools.log("choposeries.series_netflix_series "+repr(params))
     plugintools.add_item(action = "" , title ="[B][LOWERCASE][CAPITALIZE][COLOR yellow]----------[COLOR white] series [COLOR red]dilo[COLOR yellow]----------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://i.imgur.com/bEWd9YM.jpg", fanart = "https://i.imgur.com/bEWd9YM.jpg",  folder = False ) 
 
 
@@ -337,7 +337,7 @@ def series_dilo(params):
     
     
 def series_dilo_temporadas(params):
-    plugintools.log("chopocine.series_netflix_series "+repr(params))
+    plugintools.log("choposeries.series_netflix_series "+repr(params))
     plugintools.add_item(action = "" , title ="[B][LOWERCASE][CAPITALIZE][COLOR yellow]----------[COLOR white] series [COLOR red]dilo temporadas[COLOR yellow]----------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://i.imgur.com/bEWd9YM.jpg", fanart = "https://i.imgur.com/bEWd9YM.jpg",  folder = False ) 
     thumbnail = params.get("thumbnail")   
     url = params.get("url")
@@ -361,7 +361,7 @@ def series_dilo_temporadas(params):
     
     
 def series_dilo_capitulos(params):
-    plugintools.log("chopocine.series_netflix_series "+repr(params))
+    plugintools.log("choposeries.series_netflix_series "+repr(params))
     plugintools.add_item(action = "" , title ="[B][LOWERCASE][CAPITALIZE][COLOR yellow]----------[COLOR white] series [COLOR red]dilo capitulos[COLOR yellow]----------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://i.imgur.com/bEWd9YM.jpg", fanart = "https://i.imgur.com/bEWd9YM.jpg",  folder = False ) 
     thumbnail = params.get("thumbnail")   
     custom = params.get("url")
@@ -380,7 +380,7 @@ def series_dilo_capitulos(params):
         plugintools.add_item(action = "series_dilo_servers" ,url =titulo,thumbnail =thumbnail ,fanart =thumbnail, title ="[B][LOWERCASE][CAPITALIZE][COLOR white][COLOR gold] "+titulo+" [COLOR white] "+name+"[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" , folder = True ) 
     plugintools.add_item(action = "" , title ="[B][LOWERCASE][CAPITALIZE][COLOR yellow]----------[COLOR white] series [COLOR red]dilo capitulos[COLOR yellow]----------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://i.imgur.com/bEWd9YM.jpg", fanart = "https://i.imgur.com/bEWd9YM.jpg",  folder = False ) 
 def series_dilo_servers(params):
-    plugintools.log("chopocine.series_netflix_series "+repr(params))
+    plugintools.log("choposeries.series_netflix_series "+repr(params))
     plugintools.add_item(action = "" , title ="[B][LOWERCASE][CAPITALIZE][COLOR yellow]----------[COLOR white] series [COLOR red]dilo servidores[COLOR yellow]----------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://i.imgur.com/bEWd9YM.jpg", fanart = "https://i.imgur.com/bEWd9YM.jpg",  folder = False ) 
     thumbnail = params.get("thumbnail")   
     url = "https://www.dilo.nu/"+params.get("url")+"/"
@@ -421,7 +421,7 @@ def series_dilo_servers(params):
 #especiales-----------------especiales--------------------------------especiales---------------------------------------------especiales----------especiales-----------------especiales--------------------------------especiales---------------------------------------------especiales----------especiales-----------------especiales--------------------------------especiales---------------------------------------------especiales----------especiales-----------------especiales--------------------------------especiales---------------------------------------------especiales----------especiales-----------------especiales--------------------------------especiales---------------------------------------------especiales----------especiales-----------------especiales--------------------------------especiales---------------------------------------------especiales----------especiales-----------------especiales--------------------------------especiales---------------------------------------------especiales----------especiales-----------------especiales--------------------------------especiales---------------------------------------------especiales----------especiales-----------------especiales--------------------------------especiales---------------------------------------------especiales----------especiales-----------------especiales--------------------------------especiales---------------------------------------------especiales----------
 
 def series_netflix(params):
-    plugintools.log("chopocine.series_netflix "+repr(params))
+    plugintools.log("choposeries.series_netflix "+repr(params))
     plugintools.add_item(action = "" , title ="[B][LOWERCASE][CAPITALIZE][COLOR yellow]----[COLOR orange] series netflix,movistar,hbo,amazon,a3 player[COLOR yellow]----[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://cronicaglobal.elespanol.com/uploads/s1/67/38/06/3/series-streaming.jpeg", fanart = "https://cronicaglobal.elespanol.com/uploads/s1/67/38/06/3/series-streaming.jpeg",  folder = False )    
     thumbnail = params.get("thumbnail") 
     fanart = params.get("thumbnail")
@@ -446,7 +446,7 @@ def series_netflix(params):
 
 
 def series_netflix_series(params):
-    plugintools.log("chopocine.series_netflix_series "+repr(params))
+    plugintools.log("choposeries.series_netflix_series "+repr(params))
     plugintools.add_item(action = "" , title ="[B][LOWERCASE][CAPITALIZE][COLOR yellow]----[COLOR orange] series netflix,movistar,hbo,amazon,a3 player[COLOR yellow]----[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://cronicaglobal.elespanol.com/uploads/s1/67/38/06/3/series-streaming.jpeg", fanart = "https://cronicaglobal.elespanol.com/uploads/s1/67/38/06/3/series-streaming.jpeg",  folder = False )    
     thumbnail = params.get("thumbnail") 
     proove = params.get("url")
@@ -484,7 +484,7 @@ def series_netflix_series(params):
 
 
 def retrotv_series_busca(params):  
-    plugintools.log("chopocine.miniserie_mitele")    
+    plugintools.log("choposeries.miniserie_mitele")    
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR aqua]------------------------------[COLOR %s]retrotv series [COLOR aqua]------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]"% Set_Color,  thumbnail ="https://i.imgur.com/hkMvrC4.jpg", fanart = "https://i.imgur.com/oArwph7.jpg",  folder = False )   
     dialog = xbmcgui.Dialog()
     d = dialog.input('[B][LOWERCASE][CAPITALIZE][COLOR orange]buscar una peli: ejemplo: [COLOR white]la casa de papel[/COLOR][/CAPITALIZE][/LOWERCASE][/B]', type=xbmcgui.INPUT_ALPHANUM).replace(" ", "+")
@@ -504,7 +504,7 @@ def retrotv_series_busca(params):
 
 
 def retrotv_series_anios(params):  
-    plugintools.log("chopocine.miniserie_mitele")    
+    plugintools.log("choposeries.miniserie_mitele")    
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR aqua]------------------------------[COLOR %s]retrotv series [COLOR aqua]------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]"% Set_Color,  thumbnail ="https://i.imgur.com/hkMvrC4.jpg", fanart = "https://i.imgur.com/oArwph7.jpg",  folder = False )   
     url = params.get("url")
     thumbnail = params.get("thumbnail")
@@ -519,7 +519,7 @@ def retrotv_series_anios(params):
         plugintools.add_item(action = "retrotv_series" , title ="[B][LOWERCASE][CAPITALIZE][COLOR white]retroseries del año "+titulo+"[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail =thumbnail, fanart = thumbnail,url=url,  folder = True )
 
 def retrotv_series_generos(params):  
-    plugintools.log("chopocine.miniserie_mitele")    
+    plugintools.log("choposeries.miniserie_mitele")    
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR aqua]------------------------------[COLOR %s]retrotv series [COLOR aqua]------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]"% Set_Color,  thumbnail ="https://i.imgur.com/hkMvrC4.jpg", fanart = "https://i.imgur.com/oArwph7.jpg",  folder = False )   
     url = params.get("url")
     thumbnail = params.get("thumbnail")
@@ -537,7 +537,7 @@ def retrotv_series_generos(params):
 
 
 def retrotv_series(params):  
-    plugintools.log("chopocine.miniserie_mitele")    
+    plugintools.log("choposeries.miniserie_mitele")    
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR aqua]------------------------------[COLOR %s]retrotv series [COLOR aqua]------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]"% Set_Color,  thumbnail ="https://i.imgur.com/hkMvrC4.jpg", fanart = "https://i.imgur.com/oArwph7.jpg",  folder = False )   
     url = params.get("url")
     request_headers=[]
@@ -558,7 +558,7 @@ def retrotv_series(params):
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR aqua]------------------------------[COLOR %s]retrotv series [COLOR aqua]------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]"% Set_Color,  thumbnail ="https://i.imgur.com/hkMvrC4.jpg", fanart = "https://i.imgur.com/oArwph7.jpg",  folder = False ) 
 
 def retrotv_series_temporadas(params):  
-    plugintools.log("chopocine.miniserie_mitele")    
+    plugintools.log("choposeries.miniserie_mitele")    
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR aqua]------------------------------[COLOR %s]retrotv series [COLOR aqua]------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]"% Set_Color,  thumbnail ="https://i.imgur.com/hkMvrC4.jpg", fanart = "https://i.imgur.com/oArwph7.jpg",  folder = False )   
     url = params.get("url")
     thumbnail = params.get("thumbnail")
@@ -580,7 +580,7 @@ def retrotv_series_temporadas(params):
     
     
 def retrotv_series_server(params):  
-    plugintools.log("chopocine.miniserie_mitele")    
+    plugintools.log("choposeries.miniserie_mitele")    
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR aqua]------------------------------[COLOR %s]retrotv series [COLOR aqua]------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]"% Set_Color,  thumbnail ="https://i.imgur.com/hkMvrC4.jpg", fanart = "https://i.imgur.com/oArwph7.jpg",  folder = False )  
     url = params.get("url")
     thumbnail = params.get("thumbnail")
@@ -609,7 +609,7 @@ def retrotv_series_server(params):
         
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR aqua]------------------------------[COLOR %s]retrotv series [COLOR aqua]------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]"% Set_Color,  thumbnail ="https://i.imgur.com/hkMvrC4.jpg", fanart = "https://i.imgur.com/oArwph7.jpg",  folder = False ) 
 def miniserie(params):  
-    plugintools.log("chopocine.miniserie_mitele")    
+    plugintools.log("choposeries.miniserie_mitele")    
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR %s]miniseries [/CAPITALIZE][/LOWERCASE][/B][/COLOR]"% Set_Color,  thumbnail ="https://as2.ftcdn.net/jpg/01/72/36/71/500_F_172367168_EBfTeRi6JI3vDUbwGmR1CKg51AsqZWPe.jpg", fanart = "https://as2.ftcdn.net/jpg/01/72/36/71/500_F_172367168_EBfTeRi6JI3vDUbwGmR1CKg51AsqZWPe.jpg",  folder = False )   
     url= "https://www.filmaffinity.com/es/listtopmovies.php?list_id=345"
     request_headers=[]
@@ -629,7 +629,7 @@ def miniserie(params):
         
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR %s]miniseries [/CAPITALIZE][/LOWERCASE][/B][/COLOR]"% Set_Color,  thumbnail ="https://as2.ftcdn.net/jpg/01/72/36/71/500_F_172367168_EBfTeRi6JI3vDUbwGmR1CKg51AsqZWPe.jpg", fanart = "https://as2.ftcdn.net/jpg/01/72/36/71/500_F_172367168_EBfTeRi6JI3vDUbwGmR1CKg51AsqZWPe.jpg",  folder = False )   
 def miniseries_buscador(params):
-    plugintools.log("chopocine.series_papaya_buscador "+repr(params))
+    plugintools.log("choposeries.series_papaya_buscador "+repr(params))
     plugintools.set_view(plugintools.LIST)
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR gold]---[COLOR aqua]series papaya resultado de la busqueda[COLOR gold]---[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="http://i.imgur.com/P1D92cf.png", fanart ="http://i.imgur.com/P1D92cf.png",  folder = False ) 
     url = params.get("url")
@@ -650,7 +650,7 @@ def miniseries_buscador(params):
 #-----------tve------------------------tve------------------------------------tve--------------------------tve-----------------------tve------------#-----------tve------------------------tve------------------------------------tve--------------------------tve-----------------------tve------------  #-----------tve------------------------tve------------------------------------tve--------------------------tve-----------------------tve------------  #-----------tve------------------------tve------------------------------------tve--------------------------tve-----------------------tve------------  #-----------tve------------------------tve------------------------------------tve--------------------------tve-----------------------tve------------  #-----------tve------------------------tve------------------------------------tve--------------------------tve-----------------------tve------------  #-----------tve------------------------tve------------------------------------tve--------------------------tve-----------------------tve------------  #-----------tve------------------------tve------------------------------------tve--------------------------tve-----------------------tve------------  #-----------tve------------------------tve------------------------------------tve--------------------------tve-----------------------tve------------  #-----------tve------------------------tve------------------------------------tve--------------------------tve-----------------------tve------------  #-----------tve------------------------tve------------------------------------tve--------------------------tve-----------------------tve------------     
   
 def series_tve_series_retro(params):
-    plugintools.log("chopocine.cinetuxanios "+repr(params))
+    plugintools.log("choposeries.cinetuxanios "+repr(params))
     plugintools.add_item(action = "" , title ="[B][LOWERCASE][CAPITALIZE][COLOR yellow]------------[COLOR white] tve[COLOR yellow]------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://images-na.ssl-images-amazon.com/images/I/516rC6urOwL.png", fanart = "https://images-na.ssl-images-amazon.com/images/I/516rC6urOwL.png",  folder = False )    
     thumbnail = params.get("thumbnail") 
     url = params.get("url")
@@ -674,7 +674,7 @@ def series_tve_series_retro(params):
         plugintools.add_item( action="series_tve_series_retro" , title = "[B][LOWERCASE][CAPITALIZE][COLOR yellow][COLOR lime]ir a la pagina siguiente[/B][/COLOR][/CAPITALIZE][/LOWERCASE]", url= 'https://www.rtve.es'+siguiente, thumbnail = "https://www.periodicoelpunto.com/wp-content/uploads/2019/03/flecha-siguiente.png",fanart = "https://www.periodicoelpunto.com/wp-content/uploads/2019/03/flecha-siguiente.png", folder=True )  
 
 def series_tve(params):
-    plugintools.log("chopocine.cinetuxanios "+repr(params))
+    plugintools.log("choposeries.cinetuxanios "+repr(params))
     plugintools.add_item(action = "" , title ="[B][LOWERCASE][CAPITALIZE][COLOR yellow]------------[COLOR white] tve[COLOR yellow]------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://images-na.ssl-images-amazon.com/images/I/516rC6urOwL.png", fanart = "https://images-na.ssl-images-amazon.com/images/I/516rC6urOwL.png",  folder = False )    
     thumbnail = params.get("thumbnail") 
     fanart = params.get("thumbnail")
@@ -694,7 +694,7 @@ def series_tve(params):
 
     
 def series_tve_series(params):
-    plugintools.log("chopocine.cinetuxanios "+repr(params))
+    plugintools.log("choposeries.cinetuxanios "+repr(params))
     plugintools.add_item(action = "" , title ="[B][LOWERCASE][CAPITALIZE][COLOR yellow]------------[COLOR white] tve[COLOR yellow]------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://images-na.ssl-images-amazon.com/images/I/516rC6urOwL.png", fanart = "https://images-na.ssl-images-amazon.com/images/I/516rC6urOwL.png",  folder = False )    
     thumbnail = params.get("thumbnail") 
     url = params.get("url")
@@ -726,7 +726,7 @@ def series_tve_series(params):
     
     
 def series_tve_temporada(params):
-    plugintools.log("chopocine.cinetuxanios "+repr(params))
+    plugintools.log("choposeries.cinetuxanios "+repr(params))
     plugintools.add_item(action = "" , title ="[B][LOWERCASE][CAPITALIZE][COLOR yellow]------------[COLOR white] tve[COLOR yellow]------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://images-na.ssl-images-amazon.com/images/I/516rC6urOwL.png", fanart = "https://images-na.ssl-images-amazon.com/images/I/516rC6urOwL.png",  folder = False )    
     thumbnail = params.get("thumbnail") 
     url='https://www.rtve.es'+params.get("url")
@@ -786,7 +786,7 @@ def javi_descarga(params):
 
 #------------------MITELE-------------------MITELE--------------------------MITELE-------------------------MITELE--------------------MITELE-----------#------------------MITELE-------------------MITELE--------------------------MITELE-------------------------MITELE--------------------MITELE-----------#------------------MITELE-------------------MITELE--------------------------MITELE-------------------------MITELE--------------------MITELE-----------#------------------MITELE-------------------MITELE--------------------------MITELE-------------------------MITELE--------------------MITELE-----------#------------------MITELE-------------------MITELE--------------------------MITELE-------------------------MITELE--------------------MITELE-----------#------------------MITELE-------------------MITELE--------------------------MITELE-------------------------MITELE--------------------MITELE-----------#------------------MITELE-------------------MITELE--------------------------MITELE-------------------------MITELE--------------------MITELE-----------#------------------MITELE-------------------MITELE--------------------------MITELE-------------------------MITELE--------------------MITELE-----------#------------------MITELE-------------------MITELE--------------------------MITELE-------------------------MITELE--------------------MITELE-----------#------------------MITELE-------------------MITELE--------------------------MITELE-------------------------MITELE--------------------MITELE-----------#------------------MITELE-------------------MITELE--------------------------MITELE-------------------------MITELE--------------------MITELE-----------#------------------MITELE-------------------MITELE--------------------------MITELE-------------------------MITELE--------------------MITELE-----------#------------------MITELE-------------------MITELE--------------------------MITELE-------------------------MITELE--------------------MITELE-----------
 def miniserie_mitele(params):  
-    plugintools.log("chopocine.miniserie_mitele")    
+    plugintools.log("choposeries.miniserie_mitele")    
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR aqua]------------------------------[COLOR yellow]miniseries mitele[COLOR aqua]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://album.mediaset.es//parrillas/2019/10/04/e3ceb5881a0a1fdaad01296d7554868d1570194115.jpg", fanart = "https://album.mediaset.es/eimg/2017/11/03/RDrSzFS5nu4Eyyq5gGEES2.jpg",  folder = False )   
     url= "https://mab.mediaset.es/1.0.0/get?oid=bitban&eid=%2FautomaticIndex%2Fmtweb%3Furl%3Dwww%252Emitele%252Ees%252Fminiseries%252F%26page%3D1%26id%3Da-z%26size%3D24"
     request_headers=[]
@@ -808,7 +808,7 @@ def miniserie_mitele(params):
 
 
 def miniserie_mitele_server(params):  
-    plugintools.log("chopocine.miniserie_mitele_server")    
+    plugintools.log("choposeries.miniserie_mitele_server")    
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR aqua]------------------------------[COLOR yellow]series mitele[COLOR aqua]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://album.mediaset.es//parrillas/2019/10/04/e3ceb5881a0a1fdaad01296d7554868d1570194115.jpg", fanart = "https://album.mediaset.es/eimg/2017/11/03/RDrSzFS5nu4Eyyq5gGEES2.jpg",  folder = False )     
     url = params.get("url")
     thumbnail = params.get("thumbnail")
@@ -835,7 +835,7 @@ def miniserie_mitele_server(params):
         
         
 def miniserie_mitele_reproducir(params):  
-    plugintools.log("chopocine.miniserie_mitele_server")    
+    plugintools.log("choposeries.miniserie_mitele_server")    
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR aqua]------------------------------[COLOR yellow]dar en reproducir [COLOR aqua]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://album.mediaset.es//parrillas/2019/10/04/e3ceb5881a0a1fdaad01296d7554868d1570194115.jpg", fanart = "https://album.mediaset.es/eimg/2017/11/03/RDrSzFS5nu4Eyyq5gGEES2.jpg",  folder = False )   
     url1 = params.get("url")
     thumbnail = params.get("thumbnail")
@@ -938,7 +938,7 @@ def danko_menu(params):
 
 
 def danko_busca(params):  
-    plugintools.log("chopocine.pepeseries_temporadas")    
+    plugintools.log("choposeries.pepeseries_temporadas")    
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR aqua]------------------------------[COLOR yellow]series danko buscador[COLOR aqua]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://beautifulgishi.com/wp-content/uploads/2018/09/series.jpg", fanart = "https://beautifulgishi.com/wp-content/uploads/2018/09/series.jpg",  folder = False )      
     dialog = xbmcgui.Dialog()
     d = dialog.input('[B][LOWERCASE][CAPITALIZE][COLOR orange]buscar una peli: ejemplo: [COLOR white]la casa de papel[/COLOR][/CAPITALIZE][/LOWERCASE][/B]', type=xbmcgui.INPUT_ALPHANUM).replace(" ", "+")
@@ -965,7 +965,7 @@ def danko_busca(params):
     
 def series_danko_series_letras(params):
     plugintools.set_view(plugintools.LIST)  
-    plugintools.log("chopocine.series_danko_series_letras")    
+    plugintools.log("choposeries.series_danko_series_letras")    
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR aqua]------------------------------[COLOR yellow]series danko[COLOR aqua]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://beautifulgishi.com/wp-content/uploads/2018/09/series.jpg", fanart = "https://beautifulgishi.com/wp-content/uploads/2018/09/series.jpg",  folder = False )       
     url = params.get("url")
     request_headers=[]
@@ -983,7 +983,7 @@ def series_danko_series_letras(params):
 
 def series_danko_series(params):
     plugintools.set_view(plugintools.LIST)  
-    plugintools.log("chopocine.series_danko_series_letras")    
+    plugintools.log("choposeries.series_danko_series_letras")    
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR aqua]------------------------------[COLOR yellow]series danko[COLOR aqua]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://beautifulgishi.com/wp-content/uploads/2018/09/series.jpg", fanart = "https://beautifulgishi.com/wp-content/uploads/2018/09/series.jpg",  folder = False )       
     url = params.get("url")
     request_headers=[]
@@ -1005,7 +1005,7 @@ def series_danko_series(params):
     
 def series_danko_temporadas(params):
     plugintools.set_view(plugintools.LIST)    
-    plugintools.log("chopocine.series_24_series")    
+    plugintools.log("choposeries.series_24_series")    
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR aqua]------------------------------[COLOR yellow]series danko[COLOR aqua]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://beautifulgishi.com/wp-content/uploads/2018/09/series.jpg", fanart = "https://beautifulgishi.com/wp-content/uploads/2018/09/series.jpg",  folder = False )     
     url = params.get("url")
     thumbnail = params.get("thumbnail")
@@ -1027,7 +1027,7 @@ def series_danko_temporadas(params):
 
 def series_danko_servers(params):
     plugintools.set_view(plugintools.LIST)    
-    plugintools.log("chopocine.series_danko_servers")    
+    plugintools.log("choposeries.series_danko_servers")    
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR aqua]------------------------------[COLOR yellow]series danko[COLOR aqua]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://beautifulgishi.com/wp-content/uploads/2018/09/series.jpg", fanart = "https://beautifulgishi.com/wp-content/uploads/2018/09/series.jpg",  folder = False )   
     url = params.get("url")
     title = params.get("title")
@@ -1108,7 +1108,7 @@ def pepeseries_menu(params):
         plugintools.add_item(action = "play_links" ,title="[B][LOWERCASE][CAPITALIZE][COLOR red]"+r+"[/CAPITALIZE][/LOWERCASE][/B][/COLOR]",   folder=False,  isPlayable = True )  
 
 def pepeseries_busca(params):  
-    plugintools.log("chopocine.pepeseries_temporadas")    
+    plugintools.log("choposeries.pepeseries_temporadas")    
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR aqua]------------------------------[COLOR yellow]mundoseries[COLOR aqua]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://i.imgur.com/Du21mll.jpg", fanart = "https://i.imgur.com/Du21mll.jpg",  folder = False )       
     dialog = xbmcgui.Dialog()
     d = dialog.input('[B][LOWERCASE][CAPITALIZE][COLOR orange]buscar una peli: ejemplo: [COLOR white]rocky[/COLOR][/CAPITALIZE][/LOWERCASE][/B]', type=xbmcgui.INPUT_ALPHANUM).replace(" ", "%20")
@@ -1130,7 +1130,7 @@ def pepeseries_busca(params):
 
 
 def pepe_series_ultimos_capitulos(params):
-    plugintools.log("chopocine.pepe_series_ultimos_capitulos "+repr(params))    
+    plugintools.log("choposeries.pepe_series_ultimos_capitulos "+repr(params))    
     thumbnail = params.get("thumbnail") 
     fanart = params.get("thumbnail")
     page = params.get("plot")
@@ -1152,7 +1152,7 @@ def pepe_series_ultimos_capitulos(params):
 
 
 def pepe_series_ultimos_capitulos(params):
-    plugintools.log("chopocine.pepe_series_ultimos_capitulos "+repr(params))    
+    plugintools.log("choposeries.pepe_series_ultimos_capitulos "+repr(params))    
     thumbnail = params.get("thumbnail") 
     fanart = params.get("thumbnail")
     page = params.get("plot")
@@ -1173,7 +1173,7 @@ def pepe_series_ultimos_capitulos(params):
                
 
 def pepe_series_anios(params):
-    plugintools.log("chopocine.cinetuxanios "+repr(params))    
+    plugintools.log("choposeries.cinetuxanios "+repr(params))    
     thumbnail = params.get("thumbnail") 
     fanart = params.get("thumbnail")
     page = params.get("plot")
@@ -1187,7 +1187,7 @@ def pepe_series_anios(params):
         plugintools.add_item(action = "pepeseries_series_anios" , title = "[B][LOWERCASE][CAPITALIZE][COLOR yellow]series del año [COLOR white]"+genero+"[/COLOR][/CAPITALIZE][/LOWERCASE][/B]", url = url, plot= page,thumbnail ="https://st-listas.20minutos.es/images/2019-06/440207/5476186_640px.jpg?1567524986", fanart = "https://i.imgur.com/x89QdGV.jpg", folder = True )
 
 def pepeseries_series_anios(params):  
-    plugintools.log("chopocine.mundoseries_temporadas") 
+    plugintools.log("choposeries.mundoseries_temporadas") 
     plugintools.set_view(plugintools.TV_SHOWS)    
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR aqua]----[COLOR yellow]pepeseries[COLOR aqua]----[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://st-listas.20minutos.es/images/2019-06/440207/5476186_640px.jpg?1567524986", fanart = "https://i.imgur.com/x89QdGV.jpg",  folder = False ) 
     page=  params.get("plot")    
@@ -1215,7 +1215,7 @@ def pepeseries_series_anios(params):
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR aqua]----[COLOR yellow]pepeseries[COLOR aqua]----[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://st-listas.20minutos.es/images/2019-06/440207/5476186_640px.jpg?1567524986", fanart = "https://i.imgur.com/x89QdGV.jpg",  folder = False ) 
 
 def pepe_series_generos(params):
-    plugintools.log("chopocine.cinetuxanios "+repr(params))    
+    plugintools.log("choposeries.cinetuxanios "+repr(params))    
     thumbnail = params.get("thumbnail") 
     fanart = params.get("thumbnail")
     page = params.get("plot")
@@ -1229,7 +1229,7 @@ def pepe_series_generos(params):
         plugintools.add_item(action = "pepeseries" , title = "[B][LOWERCASE][CAPITALIZE][COLOR yellow]series del genero [COLOR white]"+genero+"[/COLOR][/CAPITALIZE][/LOWERCASE][/B]", url = url, plot= page,thumbnail ="https://st-listas.20minutos.es/images/2019-06/440207/5476186_640px.jpg?1567524986", fanart = "https://i.imgur.com/x89QdGV.jpg", folder = True )
 
 def pepeseries(params):  
-    plugintools.log("chopocine.mundoseries_temporadas") 
+    plugintools.log("choposeries.mundoseries_temporadas") 
     plugintools.set_view(plugintools.TV_SHOWS)    
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR aqua]----[COLOR yellow]pepeseries[COLOR aqua]----[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://st-listas.20minutos.es/images/2019-06/440207/5476186_640px.jpg?1567524986", fanart = "https://i.imgur.com/x89QdGV.jpg",  folder = False ) 
     page=  params.get("plot")    
@@ -1258,7 +1258,7 @@ def pepeseries(params):
 
 
 def pepeseries_temporadas(params):  
-    plugintools.log("chopocine.pepeseries_temporadas") 
+    plugintools.log("choposeries.pepeseries_temporadas") 
     plugintools.set_view(plugintools.LIST)    
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR aqua]----[COLOR yellow]pepeseries temporadas[COLOR aqua]----[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://st-listas.20minutos.es/images/2019-06/440207/5476186_640px.jpg?1567524986", fanart = "https://i.imgur.com/x89QdGV.jpg",  folder = False ) 
     thumbnail = params.get("thumbnail")     
@@ -1275,7 +1275,7 @@ def pepeseries_temporadas(params):
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR aqua]----[COLOR yellow]pepeseries temporadas[COLOR aqua]----[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://st-listas.20minutos.es/images/2019-06/440207/5476186_640px.jpg?1567524986", fanart = "https://i.imgur.com/x89QdGV.jpg",  folder = False ) 
 
 def pepeseries_capitulos(params):  
-    plugintools.log("chopocine.pepeseries_temporadas") 
+    plugintools.log("choposeries.pepeseries_temporadas") 
     plugintools.set_view(plugintools.LIST)    
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR aqua]----[COLOR yellow]pepeseries capitulos[COLOR aqua]----[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://st-listas.20minutos.es/images/2019-06/440207/5476186_640px.jpg?1567524986", fanart = "https://i.imgur.com/x89QdGV.jpg",  folder = False ) 
     thumbnail = params.get("thumbnail")     
@@ -1297,7 +1297,7 @@ def pepeseries_capitulos(params):
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR aqua]----[COLOR yellow]pepeseries capitulos[COLOR aqua]----[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://st-listas.20minutos.es/images/2019-06/440207/5476186_640px.jpg?1567524986", fanart = "https://i.imgur.com/x89QdGV.jpg",  folder = False ) 
 
 def pepeseries_episodios(params):  
-    plugintools.log("chopocine.pepeseries_temporadas") 
+    plugintools.log("choposeries.pepeseries_temporadas") 
     plugintools.set_view(plugintools.LIST)    
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR aqua]----[COLOR yellow]pepeseries servidores[COLOR aqua]----[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://st-listas.20minutos.es/images/2019-06/440207/5476186_640px.jpg?1567524986", fanart = "https://i.imgur.com/x89QdGV.jpg",  folder = False ) 
     thumbnail = params.get("thumbnail")     
@@ -1372,7 +1372,7 @@ def pepeseries_episodios(params):
 #----------------------MUNDOSERIES---------------MUNDOSERIES --------------------------MUNDOSERIES ------------------------MUNDOSERIES ---------- #----------------------MUNDOSERIES---------------MUNDOSERIES --------------------------MUNDOSERIES ------------------------MUNDOSERIES ---------- #----------------------MUNDOSERIES---------------MUNDOSERIES --------------------------MUNDOSERIES ------------------------MUNDOSERIES ---------- #----------------------MUNDOSERIES---------------MUNDOSERIES --------------------------MUNDOSERIES ------------------------MUNDOSERIES ---------- #----------------------MUNDOSERIES---------------MUNDOSERIES --------------------------MUNDOSERIES ------------------------MUNDOSERIES ---------- #----------------------MUNDOSERIES---------------MUNDOSERIES --------------------------MUNDOSERIES ------------------------MUNDOSERIES ---------- #----------------------MUNDOSERIES---------------MUNDOSERIES --------------------------MUNDOSERIES ------------------------MUNDOSERIES ---------- #----------------------MUNDOSERIES---------------MUNDOSERIES --------------------------MUNDOSERIES ------------------------MUNDOSERIES ---------- #----------------------MUNDOSERIES---------------MUNDOSERIES --------------------------MUNDOSERIES ------------------------MUNDOSERIES ---------- #----------------------MUNDOSERIES---------------MUNDOSERIES --------------------------MUNDOSERIES ------------------------MUNDOSERIES ---------- 
 
 def mundo_series_menu(params):
-    plugintools.log("chopocine.mundo_series_menu ")    
+    plugintools.log("choposeries.mundo_series_menu ")    
     plugintools.set_view(plugintools.LIST)  
 
 
@@ -1412,7 +1412,7 @@ def mundo_series_menu(params):
  
  
 def mundoseries_busca(params):  
-    plugintools.log("chopocine.mundoseries_temporadas")    
+    plugintools.log("choposeries.mundoseries_temporadas")    
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR aqua]------------------------------[COLOR yellow]mundoseries[COLOR aqua]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://i.imgur.com/Du21mll.jpg", fanart = "https://i.imgur.com/Du21mll.jpg",  folder = False )       
     dialog = xbmcgui.Dialog()
     d = dialog.input('[B][LOWERCASE][CAPITALIZE][COLOR orange]buscar una peli: ejemplo: [COLOR white]rocky[/COLOR][/CAPITALIZE][/LOWERCASE][/B]', type=xbmcgui.INPUT_ALPHANUM).replace(" ", "+")
@@ -1435,7 +1435,7 @@ def mundoseries_busca(params):
 
 def mundoseries_generos(params):  
     plugintools.set_view(plugintools.LIST)
-    plugintools.log("chopocine.mundoseries_temporadas")    
+    plugintools.log("choposeries.mundoseries_temporadas")    
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR aqua]------------------------------[COLOR yellow]mundoseries[COLOR aqua]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://i.imgur.com/Du21mll.jpg", fanart = "https://i.imgur.com/Du21mll.jpg",  folder = False )       
     url = params.get("url")
     plot = params.get("plot")
@@ -1454,7 +1454,7 @@ def mundoseries_generos(params):
 
 def mundoseries_anios(params):  
     plugintools.set_view(plugintools.LIST)
-    plugintools.log("chopocine.mundoseries_temporadas")    
+    plugintools.log("choposeries.mundoseries_temporadas")    
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR aqua]------------------------------[COLOR yellow]mundoseries[COLOR aqua]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://i.imgur.com/Du21mll.jpg", fanart = "https://i.imgur.com/Du21mll.jpg",  folder = False )       
     url = params.get("url")
     plot = params.get("plot")
@@ -1473,7 +1473,7 @@ def mundoseries_anios(params):
     
 def mundoseries_ultimoscapis(params):  
     plugintools.set_view(plugintools.LIST)
-    plugintools.log("chopocine.mundoseries_temporadas")    
+    plugintools.log("choposeries.mundoseries_temporadas")    
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR aqua]------------------------------[COLOR yellow]mundoseries[COLOR aqua]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://i.imgur.com/Du21mll.jpg", fanart = "https://i.imgur.com/Du21mll.jpg",  folder = False )       
     url = params.get("url")
     plot = params.get("plot")
@@ -1496,7 +1496,7 @@ def mundoseries_ultimoscapis(params):
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR aqua]------------------------------[COLOR yellow]mundoseries[COLOR aqua]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://i.imgur.com/Du21mll.jpg", fanart = "https://i.imgur.com/Du21mll.jpg",  folder = False )           
     
 def mundoseries_series(params):  
-    plugintools.log("chopocine.mundoseries_series")    
+    plugintools.log("choposeries.mundoseries_series")    
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR aqua]------------------------------[COLOR yellow]mundoseries[COLOR aqua]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://i.imgur.com/Du21mll.jpg", fanart = "https://i.imgur.com/Du21mll.jpg",  folder = False )  
     plugintools.set_view(plugintools.LIST)    
     url = params.get("url")
@@ -1519,7 +1519,7 @@ def mundoseries_series(params):
         
 def mundoseries_temporadas(params):  
     plugintools.set_view(plugintools.LIST)
-    plugintools.log("chopocine.mundoseries_temporadas")    
+    plugintools.log("choposeries.mundoseries_temporadas")    
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR aqua]------------------------------[COLOR yellow]mundoseries[COLOR aqua]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://i.imgur.com/Du21mll.jpg", fanart = "https://i.imgur.com/Du21mll.jpg",  folder = False )       
     url = params.get("url")
     plot = params.get("plot")
@@ -1543,7 +1543,7 @@ def mundoseries_temporadas(params):
         plugintools.add_item(action = "mundoseries_servers" , title ="[B][LOWERCASE][CAPITALIZE][COLOR yellow]"+titulo2+" [COLOR white]---"+titulo+"[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", url=url, plot=plot, thumbnail=thumbnail,fanart =thumbnail,  folder = True ) 
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR aqua]------------------------------[COLOR yellow]mundoseries[COLOR aqua]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://i.imgur.com/Du21mll.jpg", fanart = "https://i.imgur.com/Du21mll.jpg",  folder = False )         
 def mundoseries_servers(params):  
-    plugintools.log("chopocine.series_papaya_estrenos")
+    plugintools.log("choposeries.series_papaya_estrenos")
     
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR aqua]------------------------------[COLOR yellow]mundoseries[COLOR aqua]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://i.imgur.com/Du21mll.jpg", fanart = "https://i.imgur.com/Du21mll.jpg",  folder = False )  
     thumbnail = params.get("thumbnail")
@@ -1666,7 +1666,7 @@ def menu_seriespapaya(params):
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR aqua]------------------------------[COLOR yellow]menu series papaya[COLOR aqua]--------------------------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="https://i.imgur.com/9a16ENI.jpg", fanart = "https://i.imgur.com/9a16ENI.jpg",  folder = False )   
 
 def series_papaya_buscador(params):
-    plugintools.log("chopocine.series_papaya_buscador "+repr(params))
+    plugintools.log("choposeries.series_papaya_buscador "+repr(params))
     plugintools.set_view(plugintools.LIST)
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR gold]---[COLOR aqua]series papaya resultado de la busqueda[COLOR gold]---[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="http://i.imgur.com/P1D92cf.png", fanart ="http://i.imgur.com/P1D92cf.png",  folder = False ) 
     dialog = xbmcgui.Dialog()
@@ -1686,7 +1686,7 @@ def series_papaya_buscador(params):
         plugintools.add_item(action = "series_papaya_temporadas" , thumbnail=foto,fanart =foto,title ="[B][LOWERCASE][CAPITALIZE][COLOR white]"+titulo+"[/CAPITALIZE][/LOWERCASE][/B][/COLOR]",url= url,   folder = True )
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR gold]---[COLOR aqua]series papaya resultado de la busqueda[COLOR gold]---[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="http://i.imgur.com/P1D92cf.png", fanart ="http://i.imgur.com/P1D92cf.png",  folder = False )   
 def series_papaya_estrenos(params):  
-    plugintools.log("chopocine.series_papaya_estrenos")
+    plugintools.log("choposeries.series_papaya_estrenos")
     
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR yellow]-----[COLOR aqua]series papaya novedades[COLOR yellow]-----[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="http://i.imgur.com/P1D92cf.png", fanart ="http://i.imgur.com/P1D92cf.png",  folder = False )  
       
@@ -1711,7 +1711,7 @@ def series_papaya_estrenos(params):
 
 
 def letras_papaya(params):  
-    plugintools.log("chopocine.series_papaya")
+    plugintools.log("choposeries.series_papaya")
     
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR yellow]-----[COLOR aqua]series papaya letras[COLOR yellow]-----[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="http://i.imgur.com/P1D92cf.png", fanart ="http://i.imgur.com/P1D92cf.png",  folder = False )  
     plugintools.set_view(plugintools.LIST)  
@@ -1728,7 +1728,7 @@ def letras_papaya(params):
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR yellow]-----[COLOR aqua]series papaya letras[COLOR yellow]-----[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="http://i.imgur.com/P1D92cf.png", fanart ="http://i.imgur.com/P1D92cf.png",  folder = False )
     
 def seriesletras_papaya(params):  
-    plugintools.log("chopocine.series_papaya")
+    plugintools.log("choposeries.series_papaya")
     
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR yellow]-----[COLOR aqua]series papaya[COLOR yellow]-----[/CAPITALIZE][/LOWERCASE][/B][/COLOR]",thumbnail ="http://i.imgur.com/P1D92cf.png", fanart ="http://i.imgur.com/P1D92cf.png",  folder = False )  
      
@@ -1761,7 +1761,7 @@ def seriesletras_papaya(params):
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR yellow]-----[COLOR aqua]series papaya[COLOR yellow]-----[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="http://i.imgur.com/P1D92cf.png", fanart ="http://i.imgur.com/P1D92cf.png",  folder = False )  
 
 def series_papaya_novedades(params):  
-    plugintools.log("chopocine.series_papaya_novedades")
+    plugintools.log("choposeries.series_papaya_novedades")
     
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR yellow]---------------------[COLOR aqua]series papaya novedades[COLOR yellow]---------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="http://i.imgur.com/P1D92cf.png", fanart ="http://i.imgur.com/P1D92cf.png",  folder = False )  
     plugintools.set_view(plugintools.MOVIES,502)  
@@ -1784,7 +1784,7 @@ def series_papaya_novedades(params):
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR yellow]---------------------[COLOR aqua]series papaya novedades[COLOR yellow]---------------------[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="http://i.imgur.com/P1D92cf.png", fanart ="http://i.imgur.com/P1D92cf.png",  folder = False )       
         
 def series_papaya_temporadas(params):  
-    plugintools.log("chopocine.series_papaya")
+    plugintools.log("choposeries.series_papaya")
     
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR yellow]----[COLOR aqua]series papaya[COLOR yellow]----[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="http://i.imgur.com/P1D92cf.png", fanart ="http://i.imgur.com/P1D92cf.png",  folder = False )  
     plugintools.set_view(plugintools.MOVIES,502)  
@@ -1807,7 +1807,7 @@ def series_papaya_temporadas(params):
 
     
 def series_papaya_servidores(params):  
-    plugintools.log("chopocine.series_papaya_servidores")
+    plugintools.log("choposeries.series_papaya_servidores")
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR yellow]----[COLOR aqua]series papaya[COLOR yellow]----[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="http://i.imgur.com/P1D92cf.png", fanart ="http://i.imgur.com/P1D92cf.png",  folder = False )  
     url = params.get("url")
     thumbnail = params.get("thumbnail")  
@@ -1885,7 +1885,7 @@ def play_links(params):
 
 
 def mega_buscador(params):
-    plugintools.log("chopocine.series_papaya_buscador "+repr(params))
+    plugintools.log("choposeries.series_papaya_buscador "+repr(params))
     plugintools.set_view(plugintools.LIST)
     plugintools.add_item(action = "" , title = "[B][LOWERCASE][CAPITALIZE][COLOR gold]---[COLOR aqua]series papaya resultado de la busqueda[COLOR gold]---[/CAPITALIZE][/LOWERCASE][/B][/COLOR]", thumbnail ="http://i.imgur.com/P1D92cf.png", fanart ="http://i.imgur.com/P1D92cf.png",  folder = False ) 
     dialog = xbmcgui.Dialog()
