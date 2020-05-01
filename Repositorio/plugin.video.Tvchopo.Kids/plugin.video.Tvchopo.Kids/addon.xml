@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="plugin.video.Tvchopo.Kids"
-       name="[B][LOWERCASE][CAPITALIZE][COLOR white]TVCHOPO[COLOR fuchsia] KIDS[/CAPITALIZE][/LOWERCASE][/B][/COLOR]"
-       version="9"
+       name="[B][LOWERCASE][CAPITALIZE][COLOR white]TVCHOPO[COLOR gold] KIDS[/CAPITALIZE][/LOWERCASE][/B][/COLOR]"
+       version="10"
        provider-name="equipo-chopo">
  <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -39,7 +39,7 @@
 		todo el contenido es enlazado a las webs mas conocidas
 		de internet.....
 		
-	tvchopo ni se vender ni se cobra ni acepta donaciones... si ha sido es el caso  ha sido usted estafado,...para mas informacion entra en nuestro grupo de telegram https://t.me/tvchopo
+	tvchopo ni se vender ni se cobra ni acepta donaciones... si ha sido ese el caso  ha sido usted estafado,...para mas informacion entra en nuestro grupo de telegram @tvchopo
         
     </description>
     <platform>all</platform>
