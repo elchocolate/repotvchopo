@@ -432,38 +432,6 @@ para  estar al dia  unete a nuestro grupo de Telegram:
 	</extension>
 </addon>
 
-<addon id="plugin.video.quasar" name="Quasar" version="0.9.78" provider-name="scakemyer">
-    <requires>
-        <import addon="xbmc.addon" version="16.0.0" />
-        <import addon="xbmc.python" version="2.24.0" />
-        <import addon="repository.quasar" optional="true" />
-        <import addon="script.quasar.burst" optional="true" />
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="navigation.py">
-        <provides>video</provides>
-    </extension>
-    <extension point="xbmc.service" library="service.py" start="startup" />
-    <extension point="xbmc.python.module" library="resources/site-packages" />
-    <extension point="xbmc.subtitle.module" library="navigation.py" />
-    <extension point="xbmc.addon.metadata">
-        <summary lang="en">Quasar: Torrent streaming</summary>
-        <description lang="en">Quasar is a torrent finding and streaming engine. It doesn't go on torrent websites for legal reasons. However, it calls specially crafted add-ons (called providers) that are installed separately.[CR]This project is a fork of the well known, but no longer maintained Pulsar project from steeve.</description>
-        <language>en el es de fi fr he hr it nl pt ro sk</language>
-        <platform>all</platform>
-        <website>https://github.com/scakemyer/plugin.video.quasar</website>
-        <source>https://github.com/scakemyer/plugin.video.quasar</source>
-        <forum>http://forum.kodi.tv/showthread.php?tid=257967</forum>
-        <license>Non commercial. See https://github.com/scakemyer/plugin.video.quasar/blob/master/LICENSE</license>
-        <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.jpg</fanart>
-            <screenshot>resources/screenshots/home.jpg</screenshot>
-            <screenshot>resources/screenshots/movies.jpg</screenshot>
-            <screenshot>resources/screenshots/webui.png</screenshot>
-        </assets>
-    </extension>
-</addon>
-
 <addon id="plugin.video.sinbarreras"
        name="[COLOR chartreuse]SIN BARRERAS[/COLOR]"
        version="1.7"
@@ -505,73 +473,6 @@ para  estar al dia  unete a nuestro grupo de Telegram:
 	  <assets>
 		<icon>icon.gif</icon>
 	  </assets>
-  </extension>
-</addon>
-
-<addon id="plugin.video.torrenter" name="Torrenter" version="2.6.6" provider-name="inpos">
-    <requires>
-        <import addon="xbmc.python" version="2.1.0"/>
-        <import addon="script.module.libtorrent"/>
-        <import addon="script.module.torrent.ts"/>
-        <import addon="script.module.requests"/>
-        <import addon="script.module.torrent2http"/>
-        <import addon="script.module.pyrrent2http"/>
-        <import addon="script.module.chardet" />
-        <import addon="script.module.pyxbmct"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" provides="video" library="default.py">
-        <provides>video</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <summary lang='en'>Plugin helps you to watch videos from p2p torrent-networks, without full predownload.
-        </summary>
-        <description lang='en'>It also can add, control torrents and play downloaded files with external torrent-client (uTorrent, Transmisson, Vuse, Deluge, qBittorrent) or python-libtorrent.
-        </description>
-        <disclaimer lang='en'>GNU GPLv3 http://www.gnu.org/licenses/</disclaimer>
-        <summary lang='ru'>Плагин позволяет просматривать видео из пиринговых торрент-сетей, не дожидаясь полного скачивания.
-        </summary>
-        <description lang='ru'>Так же плагин может добавлять, проигрывать и управлять скачками в торрент клиентах (uTorrent, Transmisson, Deluge и Vuse, qBittorrent) или средставми python-libtorrent.
-        </description>
-	<disclaimer lang='ru'>GNU GPLv3 http://www.gnu.org/licenses/</disclaimer>
-	<summary lang='es'>Complemento que nos permite ver vídeos que se distribuyen en redes BitTorrent sin necesidad de descargarlos previamente por completo.
-        </summary>
-        <description lang='es'>También gestiona torrents y nos deja elegir entre su propio cliente interno y otros externos (μTorrent, Transmission, Deluge, Vuze, qBittorrent), el cliente BitTorrent con el que realizar las descargas.
-        </description>
-	<forum>https://forums.tvaddons.ag/addon-releases/29224-torrenter-v2.html</forum>
-	<website>http://xbmc.ru/forum/showthread.php?t=6837</website>
-	<source>https://github.com/inpos/plugin.video.torrenter</source>
-    </extension>
-</addon>
-
-<addon id="plugin.video.torrentin" name="Torrentin" version="0.6.2" provider-name="ciberus">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" provides="video" library="default.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <platform>all</platform>
-    <summary lang="en">Torrent player</summary>
-    <description lang="en">This add-on launches android torrent/magnet video players for playing torrent videos, also includes AceStream engine client and bridge to other torrent player plugins.</description>
-    <summary lang="es">Reproductor de torrent</summary>
-    <description lang="es">Este add-on ejecuta aplicaciones externas de Android para reproducir videos por torrent o magnet, tambien incorpora cliente para el motor Acestream (Android/Windows/Linux) y puede enlazar con otros plugins.</description>
-    <disclaimer lang="en">This KODI AddOn does not contain internal or direct links to any type of copyright video, it's only a torrent storage-redirect-player.</disclaimer>
-    <disclaimer lang="es">Este AddOn de KODI no contiene enlaces internos o directos a material protegido por copyright de ningun tipo, solamente es un Archivador-Catalogador-Reproductor-Redireccionador de archivos torrent.</disclaimer>
-    <platform>all</platform>
-    <website>https://github.com/surebic/plugin.video.torrentin</website>
-    <source>https://github.com/surebic/plugin.video.torrentin</source>
-    <forum>http://www.htcmania.com/showthread.php?t=995348</forum>
-    <license>GNU GPL. No comercial. Ver https://es.m.wikipedia.org/wiki/GNU_General_Public_License</license>
-    <assets>
-         <icon>icon.png</icon>
-         <fanart>fanart.jpg</fanart>
-         <screenshot>resources/screenshots/home.png</screenshot>
-         <screenshot>resources/screenshots/utils.png</screenshot>
-         <screenshot>resources/screenshots/maintenance.png</screenshot>
-     </assets>
-    <news>Scraper de torrents/magnets mejorado, fallos corregidos, etc.[CR]Visita el foro para mas informacion:[CR]http://www.htcmania.com/showthread.php?t=995348[CR]Gracias a todos por vuestro apoyo.</news>
   </extension>
 </addon>
 
@@ -701,36 +602,7 @@ para  estar al dia  unete a nuestro grupo de Telegram:
     </extension>
 </addon>
 
-<addon id="script.module.cryptopy" name="CryptoPy" version="1.2.7" provider-name="cryptopy.sourceforge.net">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-  </requires>
-  <extension point="xbmc.python.module" library="lib"/>
-  <extension point="xbmc.addon.metadata">
-    <platform>all</platform>
-  </extension>
-</addon>
-
-<addon id="script.module.liveresolver"
-     name="LiveResolver"
-     version="0.1.48"
-     provider-name="natko1412">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0" />
-    <import addon="script.module.beautifulsoup" version="3.2.1"/>
-    <import addon="script.module.requests"/>
-    <import addon="script.module.addon.common" version="2.0.0" />
-
-  </requires>
-  <extension point="xbmc.python.module" library="lib" />
-  <extension point="xbmc.addon.metadata">
-    <platform>all</platform>
-    <summary lang="en">Resolve common live video host URL's to be playable in XBMC/Kodi + find links embeded in sites.</summary>
-    <description lang="en"></description>
-  </extension>
-</addon>
-
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.0.37" provider-name="jsergio">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.0.45" provider-name="jsergio, gujal">
     <requires>
         <import addon="xbmc.python" version="2.1.0" />
         <import addon="plugin.video.youtube" optional="true" />
