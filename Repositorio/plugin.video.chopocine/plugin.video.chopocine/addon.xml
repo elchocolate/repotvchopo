@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
-	id="plugin.video.chopocine" version="2.1" name="[B][COLOR white]CHOPO[COLOR gold]CINE[/COLOR][/B]" provider-name="equipo tvchopo">
+	id="plugin.video.chopocine" version="2.2" name="[B][COLOR white]CHOPO[COLOR gold]CINE[/COLOR][/B]" provider-name="equipo tvchopo">
 	<requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.beautifulsoup" version="3.2.1"/>
