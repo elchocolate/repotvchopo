@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="plugin.video.sinbarreras"
-       name="[COLOR chartreuse]SIN BARRERAS[/COLOR]"
-       version="1.7"
+       name="[B][COLOR white]sin [COLOR gold]barreras[/COLOR][/B]"
+       version="chopo1"
        provider-name="SinBarreras">
  <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -33,12 +33,18 @@
 
 
   <extension point="xbmc.addon.metadata">
-    <summary>creado por Team Festa y Tvchopo</summary>
+    <summary>creado por Tvchopo</summary>
     <description>ESTE ADDON NO CONTIENE ENLACES PROPIOS,SON RECOPILACIONES DE LA RED, SOLO SE FACILITA EL ACESSO A ESAS WEBS, ESTAS WEBS SON LAS RESPONSABLES DE LOS CONTENIDOS
 	</description>
     <platform>all</platform>
-	  <assets>
-		<icon>icon.gif</icon>
-	  </assets>
+	<assets>
+        <icon>icon.jpg</icon>
+  <screenshot>resources/screenshots/screenshot1.jpg</screenshot>
+  <screenshot>resources/screenshots/screenshot2.jpg</screenshot>
+  <screenshot>resources/screenshots/screenshot3.jpg</screenshot>
+  <screenshot>resources/screenshots/screenshot4.jpg</screenshot>
+  <screenshot>resources/screenshots/screenshot5.jpg</screenshot>
+        <fanart>fanart.png</fanart>
+    </assets>
   </extension>
 </addon>
