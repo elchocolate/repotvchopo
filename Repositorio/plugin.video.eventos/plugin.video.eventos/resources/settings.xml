@@ -1,0 +1,21 @@
+﻿<settings>		
+  <category label="Información elpaso">
+       	<setting type="lsep" label="[COLOR gold]Versión del Addon 0.1[/COLOR][COLOR gold](V 0.1)[/COLOR]" option="close" action="RunPlugin(plugin://plugin.video.elpaso/?mode=7)" />
+		<setting type="lsep" label="[COLOR gold][/COLOR]" option="close" action="RunPlugin(plugin://plugin.video.elpaso/?mode=7)" />
+		<setting type="lsep" label="[COLOR gold]Dudas, sugerencias y contacto en:https://t.me/consultaschikiry [/COLOR]" option="close" action="RunPlugin(plugin://plugin.video.elpaso/?mode=7)" />
+		<setting type="lsep" label="[COLOR gold]asegurate de tener todas las dependencias actualizadas[/COLOR]" option="close" action="RunPlugin(plugin://plugin.video.elpaso/?mode=7)" />
+ </category>
+		
+  <category label="Configuración General">
+        <setting type="lsep" label="Para su buen funcionamiento pinchar en:" option="close" action="RunPlugin(plugin://plugin.video.elpaso/?mode=7)" />
+        <setting type="lsep" label="[COLOR gold]POR DEFECTO[/COLOR] y luego en [COLOR gold]OK[/COLOR]" option="close" action="RunPlugin(plugin://plugin.video.elpaso/?mode=7)" />
+		<setting id="ask_playlist_items" type="bool" label="Elegir Fuente de Video" default="true" visible="false"/>
+		<setting id="debug" type="bool" label="Enable Add-on Debugging" default="true" visible="false"/>
+        <setting id="1080pquality" label="[COLOR gold]Mejorar calidad [/COLOR]" type="bool" default="true"/>
+        <setting id="add_playlist" type="bool" label="Activar Multilink" default="true" visible="false"/>
+        <setting id="genesisorpulsar" type="enum" values="Genesis|Pulsar" label="Play IMDBid with:" default="Genesis"visible="false"/>
+        <setting id="donotshowbychannels" label="Ocultar Canales" type="bool" default="false" visible="false"/>
+  </category>
+  </settings>
+
+
