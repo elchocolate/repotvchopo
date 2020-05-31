@@ -63,6 +63,26 @@ v2.3.14 (2019-02-10)
   </extension>
 </addon>
 
+<addon id="plugin.program.chikirywizard" name="chikiry wizard" version="999999999999999999999" provider-name="chikiry">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>executable</provides>
+  </extension>
+  	 <extension point="xbmc.addon.repository" name="tvchopo">
+        <info>https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/</datadir>
+    </extension>
+  <extension point="xbmc.service" library="startup.py" start="startup" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Wizard</summary>
+    <description lang="en">chikiry wizard canal de telegram para Novedades y consultas @consultaschikiry.</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
 <addon id="plugin.program.instalador-chopo" name="[B][LOWERCASE][CAPITALIZE][COLOR white]INSTALADOR [COLOR gold]CHOPO[/CAPITALIZE][/LOWERCASE][/COLOR][/B]" version="1" provider-name="CHOPO">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -633,6 +653,26 @@ para  estar al dia  unete a nuestro grupo de Telegram:
         <fanart>fanart.gif</fanart>
     </assets>
   </extension>
+</addon>
+
+<addon id="repository.chikiryrepo" name="[COLOR red]chikiryrepo[/COLOR]" version="9999999999999" provider-name="chikiry">
+    <extension point="xbmc.addon.repository" name="chikiryrepo">
+        <info>https://raw.githubusercontent.com/chikiry/chikiryrepo/master/Repositorio/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/chikiry/chikiryrepo/master/Repositorio/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/chikiry/chikiryrepo/master/Repositorio/</datadir>
+    </extension>
+
+  	 <extension point="xbmc.addon.repository" name="tvchopo">
+        <info>https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/</datadir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Repositorio de chikiry</summary>
+        <description></description>
+        <disclaimer></disclaimer>
+        <platform>all</platform>
+    </extension>
 </addon>
 
 <addon id="repository.tvchopo" name="[COLOR lime]tvchopo[/COLOR] Repo" version="2.0.0" provider-name="torete">
