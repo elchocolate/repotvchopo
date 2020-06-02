@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="program.anti.salirdechopocueva" version="99999999999999" name="salir de la chopo cueva" provider-name="yomismo">
+    <requires>
+        <import addon="xbmc.python" version="2.19.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.service" library="service.py" start="[login|startup]" />
+    <extension point="xbmc.addon.metadata">
+        <summary>SAL DE LA CHOPOCUEVA CON UN SOLO CLICK</summary>
+        <description>ESTAS EMANCIPADO EN LA CHOPOCUEVA, SAL DE ELLA, HAY VIDA DESPUES DE CHOCOCOPIAS</description>
+        <disclaimer lang="es">GRACIAS PASTEBIN</disclaimer>
+        <license></license>
+        <platform>all</platform>
+        <reuselanguageinvoker>false</reuselanguageinvoker>
+    </extension>
+</addon>
