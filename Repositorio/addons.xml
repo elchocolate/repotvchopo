@@ -432,6 +432,38 @@ para  estar al dia  unete a nuestro grupo de Telegram:
 	</extension>
 </addon>
 
+<addon id="plugin.video.quasar" name="Quasar" version="0.9.78" provider-name="scakemyer">
+    <requires>
+        <import addon="xbmc.addon" version="16.0.0" />
+        <import addon="xbmc.python" version="2.24.0" />
+        <import addon="repository.quasar" optional="true" />
+        <import addon="script.quasar.burst" optional="true" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="navigation.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.service" library="service.py" start="startup" />
+    <extension point="xbmc.python.module" library="resources/site-packages" />
+    <extension point="xbmc.subtitle.module" library="navigation.py" />
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">Quasar: Torrent streaming</summary>
+        <description lang="en">Quasar is a torrent finding and streaming engine. It doesn't go on torrent websites for legal reasons. However, it calls specially crafted add-ons (called providers) that are installed separately.[CR]This project is a fork of the well known, but no longer maintained Pulsar project from steeve.</description>
+        <language>en el es de fi fr he hr it nl pt ro sk</language>
+        <platform>all</platform>
+        <website>https://github.com/scakemyer/plugin.video.quasar</website>
+        <source>https://github.com/scakemyer/plugin.video.quasar</source>
+        <forum>http://forum.kodi.tv/showthread.php?tid=257967</forum>
+        <license>Non commercial. See https://github.com/scakemyer/plugin.video.quasar/blob/master/LICENSE</license>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+            <screenshot>resources/screenshots/home.jpg</screenshot>
+            <screenshot>resources/screenshots/movies.jpg</screenshot>
+            <screenshot>resources/screenshots/webui.png</screenshot>
+        </assets>
+    </extension>
+</addon>
+
 <addon id="plugin.video.sinbarreras"
        name="[B][COLOR white]sin [COLOR gold]barreras[/COLOR][/B]"
        version="chopo1"
@@ -608,9 +640,10 @@ para  estar al dia  unete a nuestro grupo de Telegram:
     </extension>
 </addon>
 
-<addon id="script.module.resolveurl" name="ResolveURL" version="5.0.45" provider-name="jsergio, gujal">
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.1" provider-name="gujal">
     <requires>
-        <import addon="xbmc.python" version="2.1.0" />
+        <!-- <import addon="xbmc.python" version="3.0.0" /> -->
+        <import addon="script.module.six" version="0.0.1"/>
         <import addon="plugin.video.youtube" optional="true" />
         <import addon="script.module.python.twitch" optional="true" />
         <import addon="script.module.cryptopy" version="1.2.6" optional="true" />
@@ -626,6 +659,10 @@ para  estar al dia  unete a nuestro grupo de Telegram:
         <summary lang="el">Επίλυση συνδέσμων κοινών εξυπηρετητών σε μορφή βίντεο ικανό για αναπαραγωγή στο XBMC/Kodi.</summary>
         <description lang="en">Resolve common video host URL's to be playable in XBMC/Kodi, simplify addon development of video plugins requiring multi video hosts.</description>
         <description lang="hr">Prilagodi najčešće URL-ove video izvora kako bi radili u XBMC/Kodiju, pojednostavnjuje razvoj priključaka za video dodatke koji zahtjevaju višestruke video izvore.</description>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
     </extension>
 </addon>
 

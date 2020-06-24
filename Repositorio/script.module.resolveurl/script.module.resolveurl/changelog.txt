@@ -1,15 +1,18 @@
-Version 5.0.45 (May 1, 2020)
+Version 5.1.0 (June 7, 2020)
 - Code Base Changes:
-    - none
+    - Change Init logging to debug level
+    - Addtional helper functions
 
 - Resolvers Added:
-    - vidmoly
+    - Daxab
  
 - Resolvers Fixed/Updated:
-    - clipwatching
+    - WStream
+    - FEmbed
+    - Debrid-link
 
 - Resolvers Removed
-    - none
+    - None
 
 - Languages Added/Updated
-    - none
+    - None
