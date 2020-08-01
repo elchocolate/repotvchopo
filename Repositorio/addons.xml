@@ -465,8 +465,8 @@ para  estar al dia  unete a nuestro grupo de Telegram:
 </addon>
 
 <addon id="plugin.video.sinbarreras"
-       name="[B][COLOR white]sin [COLOR gold]barreras[/COLOR][/B]"
-       version="chopo1"
+       name="[B][COLOR white]SIN [COLOR gold]BARRERAS[/COLOR][/B]"
+       version="chopo2"
        provider-name="SinBarreras">
  <requires>
     <import addon="xbmc.python" version="2.1.0"/>

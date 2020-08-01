@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="plugin.video.sinbarreras"
-       name="[B][COLOR white]sin [COLOR gold]barreras[/COLOR][/B]"
-       version="chopo1"
+       name="[B][COLOR white]SIN [COLOR gold]BARRERAS[/COLOR][/B]"
+       version="chopo2"
        provider-name="SinBarreras">
  <requires>
     <import addon="xbmc.python" version="2.1.0"/>
