@@ -316,7 +316,7 @@ para  estar al dia  unete a nuestro grupo de Telegram:
 </addon>
 
 <addon
-	id="plugin.video.choposex" version="1.0" name="[B][COLOR white]CHOPO[COLOR fuchsia]SEX[/COLOR][/B]" provider-name="equipo tvchopo">
+	id="plugin.video.choposex" version="2.0" name="[B][COLOR white]CHOPO[COLOR fuchsia]SEX[/COLOR][/B]" provider-name="equipo tvchopo">
 	<requires>
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.module.beautifulsoup" version="3.2.1"/>
