@@ -111,7 +111,7 @@ para  estar al dia  unete a nuestro grupo de Telegram:
 
 <addon id="plugin.video.atresplayerchopo"
        name="[B][COLOR white]ATRESPLAYER[COLOR gold] CHOPO [/B][/COLOR]"
-       version="2"
+       version="3"
        provider-name="equipo-chopo">
  <requires>
     <import addon="xbmc.python" version="2.1.0"/>
