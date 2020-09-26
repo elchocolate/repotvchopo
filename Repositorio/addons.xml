@@ -317,6 +317,7 @@ para  estar al dia  unete a nuestro grupo de Telegram:
     </extension>
 
 
+
 	<extension point="xbmc.addon.metadata">
                 <platform>all</platform>
 		<summary lang="en">choposeries</summary>
