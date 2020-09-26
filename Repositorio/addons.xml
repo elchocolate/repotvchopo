@@ -287,9 +287,11 @@ para  estar al dia  unete a nuestro grupo de Telegram:
 </addon>
 
 <addon
-	id="plugin.video.choposeries" version="2.5" name="[B][COLOR white]CHOPO[COLOR gold]SERIES[/COLOR][/B]" provider-name="equipo tvchopo">
+	id="plugin.video.choposeries" version="3.0" name="[B][COLOR white]CHOPO[COLOR gold]SERIES 3.0[/COLOR][/B]" provider-name="equipo tvchopo">
 	<requires>
     <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.addon.common" version="2.0.0"/>
+	<import addon="script.module.pycryptodome" version="3.4.3"/>
     <import addon="script.module.beautifulsoup" version="3.2.1"/>
     <import addon="script.module.simple.downloader" version="0.9.4"/>
     <import addon="script.module.beautifulsoup4" />
