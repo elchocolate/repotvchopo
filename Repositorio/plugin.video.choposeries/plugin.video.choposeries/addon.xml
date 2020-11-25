@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
-	id="plugin.video.choposeries" version="3.0" name="[B][COLOR white]CHOPO[COLOR gold]SERIES 3.0[/COLOR][/B]" provider-name="equipo tvchopo">
+	id="plugin.video.choposeries" version="4.0" name="[B][COLOR white]CHOPO[COLOR gold]SERIES 3.0[/COLOR][/B]" provider-name="equipo tvchopo">
 	<requires>
     <import addon="xbmc.python" version="2.1.0"/>
 	<import addon="script.module.addon.common" version="2.0.0"/>

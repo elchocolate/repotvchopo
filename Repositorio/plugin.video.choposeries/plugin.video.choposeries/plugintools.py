@@ -4,7 +4,7 @@
 #---------------------------------------------------------------------------
 # License: GPL (http://www.gnu.org/licenses/gpl-3.0.html)
 # Based on code from youtube, parsedom and pelisalacarta addons
-# Author: 
+# Author: "torete"
 # Jesús
 # tvalacarta@gmail.com
 # http://www.mimediacenter.info/plugintools
@@ -19,6 +19,7 @@
 # - Added parameter on "add_item" to say that item is playable
 # 1.0.3
 # - Added direct play
+#parakodi18
 # - Fixed bug when video isPlayable=True
 # 1.0.4
 # - Added get_temp_path, get_runtime_path, get_data_path
