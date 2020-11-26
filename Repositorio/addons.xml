@@ -325,6 +325,23 @@ para  estar al dia  unete a nuestro grupo de Telegram:
 	</extension>
 </addon>
 
+<addon id="plugin.video.f4mTester" version="2.7.1" name="f4mTester" provider-name="Shani">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.video.F4mProxy" version="2.7.1"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+
+
+    <extension point="xbmc.addon.metadata">
+        <summary>f4mTester</summary>
+        <description></description>
+        <platform>all</platform>
+    </extension>
+</addon>
+
 <addon
 	id="plugin.video.mitelechopo" version="1.0" name="[B][COLOR white]mitele[COLOR gold] chopo[/COLOR][/B]" provider-name="equipo tvchopo">
 	<requires>
