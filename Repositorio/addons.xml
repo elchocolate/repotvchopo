@@ -224,25 +224,13 @@ para  estar al dia  unete a nuestro grupo de Telegram:
 </addon>
 
 <addon
-	id="plugin.video.choposeries" version="4.0" name="[B][COLOR white]CHOPO[COLOR gold]SERIES 3.0[/COLOR][/B]" provider-name="equipo tvchopo">
-	<requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-	<import addon="script.module.addon.common" version="2.0.0"/>
-	<import addon="script.module.pycryptodome" version="3.4.3"/>
-    <import addon="script.module.beautifulsoup" version="3.2.1"/>
-    <import addon="script.module.simple.downloader" version="0.9.4"/>
-    <import addon="script.module.beautifulsoup4" />
-    <import addon="script.module.requests" />
-    <import addon="script.module.httplib2" />
-    <import addon="script.module.liveresolver" version="0.1.24" optional="true"/>
-    <import addon="script.module.youtube.dl" optional="true"/>
+	id="plugin.video.choposeries" version="6.0" name="[B][COLOR white]CHOPO[COLOR gold]SERIES 3.0[/COLOR][/B]" provider-name="equipo tvchopo">
+<requires>
     <import addon="plugin.video.youtube" />
-    <import addon="script.module.urlresolver" />
-	<import addon="script.module.resolveurl" optional="true"/>
-	<import addon="script.module.simplejson" />
-    <import addon="script.module.livestreamer" optional="true"/>
-    <import addon="script.module.pyamf" optional="true"/>
-	</requires>
+    <import addon="script.module.requests" />
+    <import addon="script.module.resolveurl" />
+    <import addon="script.module.six" />
+  </requires>
 	<extension point="xbmc.python.pluginsource" library="default.py">
 		<provides>video</provides>
 	</extension>
