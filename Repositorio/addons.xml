@@ -473,7 +473,7 @@ para  estar al dia  unete a nuestro grupo de Telegram:
 </addon>
 
 <addon
-	id="plugin.video.Tvchopo.Kids" version="13.0" name="[B][LOWERCASE][CAPITALIZE][COLOR white]TVCHOPO[COLOR gold] KIDS[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" provider-name="equipo tvchopo">
+	id="plugin.video.Tvchopo.Kids" version="14" name="B][LOWERCASE][CAPITALIZE][COLOR white]TVCHOPO[COLOR gold] KIDS[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" provider-name="equipo tvchopo">
 <requires>
     <import addon="plugin.video.youtube" />
     <import addon="script.module.requests" />
@@ -493,8 +493,8 @@ para  estar al dia  unete a nuestro grupo de Telegram:
 
 	<extension point="xbmc.addon.metadata">
                 <platform>all</platform>
-		<summary lang="en">tvchopo</summary>
-		<summary lang="da">tvchopo</summary>
+		<summary lang="en">choposeries</summary>
+		<summary lang="da">choposeries</summary>
    <description>
         addon Tvchopo.Kids no contiene ningun material propio..
 		todo el contenido es enlazado a las webs mas conocidas

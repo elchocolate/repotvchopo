@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
-	id="plugin.video.Tvchopo.Kids" version="13.0" name="[B][LOWERCASE][CAPITALIZE][COLOR white]TVCHOPO[COLOR gold] KIDS[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" provider-name="equipo tvchopo">
+	id="plugin.video.Tvchopo.Kids" version="14" name="B][LOWERCASE][CAPITALIZE][COLOR white]TVCHOPO[COLOR gold] KIDS[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" provider-name="equipo tvchopo">
 <requires>
     <import addon="plugin.video.youtube" /> 
     <import addon="script.module.requests" />
@@ -20,15 +20,15 @@
 	
 	<extension point="xbmc.addon.metadata">
                 <platform>all</platform>
-		<summary lang="en">tvchopo</summary>
-		<summary lang="da">tvchopo</summary>
+		<summary lang="en">choposeries</summary>
+		<summary lang="da">choposeries</summary>
    <description>
         addon Tvchopo.Kids no contiene ningun material propio..
 		todo el contenido es enlazado a las webs mas conocidas
 		de internet.....
-		
+
 	tvchopo ni se vender ni se cobra ni acepta donaciones... si ha sido ese el caso  ha sido usted estafado,...para mas informacion entra en nuestro grupo de telegram @tvchopo
-        
+
     </description>
 		<website></website>
 		<license>GPL 2.0</license>
