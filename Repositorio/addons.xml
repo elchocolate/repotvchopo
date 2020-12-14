@@ -473,7 +473,7 @@ para  estar al dia  unete a nuestro grupo de Telegram:
 </addon>
 
 <addon
-	id="plugin.video.Tvchopo.Kids" version="12.0" name="[B][LOWERCASE][CAPITALIZE][COLOR white]TVCHOPO[COLOR gold] KIDS[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" provider-name="equipo tvchopo">
+	id="plugin.video.Tvchopo.Kids" version="14.0" name="[B][LOWERCASE][CAPITALIZE][COLOR white]TVCHOPO[COLOR gold] KIDS[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" provider-name="equipo tvchopo">
 <requires>
     <import addon="plugin.video.youtube" />
     <import addon="script.module.requests" />
