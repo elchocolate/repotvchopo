@@ -294,7 +294,7 @@ para  estar al dia  unete a nuestro grupo de Telegram:
 </addon>
 
 <addon
-	id="plugin.video.discoverypluschopo" version="chopo1" name="[B][COLOR white]DISCOVERY[COLOR gold]+ CHOPO[/COLOR][/B]" provider-name="equipo tvchopo">
+	id="plugin.video.discoverypluschopo" version="chopo2" name="[B][COLOR white]DISCOVERY[COLOR gold]+ CHOPO[/COLOR][/B]" provider-name="equipo tvchopo">
 <requires>
     <import addon="plugin.video.youtube" />
     <import addon="script.module.requests" />
