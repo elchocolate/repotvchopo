@@ -214,11 +214,11 @@ para  estar al dia  unete a nuestro grupo de Telegram:
 </addon>
 
 <addon
-	id="plugin.video.choposeries" version="8.0" name="[B][COLOR white]CHOPO[COLOR gold]SERIES[/COLOR][/B]" provider-name="equipo tvchopo">
+	id="plugin.video.choposeries" version="9.0" name="[B][COLOR white]CHOPO[COLOR gold]SERIES[/COLOR][/B]" provider-name="equipo tvchopo">
 <requires>
     <import addon="plugin.video.youtube" />
     <import addon="script.module.requests" />
-
+    <import addon="script.module.resolveurl" />
     <import addon="script.module.six" />
   </requires>
 	<extension point="xbmc.python.pluginsource" library="default.py">
