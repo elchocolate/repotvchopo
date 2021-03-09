@@ -311,7 +311,7 @@ para  estar al dia  unete a nuestro grupo de Telegram:
 </addon>
 
 <addon
-	id="plugin.video.koditv" version="1" name="[B][COLOR white]kodi[COLOR skyblue]tv[/COLOR][/B]" provider-name="anonimo">
+	id="plugin.video.koditv" version="2" name="[B][COLOR white]kodi[COLOR aqua]tv[/COLOR][/B]" provider-name="equipo tvchopo">
 <requires>
     <import addon="plugin.video.youtube" />
     <import addon="script.module.requests" />
@@ -333,7 +333,7 @@ para  estar al dia  unete a nuestro grupo de Telegram:
                 <platform>all</platform>
 		<summary lang="en"></summary>
 		<summary lang="da"></summary>
-		<description lang="en">addon de tv .. no conntiene ningun enlace propio todo son frutos de las webs que es la que los alojan</description>
+		<description lang="en"></description>
 		<website></website>
 		<license>GPL 2.0</license>
 		<platform>all</platform>
