@@ -314,7 +314,7 @@ def show_build_prompt():
 
         def __init__(self, *args, **kwargs):
             self.title = CONFIG.THEME3.format(CONFIG.ADDONTITLE)
-            self.msg = "Currently no build installed from {0}.\n\nSelect 'Build Menu' to install a Community Build from us or 'Ignore' to never see this message again.\n\nThank you for choosing {1}.".format(CONFIG.ADDONTITLE, CONFIG.ADDONTITLE)
+            self.msg = "Actualmente no hay ningun wizard instaldo {0}.\n\nseleciona 'un wizard en el menu' para instalar una Build de nosotros o 'Ignorar 'para no volver a ver este mensaje nunca más.\n\nGracias por escoger chopo {1}.".format(CONFIG.ADDONTITLE, CONFIG.ADDONTITLE)
             self.msg = CONFIG.THEME2.format(self.msg)
 
         def onInit(self):
@@ -376,8 +376,8 @@ def show_update_window(name='Testing Window', current='1.0', new='1.1', icon=CON
             self.new = kwargs['new']
             self.icon = kwargs['icon']
             self.fanart = kwargs['fanart']
-            self.msgupdate = "Update avaliable for installed build:\n[COLOR {0}]{1}[/COLOR]\n\nCurrent Version: v[COLOR {2}]{3}[/COLOR]\nLatest Version: v[COLOR {4}]{5}[/COLOR]\n\n[COLOR {6}]*Recommened: Fresh install[/COLOR]".format(CONFIG.COLOR1, self.name, CONFIG.COLOR1, self.current, CONFIG.COLOR1, self.new, CONFIG.COLOR1)
-            self.msgcurrent = "Running latest version of installed build:\n[COLOR {0}]{1}[/COLOR]\n\nCurrent Version: v[COLOR {2}]{3}[/COLOR]\nLatest Version: v[COLOR {4}]{5}[/COLOR]\n\n[COLOR {6}]*Recommended: Fresh install[/COLOR]".format(CONFIG.COLOR1, self.name, CONFIG.COLOR1, self.current, CONFIG.COLOR1, self.new, CONFIG.COLOR1)
+            self.msgupdate = "Actualización disponible para el wizard instalado:\n[COLOR {0}]{1}[/COLOR]\n\nVersión actual: v[COLOR {2}]{3}[/COLOR]\nUltima versión: v[COLOR {4}]{5}[/COLOR]\n\n[COLOR {6}]*Recomendada: Instalación nueva[/COLOR]".format(CONFIG.COLOR1, self.name, CONFIG.COLOR1, self.current, CONFIG.COLOR1, self.new, CONFIG.COLOR1)
+            self.msgcurrent = "Ejecutando la última versión de instalada build:\n[COLOR {0}]{1}[/COLOR]\n\nVersión actual: v[COLOR {2}]{3}[/COLOR]\nUltima versión: v[COLOR {4}]{5}[/COLOR]\n\n[COLOR {6}]*Recomendada: Instalación nueva[/COLOR]".format(CONFIG.COLOR1, self.name, CONFIG.COLOR1, self.current, CONFIG.COLOR1, self.new, CONFIG.COLOR1)
 
         def onInit(self):
             self.imagefanart = 101
