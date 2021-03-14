@@ -429,11 +429,11 @@ def show_update_window(name='Testing Window', current='1.0', new='1.1', icon=CON
     # update = UpdateWindow("build_update_prompt.xml", CONFIG.ADDON_PATH, 'Default', name=name, current=current, new=new, icon=icon, fanart=fanart)
     # update.doModal()
     # del update
-    msgcurrent = 'Running latest version of installed build: '
-    msgupdate = 'Update available for installed build: '
+    msgcurrent = 'Ejecutando la última versión del wizard instalado: '
+    msgupdate = 'Actualización disponible para el wizard: '
     build_name = '[COLOR {0}]{1}[/COLOR]'.format(CONFIG.COLOR1, name)
-    current_version = 'Current Version: v[COLOR {0}]{1}[/COLOR]'.format(CONFIG.COLOR1, current)
-    latest_version = 'Latest Version: v[COLOR {0}]{1}[/COLOR]'.format(CONFIG.COLOR1, new)
+    current_version = 'Versión actual: v[COLOR {0}]{1}[/COLOR]'.format(CONFIG.COLOR1, current)
+    latest_version = 'Ultima versión: v[COLOR {0}]{1}[/COLOR]'.format(CONFIG.COLOR1, new)
     
     final_msg = '{0}{1}\n{2}\n{3}\n'.format(msgcurrent if current >= new else msgupdate,
                                         build_name, current_version, latest_version)
@@ -502,13 +502,13 @@ def show_notification(msg, test=False):
         def do_remind(self):
             if not test:
                 CONFIG.set_setting('notedismiss', 'false')
-            logging.log('[Notifications] Notification {0} Remind Me Later'.format(CONFIG.get_setting('noteid')))
+            logging.log('[Notifications] Notification {0} Recuérdame más tarde'.format(CONFIG.get_setting('noteid')))
             self.close()
 
         def do_dismiss(self):
             if not test:
                 CONFIG.set_setting('notedismiss', 'true')
-            logging.log('[Notifications] Notification {0} Dismissed'.format(CONFIG.get_setting('noteid')))
+            logging.log('[Notifications] Notification {0} cancelar'.format(CONFIG.get_setting('noteid')))
             self.close()
 
         def onAction(self, action):
