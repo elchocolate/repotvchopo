@@ -21,7 +21,7 @@ EXCLUDES       = [ADDON_ID, 'plugin.program.CHOPO-WIZARD']
 CACHETEXT      = 'Yes'
 CACHEAGE       = 30
 # Text File with build info in it.
-BUILDFILE      = 'https://pastebin.com/raw/xmPtenwb'
+BUILDFILE      = 'https://pastebin.com/raw/Scv0p5KF'
 # How often you would like it to check for build updates in days
 # 0 being every startup of kodi
 UPDATECHECK    = 0

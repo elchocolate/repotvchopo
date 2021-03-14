@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.program.wizardchopo19" name="[COLOR aqua]wizard chopo[/COLOR] kodi matrix" version="1" provider-name="Slam">
+<addon id="plugin.program.wizardchopo19" name="[COLOR aqua]wizard chopo[/COLOR] kodi matrix" version="01" provider-name="Slam">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="script.module.requests" />
