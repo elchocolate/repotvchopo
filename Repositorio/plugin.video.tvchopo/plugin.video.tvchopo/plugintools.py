@@ -39,7 +39,7 @@
 # Welcome matrix
 #---------------------------------------------------------------------------
 
-import xbmc
+import xbmcimport xbmcvfs
 import xbmcplugin
 import xbmcaddon
 import xbmcgui
@@ -424,24 +424,24 @@ def show_picture(url):
 
 def get_temp_path():
     _log("get_temp_path")
-
-    dev = xbmc.translatePath( "special://temp/" )
+    try:
+        dev = xbmc.translatePath( "special://temp/" )    except:        dev = xbmcvfs.translatePath( "special://temp/" )
     _log("get_temp_path ->'"+str(dev)+"'")
 
     return dev
 
 def get_runtime_path():
     _log("get_runtime_path")
-
-    dev = xbmc.translatePath( __settings__.getAddonInfo('Path') )
+    try:
+        dev = xbmc.translatePath( __settings__.getAddonInfo('Path') )    except:        dev = xbmcvfs.translatePath( __settings__.getAddonInfo('Path') )
     _log("get_runtime_path ->'"+str(dev)+"'")
 
     return dev
 
 def get_data_path():
     _log("get_data_path")
-
-    dev = xbmc.translatePath( __settings__.getAddonInfo('Profile') )
+    try:
+         dev = xbmc.translatePath( __settings__.getAddonInfo('Profile') )    except:         dev = xbmcvfs.translatePath( __settings__.getAddonInfo('Profile') )
     
     # Parche para XBMC4XBOX
     if not os.path.exists(dev):
