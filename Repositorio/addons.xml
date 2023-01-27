@@ -241,7 +241,7 @@ para  estar al dia  unete a nuestro grupo de Telegram:
 </addon>
 
 <addon
-	id="plugin.video.emuchopo" version="2" name="[B][COLOR white]EMU[COLOR orange]CHOPO[/COLOR][/B]" provider-name="equipo tvchopo">
+	id="plugin.video.emuchopo" version="3" name="[B][COLOR white]EMU[COLOR orange]CHOPO[/COLOR][/B]" provider-name="equipo tvchopo">
 <requires>
     <import addon="script.module.requests" />
     <import addon="script.module.six" />
