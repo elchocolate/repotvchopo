@@ -1,7 +1,7 @@
 <settings>
 
   <category label="General"> 
-    <setting label="[B][LOWERCASE][CAPITALIZE][COLOR gold]Ruta para guardar las descargas[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" type="folder" id="downloads_path" default="No Establecida" />	
+    #setting label="[B][LOWERCASE][CAPITALIZE][COLOR gold]Ruta para guardar las descargas[/CAPITALIZE][/LOWERCASE][/B][/COLOR]" type="folder" id="downloads_path" default="No Establecida" />	
   </category>
   
   <category label="cambia de Color ">
