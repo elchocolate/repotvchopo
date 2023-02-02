@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
-	id="plugin.video.emuchopo" version="3" name="[B][COLOR white]EMU[COLOR orange]CHOPO[/COLOR][/B]" provider-name="equipo tvchopo">
+	id="plugin.video.emuchopo" version="4" name="[B][COLOR white]emu[COLOR orange]chopo[/COLOR][/B]" provider-name="equipo tvchopo">
 <requires>
     <import addon="script.module.requests" />
     <import addon="script.module.six" />
@@ -13,6 +13,11 @@
         <info>https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/addons.xml</info>
         <checksum>https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/addons.xml.md5</checksum>
         <datadir zip="true">https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/</datadir>
+	    <dir>
+        <info compressed="false">https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/</datadir>
+        </dir>
     </extension>
 	
 	
@@ -20,7 +25,7 @@
                 <platform>all</platform>
 		<summary lang="en"></summary>
 		<summary lang="da"></summary>
-		<description lang="en"></description>
+		<description lang="en">ADDON ENULADOR DE CONSOLAS RETROS "EQUIPO CHOPO"</description>
 		<website></website>
 		<license>GPL 2.0</license>
 		<platform>all</platform>
