@@ -91,7 +91,7 @@ class BuildMenu:
             directory.add_file('{0}'.format(CONFIG.BUILDFILE), icon=CONFIG.ICONBUILDS, themeit=CONFIG.THEME3)
             return
 
-        total, count17, count18, count19, adultcount, hidden = check.build_count()
+        total, count17, count19, count20, adultcount, hidden = check.build_count()
 
         match = re.compile('name="(.+?)".+?ersion="(.+?)".+?rl="(.+?)".+?ui="(.+?)".+?odi="(.+?)".+?heme="(.+?)".+?con="(.+?)".+?anart="(.+?)".+?dult="(.+?)".+?escription="(.+?)"').findall(link)
         
@@ -113,14 +113,19 @@ class BuildMenu:
             if CONFIG.SEPARATE == 'true':
                 self._list_all(match)
             else:
+                if count20 > 0:
+                    state = '+' if CONFIG.SHOW20 == 'false' else '-'
+                    directory.add_file('[B]{0} [COLOR white]Builds ({1})[/B]'.format(state, count20), {'mode': 'togglesetting',
+                                       'name': 'show20'}, themeit=CONFIG.THEME3)
+                    if CONFIG.SHOW20 == 'true':
+                        self._list_all(match, kodiv=20)
                 if count19 > 0:
                     state = '+' if CONFIG.SHOW19 == 'false' else '-'
-                    directory.add_file('[B]{0} [COLOR white]Matrix Builds ({1})[/B]'.format(state, count19), {'mode': 'togglesetting',
+                    directory.add_file('[B]{0} [COLOR white]Builds ({1})[/B]'.format(state, count19), {'mode': 'togglesetting',
                                        'name': 'show19'}, themeit=CONFIG.THEME3)
                     if CONFIG.SHOW19 == 'true':
                         self._list_all(match, kodiv=19)
-                if count18 > 0:
-                    state = '+' if CONFIG.SHOW18 == 'false' else '-'
+  
 
 
         elif hidden > 0:

@@ -14,7 +14,7 @@ ART = os.path.join(PATH, 'resources', 'media')
 #        User Edit Variables                            #
 #########################################################
 ADDON_ID       = xbmcaddon.Addon().getAddonInfo('id')
-ADDONTITLE     = '[COLOR red]CHOPO-WIZARD[/COLOR]'
+ADDONTITLE     = '[COLOR red]INSTALADOR DE WIZARD[/COLOR]'
 BUILDERNAME    = 'WHIZ'
 EXCLUDES       = [ADDON_ID, 'plugin.program.CHOPO-WIZARD']
 # Enable/Disable the text file caching with 'Yes' or 'No' and age being how often it rechecks in minutes
