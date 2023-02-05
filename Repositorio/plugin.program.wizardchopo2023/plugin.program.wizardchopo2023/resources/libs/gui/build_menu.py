@@ -113,18 +113,21 @@ class BuildMenu:
             if CONFIG.SEPARATE == 'true':
                 self._list_all(match)
             else:
-                if count20 > 0:
-                    state = '+' if CONFIG.SHOW20 == 'false' else '-'
-                    directory.add_file('[B]{0} [COLOR white]Builds ({1})[/B]'.format(state, count20), {'mode': 'togglesetting',
-                                       'name': 'show20'}, themeit=CONFIG.THEME3)
-                    if CONFIG.SHOW20 == 'true':
-                        self._list_all(match, kodiv=20)
-                if count19 > 0:
+                versions='{0}'.format(CONFIG.KODIV)
+                if '19' in versions:
                     state = '+' if CONFIG.SHOW19 == 'false' else '-'
-                    directory.add_file('[B]{0} [COLOR white]Builds ({1})[/B]'.format(state, count19), {'mode': 'togglesetting',
+                    directory.add_file('[B]{0} [COLOR white]wizards para kodi 19 ({1})[/B]'.format(state, count19), {'mode': 'togglesetting',
                                        'name': 'show19'}, themeit=CONFIG.THEME3)
                     if CONFIG.SHOW19 == 'true':
                         self._list_all(match, kodiv=19)
+                
+                if '20' in versions:
+                    state = '+' if CONFIG.SHOW20 == 'false' else '-'
+                    directory.add_file('[B]{0} [COLOR white]wizards para kodi 20 ({1})[/B]'.format(state, count20), {'mode': 'togglesetting',
+                                       'name': 'show20'}, themeit=CONFIG.THEME3)
+                    if CONFIG.SHOW20 == 'true':
+                        self._list_all(match, kodiv=20)
+                
   
 
 
