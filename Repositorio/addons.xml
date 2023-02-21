@@ -309,11 +309,11 @@ para  estar al dia  unete a nuestro grupo de Telegram:
 </addon>
 
 <addon
-	id="plugin.video.koditv" version="5" name="[B][COLOR white]kodi[COLOR aqua]tv[/COLOR][/B]" provider-name="equipo tvchopo">
+	id="plugin.video.koditv" version="6" name="[B][COLOR white]kodi[COLOR aqua]tv[/COLOR][/B]" provider-name="equipo tvchopo">
 <requires>
     <import addon="plugin.video.youtube" />
     <import addon="script.module.requests" />
-    <import addon="script.module.resolveurl" />
+    <import addon="script.module.resolveurl" optional="true" />
     <import addon="script.module.six" />
   </requires>
 	<extension point="xbmc.python.pluginsource" library="default.py">
