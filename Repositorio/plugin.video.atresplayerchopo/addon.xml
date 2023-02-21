@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
-	id="plugin.video.atresplayerchopo" version="6" name="[B][COLOR white]atresplayer[COLOR gold] chopo[/COLOR][/B]" provider-name="equipo tvchopo">
+	id="plugin.video.atresplayerchopo" version="7" name="[B][COLOR white]atresplayer[COLOR gold] chopo[/COLOR][/B]" provider-name="equipo tvchopo">
 <requires>
     <import addon="plugin.video.youtube" /> 
     <import addon="script.module.requests" />
-    <import addon="script.module.resolveurl" />
     <import addon="script.module.six" />
   </requires>
 	<extension point="xbmc.python.pluginsource" library="default.py">
