@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
-	id="plugin.video.tvchopo" version="26" name="[B][COLOR white]tv[COLOR aqua]chopo[/COLOR][/B]" provider-name="equipo tvchopo">
+	id="plugin.video.tvchopo" version="27" name="[B][COLOR white]tv[COLOR aqua]chopo[/COLOR][/B]" provider-name="equipo tvchopo">
 <requires>
     <import addon="plugin.video.youtube" optional="true" /> 
     <import addon="script.module.requests" />
