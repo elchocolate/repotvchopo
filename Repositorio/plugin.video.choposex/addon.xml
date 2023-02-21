@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
-	id="plugin.video.choposex" version="9" name="[B][COLOR white]chopo[COLOR fuchsia]sex[/COLOR][/B]" provider-name="equipo tvchopo">
+	id="plugin.video.choposex" version="10" name="[B][COLOR white]chopo[COLOR fuchsia]sex[/COLOR][/B]" provider-name="equipo tvchopo">
 <requires>
     <import addon="plugin.video.youtube" /> 
     <import addon="script.module.requests" />
-    <import addon="script.module.resolveurl" />
+    <import addon="script.module.resolveurl"  optional="true" />
     <import addon="script.module.six" />
   </requires>
 	<extension point="xbmc.python.pluginsource" library="default.py">
