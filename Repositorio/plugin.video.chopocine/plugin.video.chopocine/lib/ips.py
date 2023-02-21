@@ -12,4 +12,4 @@ def cookie():
  
     payload = {'url':'https://www.gnula2.co/estrenos/','proxyServerId':'94','demo':'0','frontOrigin':'https://www.croxyproxy.rocks'}
     x = requests.post(url,headers=headers,data=payload,verify=False)
-    return(x.headers['set-cookie'])
+    return(x.headers['access-control-allow-origin'])
