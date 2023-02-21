@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
-	id="plugin.video.mitelechopo" version="5" name="[B][COLOR white]mitele[COLOR gold] chopo[/COLOR][/B]" provider-name="equipo tvchopo">
+	id="plugin.video.mitelechopo" version="6" name="[B][COLOR white]mitele[COLOR gold] chopo[/COLOR][/B]" provider-name="equipo tvchopo">
 <requires>
     <import addon="plugin.video.youtube" /> 
     <import addon="script.module.requests" />
-    <import addon="script.module.resolveurl" />
     <import addon="script.module.six" />
   </requires>
 	<extension point="xbmc.python.pluginsource" library="default.py">
