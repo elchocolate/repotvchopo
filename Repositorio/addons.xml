@@ -130,7 +130,7 @@ para  estar al dia  unete a nuestro grupo de Telegram:
 </addon>
 
 <addon
-	id="plugin.video.chopocine" version="11" name="[B][COLOR white]chopo[COLOR aqua]cine[/COLOR][/B]" provider-name="equipo tvchopo">
+	id="plugin.video.chopocine" version="12" name="[B][COLOR white]chopo[COLOR aqua]cine[/COLOR][/B]" provider-name="equipo tvchopo">
 <requires>
     <import addon="plugin.video.youtube" />
     <import addon="script.module.requests" />
