@@ -397,7 +397,7 @@ para  estar al dia  unete a nuestro grupo de Telegram:
 </addon>
 
 <addon
-	id="plugin.video.tvchopo" version="27" name="[B][COLOR white]tv[COLOR aqua]chopo[/COLOR][/B]" provider-name="equipo tvchopo">
+	id="plugin.video.tvchopo" version="28" name="[B][COLOR white]tv[COLOR aqua]chopo[/COLOR][/B]" provider-name="equipo tvchopo">
 <requires>
     <import addon="plugin.video.youtube" optional="true" />
     <import addon="script.module.requests" />
