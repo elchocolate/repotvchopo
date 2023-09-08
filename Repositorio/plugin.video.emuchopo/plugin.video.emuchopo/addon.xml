@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
-	id="plugin.video.emuchopo" version="6" name="[B][COLOR white]emu[COLOR orange]chopo[/COLOR][/B]" provider-name="equipo tvchopo">
+	id="plugin.video.emuchopo" version="7" name="[B][COLOR white]emu[COLOR orange]chopo[/COLOR][/B]" provider-name="equipo tvchopo">
 <requires>
     <import addon="script.module.requests" />
     <import addon="script.module.six" />
