@@ -353,7 +353,7 @@ para  estar al dia  unete a nuestro grupo de Telegram:
 </addon>
 
 <addon
-	id="plugin.video.mitelechopo" version="8" name="[B][COLOR white]mitele[COLOR gold] chopo[/COLOR][/B]" provider-name="equipo tvchopo">
+	id="plugin.video.mitelechopo" version="9" name="[B][COLOR white]mitele[COLOR gold] chopo[/COLOR][/B]" provider-name="equipo tvchopo">
 <requires>
     <import addon="plugin.video.youtube" />
     <import addon="script.module.requests" />
