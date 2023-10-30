@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="game.libretro.chopo"
+<addon id="game.libretro"
        name="Libretro Compatibility"
-       version="a64"
+       version="20.2.5"
        provider-name="Team Kodi">
   <backwards-compatibility abi="1.0.0"/>
   <requires>
