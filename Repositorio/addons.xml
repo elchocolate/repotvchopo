@@ -2,7 +2,7 @@
 <addons>
 <addon id="game.libretro"
        name="Libretro Compatibility"
-       version="20.2.5"
+       version="20.2.8"
        provider-name="Team Kodi">
   <backwards-compatibility abi="1.0.0"/>
   <requires>
