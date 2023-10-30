@@ -13,8 +13,7 @@
   <extension point="kodi.gameclient"
        library_android="libgame.libretro.so">
   </extension>
-
-  	 <extension point="xbmc.addon.repository" name="tvchopo">
+	 <extension point="xbmc.addon.repository" name="tvchopo">
         <info>https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/addons.xml</info>
         <checksum>https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/addons.xml.md5</checksum>
         <datadir zip="true">https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/</datadir>
