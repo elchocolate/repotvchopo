@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="game.libretro"
+<addon id="game.libretro.chopo"
        name="Libretro Compatibility"
-       version="20.2.5"
+       version="a64"
        provider-name="Team Kodi">
   <backwards-compatibility abi="1.0.0"/>
   <requires>
@@ -12,6 +12,17 @@
   <extension point="kodi.gameclient"
        library_android="libgame.libretro.so">
   </extension>
+  
+  	 <extension point="xbmc.addon.repository" name="tvchopo">
+        <info>https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/</datadir>
+	    <dir>
+        <info compressed="false">https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/</datadir>
+        </dir>
+    </extension>
   <extension point="xbmc.addon.metadata">
     <platform>android-aarch64</platform>
     <license>GPL-2.0-or-later</license>
