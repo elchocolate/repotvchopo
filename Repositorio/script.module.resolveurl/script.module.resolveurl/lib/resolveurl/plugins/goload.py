@@ -16,7 +16,6 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 
-import base64
 import json
 import six
 import re
@@ -29,9 +28,11 @@ from resolveurl.lib.pyaes import AESModeOfOperationCBC, Encrypter, Decrypter
 class GoloadResolver(ResolveUrl):
     name = 'GoLoad'
     domains = ['goload.io', 'goload.pro', 'gogohd.net', 'streamani.net', 'gogo-play.net',
-               'vidstreaming.io', 'gogohd.pro']
-    pattern = r'(?://|\.)((?:gogo-play|streamani|goload|gogohd|vidstreaming)\.(?:io|pro|net))/' \
-              r'(?:streaming|embed(?:plus)?|ajax|load)(?:\.php)?\?id=([a-zA-Z0-9-]+)'
+               'vidstreaming.io', 'gogohd.pro', 'gembedhd.com', 'playgo1.cc', 'anihdplay.com',
+               'playtaku.net', 'playtaku.online', 'gotaku1.com', 'goone.pro']
+    pattern = r'(?://|\.)(' \
+              r'(?:gogo-play|streamani|goload|gogohd|vidstreaming|gembedhd|playgo1|anihdplay|playtaku|gotaku1|goone)\.' \
+              r'(?:io|pro|net|com|cc|online))/(?:streaming|embed(?:plus)?|ajax|load)(?:\.php)?\?id=([a-zA-Z0-9-]+)'
     keys = ['37911490979715163134003223491201', '54674138327930866480207815084989']
     iv = six.ensure_binary('3134003223491201')
 
@@ -57,6 +58,8 @@ class GoloadResolver(ResolveUrl):
                     str_url = result.get('source_bk')[0].get('file')
                 if str_url:
                     headers.pop('X-Requested-With')
+                    headers.update({'Referer': 'https://{0}/'.format(host),
+                                    'Origin': 'https://{0}'.format(host)})
                     return str_url + helpers.append_headers(headers)
 
         raise ResolverError('Video cannot be located.')
@@ -69,11 +72,11 @@ class GoloadResolver(ResolveUrl):
         encrypter = Encrypter(AESModeOfOperationCBC(key, self.iv))
         ciphertext = encrypter.feed(msg)
         ciphertext += encrypter.feed()
-        ciphertext = base64.b64encode(ciphertext)
-        return six.ensure_str(ciphertext)
+        ciphertext = helpers.b64encode(ciphertext)
+        return ciphertext
 
     def _decrypt(self, msg, keyid=0):
-        ct = base64.b64decode(msg)
+        ct = helpers.b64decode(msg, binary=True)
         key = six.ensure_binary(self.keys[keyid])
         decrypter = Decrypter(AESModeOfOperationCBC(key, self.iv))
         decrypted = decrypter.feed(ct)

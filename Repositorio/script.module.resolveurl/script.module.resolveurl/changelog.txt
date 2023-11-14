@@ -1,18 +1,16 @@
-Version 5.1.87 (Jan 02, 2023)
+Version 5.1.116 (Nov 13, 2023)
 - Code Base Changes:
     - None
 
 - Resolvers Added:
-    - streamhide
+    - None
 
 - Resolvers Fixed/Updated:
-    - dembed
-    - fembed
-    - goload
-    - neohd
-    - streamsb
-    - uploadever
-    - vidcloud9
+    - govad
+    - mixdrop
+    - streamwish
+    - upbaam
+    - vidbom
     - voesx
 
 - Resolvers Removed

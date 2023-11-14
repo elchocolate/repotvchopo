@@ -122,7 +122,8 @@ class HostedMediaFile:
         regex = r"(?:www\.)?([\w\-]*\.[\w\-]{2,5}(?:\.[\w\-]{2,5})?)$"
         res = re.search(regex, domain)
         if res:
-            domain = res.group(1)
+            # domain = res.group(1)
+            domain = '.'.join(res.group(1).split('.')[-2:])
         domain = domain.lower()
         return domain
 
@@ -192,7 +193,7 @@ class HostedMediaFile:
                             return url_list
                         else:
                             stream_url = resolver.get_media_url(self._host, self._media_id)
-                        if stream_url.startswith("//"):
+                        if stream_url and stream_url.startswith("//"):
                             stream_url = 'http:%s' % stream_url
                         if stream_url and self.__test_stream(stream_url):
                             self.__resolvers = [resolver]  # Found a working resolver, throw out the others
@@ -265,6 +266,8 @@ class HostedMediaFile:
 
         try:
             msg = ''
+            if 'verifypeer' in headers.keys():
+                headers.pop('verifypeer')
             request = urllib_request.Request(stream_url.split('|')[0], headers=headers)
             # only do a HEAD request for non m3u8 streams
             if '.m3u8' not in stream_url:

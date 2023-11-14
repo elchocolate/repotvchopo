@@ -17,7 +17,6 @@
 """
 
 import re
-import base64
 from six.moves import urllib_parse
 from resolveurl.lib import helpers, captcha_lib
 from resolveurl import common
@@ -50,11 +49,11 @@ class PandaFilesResolver(ResolveUrl):
             headers.update({'verifypeer': 'false'})
             query = urllib_parse.parse_qsl(urllib_parse.urlparse(source.group(1)).query)
             if not query:
-                return source.group(1) + helpers.append_headers(headers)
-            src = base64.b64decode(query[0][1]).decode('utf-8')
-            return src + helpers.append_headers(headers)
+                return source.group(1).replace(' ', '%20') + helpers.append_headers(headers)
+            src = helpers.b64decode(query[0][1])
+            return src.replace(' ', '%20') + helpers.append_headers(headers)
 
         raise ResolverError('File Not Found or removed')
 
     def get_url(self, host, media_id):
-        return self._default_get_url(host, media_id, template='https://{host}/document')
+        return self._default_get_url(host, media_id, template='https://{host}/pandadocument')

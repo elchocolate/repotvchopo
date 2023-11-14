@@ -27,9 +27,14 @@ class StreamTapeResolver(ResolveUrl):
     name = 'StreamTape'
     domains = ['streamtape.com', 'strtape.cloud', 'streamtape.net', 'streamta.pe', 'streamtape.site',
                'strcloud.link', 'strtpe.link', 'streamtape.cc', 'scloud.online', 'stape.fun',
-               'streamadblockplus.com', 'shavetape.cash', 'streamtape.to']
-    pattern = r'(?://|\.)(s(?:tr)?(?:eam|have)?(?:ta?p?e?|cloud|adblockplus)\.' \
-              r'(?:com|cloud|net|pe|site|link|cc|online|fun|cash|to))/(?:e|v)/([0-9a-zA-Z]+)'
+               'streamadblockplus.com', 'shavetape.cash', 'streamtape.to', 'streamta.site',
+               'streamadblocker.xyz', 'tapewithadblock.org', 'adblocktape.wiki', 'antiadtape.com',
+               'streamtape.xyz', 'tapeblocker.com', 'streamnoads.com']
+    pattern = r'(?://|\.)(' \
+              r'(?:s(?:tr)?(?:eam|have)?|tapewith)?(?:adblock(?:er|plus)?|antiad|noads)?' \
+              r'(?:ta?p?e?|cloud)?(?:blocker)?\.' \
+              r'(?:com|cloud|net|pe|site|link|cc|online|fun|cash|to|xyz|org|wiki)' \
+              r')/(?:e|v)/([0-9a-zA-Z]+)'
 
     def get_media_url(self, host, media_id):
         web_url = self.get_url(host, media_id)
