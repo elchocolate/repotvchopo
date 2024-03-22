@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
-	id="plugin.video.koditv" version="9" name="[B][COLOR white]kodi[COLOR aqua]tv[/COLOR][/B]" provider-name="equipo tvchopo">
+	id="plugin.video.koditv" version="10" name="[B][COLOR white]kodi[COLOR aqua]tv[/COLOR][/B]" provider-name="equipo tvchopo">
 <requires>
-    <import addon="plugin.video.youtube" /> 
     <import addon="script.module.requests" />
     <import addon="script.module.resolveurl" optional="true" />
     <import addon="script.module.six" />
