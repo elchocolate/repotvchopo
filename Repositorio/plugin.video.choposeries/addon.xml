@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
-	id="plugin.video.choposeries" version="19" name="[B][COLOR white]chopo[COLOR gold]series[/COLOR][/B]" provider-name="equipo tvchopo">
-<requires>
-    <import addon="plugin.video.youtube" /> 
+	id="plugin.video.choposeries" version="20" name="[B][COLOR white]chopo[COLOR gold]series[/COLOR][/B]" provider-name="equipo tvchopo">
+<requires>   
     <import addon="script.module.requests" />
     <import addon="script.module.resolveurl"  optional="true" />
     <import addon="script.module.six" />
