@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
-	id="plugin.video.koditv" version="10" name="[B][COLOR white]kodi[COLOR aqua]tv[/COLOR][/B]" provider-name="equipo tvchopo">
+	id="plugin.video.koditv" version="11" name="[B][COLOR white]kodi[COLOR aqua]tv[/COLOR][/B]" provider-name="equipo tvchopo">
 <requires>
     <import addon="script.module.requests" />
     <import addon="script.module.resolveurl" optional="true" />
@@ -26,7 +26,7 @@
                 <platform>all</platform>
 		<summary lang="en"></summary>
 		<summary lang="da"></summary>
-		<description lang="en"></description>
+		<description lang="en">este addon es totalmente gratuito no contiene ningun contenido todo es enlazado a webs que estan libremente en internet.</description>
 		<website></website>
 		<license>GPL 2.0</license>
 		<platform>all</platform>
