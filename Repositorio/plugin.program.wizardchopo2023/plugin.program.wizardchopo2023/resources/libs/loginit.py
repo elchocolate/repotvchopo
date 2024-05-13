@@ -827,7 +827,7 @@ def update_login(do, who):
                 user = addonid.getSetting(default)
                 CONFIG.set_setting(saved, user)
                 
-                logging.log('Login Data Saved for {0}'.format(name), level=xbmc.LOGNOTICE)
+                logging.log('Login Data Saved for {0}'.format(name), level=xbmc.LOGINFO)
             except Exception as e:
                 logging.log("[Login Data] Unable to Update {0} ({1})".format(who, str(e)), level=xbmc.LOGERROR)
         else:
@@ -845,7 +845,7 @@ def update_login(do, who):
                     
                 user = addonid.getSetting(default)
                 CONFIG.set_setting(saved, user)
-                logging.log('Login Data Restored for {0}'.format(name), level=xbmc.LOGNOTICE)
+                logging.log('Login Data Restored for {0}'.format(name), level=xbmc.LOGINFO)
             except Exception as e:
                 logging.log("[Login Info] Unable to Restore {0} ({1})".format(who, str(e)), level=xbmc.LOGERROR)
         else:
@@ -891,9 +891,9 @@ def auto_update(who):
                 dialog = xbmcgui.Dialog()
 
                 if dialog.yesno(CONFIG.ADDONTITLE,
-                                    "Would you like to save the [COLOR {0}]Login Info[/COLOR] for [COLOR {1}]{2}[/COLOR]?".format(CONFIG.COLOR2, CONFIG.COLOR1, n),
-                                    "Addon: [COLOR springgreen][B]{0}[/B][/COLOR]".format(u),
-                                    "Saved:[/COLOR] [COLOR red][B]{0}[/B][/COLOR]".format(su) if not su == '' else 'Saved:[/COLOR] [COLOR red][B]None[/B][/COLOR]',
+                                    "Would you like to save the [COLOR {0}]Login Info[/COLOR] for [COLOR {1}]{2}[/COLOR]?".format(CONFIG.COLOR2, CONFIG.COLOR1, n)
+                                    +'\n'+"Addon: [COLOR springgreen][B]{0}[/B][/COLOR]".format(u)
+                                    +'\n'+"Saved:[/COLOR] [COLOR red][B]{0}[/B][/COLOR]".format(su) if not su == '' else 'Saved:[/COLOR] [COLOR red][B]None[/B][/COLOR]',
                                     yeslabel="[B][COLOR springgreen]Save Data[/COLOR][/B]",
                                     nolabel="[B][COLOR red]No Cancel[/COLOR][/B]"):
                     login_it('update', who)

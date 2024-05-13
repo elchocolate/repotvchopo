@@ -17,8 +17,9 @@
 #  http://www.gnu.org/copyleft/gpl.html                                        #
 ################################################################################
 
-import xbmc, xbmcvfs
+import xbmc
 import xbmcaddon
+import xbmcvfs
 
 import os
 
@@ -128,9 +129,6 @@ class Config:
                               'commoncache.db', 'access.log', 'trakt.db',
                               'video_cache.db', '.gitignore', '.DS_Store',
                               'Textures13.db', 'Thumbs.db']
-        self.EXCLUDE_DIRS = [self.ADDON_ID, 'cache', 'system', 'packages',
-                             'Thumbnails', 'peripheral_data', 'temp',
-                             'My_Builds', 'library', 'cdm', 'archive_cache']
         self.XMLS = ['advancedsettings.xml', 'sources.xml', 'favourites.xml',
                      'profiles.xml', 'playercorefactory.xml', 'guisettings.xml']
         self.MODURL = 'http://mirrors.kodi.tv/addons/matrix/'
@@ -181,6 +179,19 @@ class Config:
         self.PROFILES = os.path.join(self.USERDATA, 'profiles.xml')
         self.WIZLOG = os.path.join(self.PLUGIN_DATA, 'wizard.log')
         self.WHITELIST = os.path.join(self.PLUGIN_DATA, 'whitelist.txt')
+        
+        self.EXCLUDE_DIRS = [self.ADDON_PATH,
+                             os.path.join(self.HOME, 'cache'),
+                             os.path.join(self.HOME, 'system'),
+                             os.path.join(self.HOME, 'temp'),
+                             os.path.join(self.HOME, 'My_Builds'),
+                             os.path.join(self.HOME, 'cdm'),
+                             os.path.join(self.ADDONS, 'temp'),
+                             os.path.join(self.ADDONS, 'packages'),
+                             os.path.join(self.ADDONS, 'archive_cache'),
+                             os.path.join(self.USERDATA, 'Thumbnails'),
+                             os.path.join(self.USERDATA, 'peripheral_data'),
+                             os.path.join(self.USERDATA, 'library')]
 
     def init_settings(self):
         self.FIRSTRUN = self.get_setting('first_install')
@@ -200,10 +211,9 @@ class Config:
         self.EXTERROR = self.get_setting('errors')
         
         # View variables
-        self.SHOW17 = self.get_setting('show17')
-        self.SHOW18 = self.get_setting('show18')
-        self.SHOW19 = self.get_setting('show19')
+        self.SHOW21 = self.get_setting('show21')
         self.SHOW20 = self.get_setting('show20')
+        self.SHOW19 = self.get_setting('show19')
         self.SHOWADULT = self.get_setting('adult')
         self.SEPARATE = self.get_setting('separate')
         self.DEVELOPER = self.get_setting('developer')
@@ -293,7 +303,7 @@ class Config:
             xbmcaddon.Addon(id).openSettings()
         except:
             import logging
-            logging.log('No se puede abrir la configuración de {}'.format(id), level=xbmc.LOGERROR)
+            logging.log('Cannot open settings for {}'.format(id), level=xbmc.LOGERROR)
         
         if int(self.KODIV) < 18:
             use = 0

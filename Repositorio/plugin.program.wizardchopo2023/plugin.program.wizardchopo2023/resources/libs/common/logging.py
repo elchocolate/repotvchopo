@@ -50,7 +50,7 @@ def log(msg, level=xbmc.LOGDEBUG):
     if CONFIG.DEBUGLEVEL == '1':  # Normal Logging
         pass
     if CONFIG.DEBUGLEVEL == '2':  # Full Logging
-        level = xbmc.LOGNOTICE
+        level = xbmc.LOGINFO
     
     xbmc.log('{0}: {1}'.format(CONFIG.ADDONTITLE, msg), level)
     if CONFIG.ENABLEWIZLOG == 'true':
@@ -59,8 +59,8 @@ def log(msg, level=xbmc.LOGDEBUG):
                 f.close()
 
         lastcheck = CONFIG.NEXTCLEANDATE if not CONFIG.NEXTCLEANDATE == 0 else tools.get_date()
-        #if CONFIG.CLEANWIZLOG == 'true' and time.mktime(time.strptime(lastcheck, "%Y-%m-%d %H:%M:%S")) <= tools.get_date():
-            #check_log()
+        if CONFIG.CLEANWIZLOG == 'true' and time.mktime(time.strptime(lastcheck, "%Y-%m-%d %H:%M:%S")) <= tools.get_date():
+            check_log()
 
         line = "[{0}] {1}".format(tools.get_date(formatted=True), msg)
         line = line.rstrip('\r\n') + '\n'
@@ -83,7 +83,7 @@ def check_log():
     elif CONFIG.CLEANWIZLOGBY == '1':  # By Size
         maxsize = CONFIG.MAXWIZSIZE[int(float(CONFIG.CLEANSIZE))]*1024
         if os.path.getsize(CONFIG.WIZLOG) >= maxsize:
-            start = len(lines)/2
+            start = int(len(lines)/2)
             newfile = lines[start:]
             tools.write_to_file(CONFIG.WIZLOG, '\n'.join(newfile))
     elif CONFIG.CLEANWIZLOGBY == '2':  # By Lines
@@ -335,7 +335,7 @@ def show_result(message, url=None):
             except:
                 pass
         except Exception as e:
-            log(str(e), xbmc.LOGNOTICE)
+            log(str(e), xbmc.LOGINFO)
             confirm = dialog.ok(CONFIG.ADDONTITLE, "[COLOR %s]%s[/COLOR]" % (CONFIG.COLOR2, message))
     else:
         confirm = dialog.ok(CONFIG.ADDONTITLE, "[COLOR %s]%s[/COLOR]" % (CONFIG.COLOR2, message))

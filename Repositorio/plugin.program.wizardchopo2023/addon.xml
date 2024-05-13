@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.program.wizardchopo2023" name="[COLOR white]instalador wizard-[COLOR aqua]chopo[/COLOR]" version="3.0" provider-name="equipo-tvchopo">
+<addon id="plugin.program.wizardchopo2023" name="[COLOR white]instalador wizard-[COLOR aqua]chopo[/COLOR]" version="4.0" provider-name="equipo-tvchopo">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="script.module.requests" />
@@ -24,7 +24,7 @@
     
     <extension point="xbmc.addon.metadata">
         <summary lang="en">Wizard</summary>
-        <description lang="en">[COLOR orange]instalador de wizard chopo para kodi 19 y 20[/COLOR]</description>
+        <description lang="en">[COLOR orange]instalador de wizard chopo para kodi 19,20,21[/COLOR]</description>
         <platform>all</platform>
         <reuselanguageinvoker>false</reuselanguageinvoker>
         <source></source>

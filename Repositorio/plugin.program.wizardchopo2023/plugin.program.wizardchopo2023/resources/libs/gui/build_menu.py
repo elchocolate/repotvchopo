@@ -85,13 +85,13 @@ class BuildMenu:
         else:
             directory.add_file('Kodi Version: {0}'.format(CONFIG.KODIV), icon=CONFIG.ICONBUILDS,
                                themeit=CONFIG.THEME3)
-            directory.add_dir('[COLOR white]Menú<< Guardar datos[/COLOR]', {'mode': 'savedata'}, icon=CONFIG.ICONSAVE, themeit=CONFIG.THEME3)
+            directory.add_dir('Menú Guardar datos', {'mode': 'savedata'}, icon=CONFIG.ICONSAVE, themeit=CONFIG.THEME3)
             directory.add_separator()
             directory.add_file('URL for txt file not valid', icon=CONFIG.ICONBUILDS, themeit=CONFIG.THEME3)
             directory.add_file('{0}'.format(CONFIG.BUILDFILE), icon=CONFIG.ICONBUILDS, themeit=CONFIG.THEME3)
             return
 
-        total, count17, count19, count20, adultcount, hidden = check.build_count()
+        total, count21, count20, count19, adultcount, hidden = check.build_count()
 
         match = re.compile('name="(.+?)".+?ersion="(.+?)".+?rl="(.+?)".+?ui="(.+?)".+?odi="(.+?)".+?heme="(.+?)".+?con="(.+?)".+?anart="(.+?)".+?dult="(.+?)".+?escription="(.+?)"').findall(link)
         
@@ -105,35 +105,36 @@ class BuildMenu:
                 self.view_build(match[0][0])
                 return
 
-        directory.add_file('[COLOR white]Kodi Version: [COLOR lime]{0}'.format(CONFIG.KODIV), icon=CONFIG.ICONBUILDS, themeit=CONFIG.THEME3)
-        directory.add_dir('[COLOR white]Menú Guardar datos[/COLOR]', {'mode': 'savedata'}, icon=CONFIG.ICONSAVE, themeit=CONFIG.THEME3)
+        directory.add_file('Kodi Version: {0}'.format(CONFIG.KODIV), icon=CONFIG.ICONBUILDS, themeit=CONFIG.THEME3)
+        directory.add_dir('Menú Guardar datos', {'mode': 'savedata'}, icon=CONFIG.ICONSAVE, themeit=CONFIG.THEME3)
         directory.add_separator()
 
         if len(match) >= 1:
             if CONFIG.SEPARATE == 'true':
                 self._list_all(match)
             else:
-                versions='{0}'.format(CONFIG.KODIV)
-                if '19' in versions:
-                    state = '+' if CONFIG.SHOW19 == 'false' else '-'
-                    directory.add_file('[B]{0} [COLOR white]wizards para kodi 19 ({1})[/B]'.format(state, count19), {'mode': 'togglesetting',
-                                       'name': 'show19'}, themeit=CONFIG.THEME3)
-                    if CONFIG.SHOW19 == 'true':
-                        self._list_all(match, kodiv=19)
-                
-                if '20' in versions:
+                if count21 > 0:
+                    state = '+' if CONFIG.SHOW21 == 'false' else '-'
+                    directory.add_file('[B][COLOR aqua] Omega wizards ({1})[/B]'.format(state, count21), {'mode': 'togglesetting',
+                                       'name': 'show21'}, themeit=CONFIG.THEME3)
+                    if CONFIG.SHOW21 == 'true':
+                        self._list_all(match, kodiv=21)
+                if count20 > 0:
                     state = '+' if CONFIG.SHOW20 == 'false' else '-'
-                    directory.add_file('[B]{0} [COLOR white]wizards para kodi 20 ({1})[/B]'.format(state, count20), {'mode': 'togglesetting',
+                    directory.add_file('[B][COLOR aqua] Nexus wizards ({1})[/B]'.format(state, count20), {'mode': 'togglesetting',
                                        'name': 'show20'}, themeit=CONFIG.THEME3)
                     if CONFIG.SHOW20 == 'true':
                         self._list_all(match, kodiv=20)
-                
-  
-
+                if count19 > 0:
+                    state = '+' if CONFIG.SHOW19 == 'false' else '-'
+                    directory.add_file('[B][COLOR aqua] Matrix wizards ({1})[/B]'.format(state, count19), {'mode': 'togglesetting',
+                                       'name': 'show19'}, themeit=CONFIG.THEME3)
+                    if CONFIG.SHOW19 == 'true':
+                        self._list_all(match, kodiv=19)
 
         elif hidden > 0:
             if adultcount > 0:
-                directory.add_file('There is currently only Adult builds', icon=CONFIG.ICONBUILDS,
+                directory.add_file('There is currently only Adult wizard', icon=CONFIG.ICONBUILDS,
                                    themeit=CONFIG.THEME3)
                 directory.add_file('Enable Show Adults in Addon Settings > Misc', icon=CONFIG.ICONBUILDS,
                                    themeit=CONFIG.THEME3)
@@ -174,25 +175,22 @@ class BuildMenu:
             themecheck = tools.open_url(themefile, check=True)
             
             if updatecheck:
-                build = '{0} [COLOR red][ACTUAL v{1}][/COLOR]'.format(build, CONFIG.BUILDVERSION)
+                build = '{0} [COLOR red][CURRENT v{1}][/COLOR]'.format(build, CONFIG.BUILDVERSION)
                 
             directory.add_file(build, description=description, fanart=fanart, icon=icon, themeit=CONFIG.THEME4)
             directory.add_separator()
             directory.add_dir('Menú Guardar datos', {'mode': 'savedata'}, icon=CONFIG.ICONSAVE, themeit=CONFIG.THEME3)
-            directory.add_file('Build informacion', {'mode': 'buildinfo', 'name': name}, description=description, fanart=fanart,
+            directory.add_file('informacion del wizard', {'mode': 'buildinfo', 'name': name}, description=description, fanart=fanart,
                                icon=icon, themeit=CONFIG.THEME3)
                                
             if previewcheck:
                 directory.add_file('View Video Preview', {'mode': 'buildpreview', 'name': name}, description=description, fanart=fanart,
                                    icon=icon, themeit=CONFIG.THEME3)
             
-            if versioncheck:
-                directory.add_file(
-                    '[I]Build diseñado para Kodi v{0} (installed: v{1})[/I]'.format(str(kodi), str(CONFIG.KODIV)),
-                    fanart=fanart, icon=icon, themeit=CONFIG.THEME3)
+     
                     
-            directory.add_separator('instalar wizards')
-            directory.add_file('instalar aqui', {'mode': 'install', 'action': 'build', 'name': name}, description=description, fanart=fanart,
+            directory.add_separator('INSTALL')
+            directory.add_file('[COLOR aqua]Instalar aqui', {'mode': 'install', 'action': 'build', 'name': name}, description=description, fanart=fanart,
                                icon=icon, themeit=CONFIG.THEME1)
                                
             if guicheck:
@@ -245,7 +243,7 @@ class BuildMenu:
 
                 themes = self.theme_count(name, count=False)
 
-                msg = "[COLOR {0}]Build nombre:[/COLOR] [COLOR {1}]{2}[/COLOR][CR]".format(CONFIG.COLOR2, CONFIG.COLOR1, name)
+                msg = "[COLOR {0}]Build Name:[/COLOR] [COLOR {1}]{2}[/COLOR][CR]".format(CONFIG.COLOR2, CONFIG.COLOR1, name)
                 msg += "[COLOR {0}]Build Version:[/COLOR] [COLOR {1}]{2}[/COLOR][CR]".format(CONFIG.COLOR2, CONFIG.COLOR1, version)
                 if themes:
                     msg += "[COLOR {0}]Build Theme(s):[/COLOR] [COLOR {1}]{2}[/COLOR][CR]".format(CONFIG.COLOR2, CONFIG.COLOR1, ', '.join(themes))
@@ -254,9 +252,9 @@ class BuildMenu:
                 msg += "[COLOR {0}]Description:[/COLOR] [COLOR {1}]{2}[/COLOR][CR]".format(CONFIG.COLOR2, CONFIG.COLOR1, description)
 
                 if extend:
-                    msg += "[COLOR {0}]Última actualización:[/COLOR] [COLOR {1}]{2}[/COLOR][CR][CR]".format(CONFIG.COLOR2, CONFIG.COLOR1, created)
-                    msg += "[COLOR {0}]Tamaño extraído:[/COLOR] [COLOR {1}]{2}[/COLOR][CR][CR]".format(CONFIG.COLOR2, CONFIG.COLOR1, tools.convert_size(int(float(extracted))))
-                    msg += "[COLOR {0}]Zip tamaño:[/COLOR] [COLOR {1}]{2}[/COLOR][CR][CR]".format(CONFIG.COLOR2, CONFIG.COLOR1, tools.convert_size(int(float(zipsize))))
+                    msg += "[COLOR {0}]Latest Update:[/COLOR] [COLOR {1}]{2}[/COLOR][CR][CR]".format(CONFIG.COLOR2, CONFIG.COLOR1, created)
+                    msg += "[COLOR {0}]Extracted Size:[/COLOR] [COLOR {1}]{2}[/COLOR][CR][CR]".format(CONFIG.COLOR2, CONFIG.COLOR1, tools.convert_size(int(float(extracted))))
+                    msg += "[COLOR {0}]Zip Size:[/COLOR] [COLOR {1}]{2}[/COLOR][CR][CR]".format(CONFIG.COLOR2, CONFIG.COLOR1, tools.convert_size(int(float(zipsize))))
                     msg += "[COLOR {0}]Skin Name:[/COLOR] [COLOR {1}]{2}[/COLOR][CR][CR]".format(CONFIG.COLOR2, CONFIG.COLOR1, skin)
                     msg += "[COLOR {0}]Programs:[/COLOR] [COLOR {1}]{2}[/COLOR][CR][CR]".format(CONFIG.COLOR2, CONFIG.COLOR1, programs)
                     msg += "[COLOR {0}]Video:[/COLOR] [COLOR {1}]{2}[/COLOR][CR][CR]".format(CONFIG.COLOR2, CONFIG.COLOR1, video)

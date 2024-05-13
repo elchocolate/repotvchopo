@@ -462,8 +462,8 @@ def clear_crash():
         dialog = xbmcgui.Dialog()
 
         if dialog.yesno(CONFIG.ADDONTITLE,
-                            '[COLOR {0}]Would you like to delete the Crash logs?'.format(CONFIG.COLOR2),
-                            '[COLOR {0}]{1}[/COLOR] Files Found[/COLOR]'.format(CONFIG.COLOR1, len(files)),
+                            '[COLOR {0}]Would you like to delete the Crash logs?'.format(CONFIG.COLOR2)
+                            +'\n'+'[COLOR {0}]{1}[/COLOR] Files Found[/COLOR]'.format(CONFIG.COLOR1, len(files)),
                             yeslabel="[B][COLOR springgreen]Remove Logs[/COLOR][/B]",
                             nolabel="[B][COLOR red]Keep Logs[/COLOR][/B]"):
             for f in files:
@@ -510,9 +510,9 @@ def total_clean():
     dialog = xbmcgui.Dialog()
 
     if dialog.yesno(CONFIG.ADDONTITLE,
-                        '[COLOR {0}]¿Le gustaría borrar la caché, los paquetes y las miniaturas??[/COLOR]'.format(CONFIG.COLOR2),
-                        nolabel='[B][COLOR red]cancelar Proceso[/COLOR][/B]',
-                        yeslabel='[B][COLOR springgreen]borrar todo [/COLOR][/B]'):
+                        '[COLOR {0}]Would you like to clear cache, packages and thumbnails?[/COLOR]'.format(CONFIG.COLOR2),
+                        nolabel='[B][COLOR red]Cancel Process[/COLOR][/B]',
+                        yeslabel='[B][COLOR springgreen]Clean All[/COLOR][/B]'):
         clear_archive()
         clear_cache()
         clear_function_cache(over=True)
@@ -533,7 +533,7 @@ def clear_thumbs(type=None):
     if type is not None:
         choice = 1
     else:
-        choice = dialog.yesno(CONFIG.ADDONTITLE, '[COLOR {0}]¿Le gustaría eliminar {1} y las carpetas de miniaturas relacionadas?'.format(CONFIG.COLOR2, latest) + '\n' + "They will repopulate on the next startup[/COLOR]", nolabel='[B][COLOR red]Don\'t Delete[/COLOR][/B]', yeslabel='[B][COLOR springgreen]Delete Thumbs[/COLOR][/B]')
+        choice = dialog.yesno(CONFIG.ADDONTITLE, '[COLOR {0}]Would you like to delete the {1} and related thumbnail folders?'.format(CONFIG.COLOR2, latest) + '\n' + "They will repopulate on the next startup[/COLOR]", nolabel='[B][COLOR red]Don\'t Delete[/COLOR][/B]', yeslabel='[B][COLOR springgreen]Delete Thumbs[/COLOR][/B]')
     if choice == 1:
         try:
             tools.remove_file(os.path.join(CONFIG.DATABASE, latest))
@@ -558,11 +558,11 @@ def remove_addon(addon, name, over=False, data=True):
         dialog = xbmcgui.Dialog()
         
         yes = dialog.yesno(CONFIG.ADDONTITLE,
-                               '[COLOR {0}]¿Estás seguro de que quieres eliminar add-on:'.format(CONFIG.COLOR2),
-                               'Name: [COLOR {0}]{1}[/COLOR]'.format(CONFIG.COLOR1, name),
-                               'ID: [COLOR {0}]{1}[/COLOR][/COLOR]'.format(CONFIG.COLOR1, addon),
-                               yeslabel='[B][COLOR springgreen]borrar Add-on[/COLOR][/B]',
-                               nolabel='[B][COLOR red]no borrar[/COLOR][/B]')
+                               '[COLOR {0}]Are you sure you want to delete the add-on:'.format(CONFIG.COLOR2)
+                               +'\n'+'Name: [COLOR {0}]{1}[/COLOR]'.format(CONFIG.COLOR1, name)
+                               +'\n'+'ID: [COLOR {0}]{1}[/COLOR][/COLOR]'.format(CONFIG.COLOR1, addon),
+                               yeslabel='[B][COLOR springgreen]Remove Add-on[/COLOR][/B]',
+                               nolabel='[B][COLOR red]Don\'t Remove[/COLOR][/B]')
     if yes == 1:
         folder = os.path.join(CONFIG.ADDONS, addon)
         logging.log("Removing Add-on: {0}".format(addon))
@@ -592,7 +592,7 @@ def remove_addon(addon, name, over=False, data=True):
             
     if not over:
         logging.log_notify(CONFIG.ADDONTITLE,
-                           "[COLOR {0}]{1} borrar[/COLOR]".format(CONFIG.COLOR2, name))
+                           "[COLOR {0}]{1} Removed[/COLOR]".format(CONFIG.COLOR2, name))
 
 
 def remove_addon_data(addon):
@@ -600,18 +600,18 @@ def remove_addon_data(addon):
 
     if addon == 'all':  # clear ALL addon data
         if dialog.yesno(CONFIG.ADDONTITLE,
-                            '[COLOR {0}]Le gustaria quitar [COLOR {1}]ALL[/COLOR] datos adicionales almacenados en su carpeta de datos de usuario?[/COLOR]'.format(CONFIG.COLOR2, CONFIG.COLOR1),
-                            yeslabel='[B][COLOR springgreen]eliminar Data[/COLOR][/B]',
-                            nolabel='[B][COLOR red]no eliminar[/COLOR][/B]'):
+                            '[COLOR {0}]Would you like to remove [COLOR {1}]ALL[/COLOR] addon data stored in your userdata folder?[/COLOR]'.format(CONFIG.COLOR2, CONFIG.COLOR1),
+                            yeslabel='[B][COLOR springgreen]Remove Data[/COLOR][/B]',
+                            nolabel='[B][COLOR red]Don\'t Remove[/COLOR][/B]'):
             tools.clean_house(CONFIG.ADDON_DATA)
         else:
-            logging.log_notify('[COLOR {0}]eliminar Addon Data[/COLOR]'.format(CONFIG.COLOR1),
+            logging.log_notify('[COLOR {0}]Remove Addon Data[/COLOR]'.format(CONFIG.COLOR1),
                                '[COLOR {0}]Cancelled![/COLOR]'.format(CONFIG.COLOR2))
     elif addon == 'uninstalled':  # clear addon data for uninstalled addons
         if dialog.yesno(CONFIG.ADDONTITLE,
-                            '[COLOR {0}]Le gustaria quitar [COLOR {1}]ALL[/COLOR] datos de complementos almacenados en su carpeta de datos de usuario para complementos desinstalados?[/COLOR]'.format(CONFIG.COLOR2, CONFIG.COLOR1),
-                            yeslabel='[B][COLOR springgreen]eliminar Data[/COLOR][/B]',
-                            nolabel='[B][COLOR red]no eliminar[/COLOR][/B]'):
+                            '[COLOR {0}]Would you like to remove [COLOR {1}]ALL[/COLOR] addon data stored in your userdata folder for uninstalled addons?[/COLOR]'.format(CONFIG.COLOR2, CONFIG.COLOR1),
+                            yeslabel='[B][COLOR springgreen]Remove Data[/COLOR][/B]',
+                            nolabel='[B][COLOR red]Don\'t Remove[/COLOR][/B]'):
                             
             total = 0
             
@@ -626,29 +626,29 @@ def remove_addon_data(addon):
                     total += 1
                     logging.log(folder)
                     shutil.rmtree(folder)
-            logging.log_notify('[COLOR {0}]Limpiar Desinstalado[/COLOR]'.format(CONFIG.COLOR1),
-                               '[COLOR {0}]{1} Folders(s) borradas[/COLOR]'.format(CONFIG.COLOR2, total))
+            logging.log_notify('[COLOR {0}]Clean up Uninstalled[/COLOR]'.format(CONFIG.COLOR1),
+                               '[COLOR {0}]{1} Folders(s) Removed[/COLOR]'.format(CONFIG.COLOR2, total))
         else:
-            logging.log_notify('[COLOR {0}]eliminar  Add-on Data[/COLOR]'.format(CONFIG.COLOR1),
+            logging.log_notify('[COLOR {0}]Remove Add-on Data[/COLOR]'.format(CONFIG.COLOR1),
                                '[COLOR {0}]Cancelled![/COLOR]'.format(CONFIG.COLOR2))
     elif addon == 'empty':  # clear empty folders from addon_data
         if dialog.yesno(CONFIG.ADDONTITLE,
-                            '[COLOR {0}]Le gustaria quitar [COLOR {1}]ALL[/COLOR] Carpetas de datos adicionales vacías en su carpeta de datos de usuario?[/COLOR]'.format(CONFIG.COLOR2, CONFIG.COLOR1),
-                            yeslabel='[B][COLOR springgreen]eliminar Data[/COLOR][/B]',
-                            nolabel='[B][COLOR red]No quitar[/COLOR][/B]'):
+                            '[COLOR {0}]Would you like to remove [COLOR {1}]ALL[/COLOR] empty addon data folders in your userdata folder?[/COLOR]'.format(CONFIG.COLOR2, CONFIG.COLOR1),
+                            yeslabel='[B][COLOR springgreen]Remove Data[/COLOR][/B]',
+                            nolabel='[B][COLOR red]Don\'t Remove[/COLOR][/B]'):
             total = tools.empty_folder(CONFIG.ADDON_DATA)
-            logging.log_notify('[COLOR {0}]Eliminar carpetas vacías[/COLOR]'.format(CONFIG.COLOR1),
-                               '[COLOR {0}]{1} Carpetas eliminadas[/COLOR]'.format(CONFIG.COLOR2, total))
+            logging.log_notify('[COLOR {0}]Remove Empty Folders[/COLOR]'.format(CONFIG.COLOR1),
+                               '[COLOR {0}]{1} Folders(s) Removed[/COLOR]'.format(CONFIG.COLOR2, total))
         else:
-            logging.log_notify('[COLOR {0}]Eliminar carpetas vacías[/COLOR]'.format(CONFIG.COLOR1),
+            logging.log_notify('[COLOR {0}]Remove Empty Folders[/COLOR]'.format(CONFIG.COLOR1),
                                '[COLOR {0}]Cancelled![/COLOR]'.format(CONFIG.COLOR2))
     else:  # clear addon data for a specific addon
         addon_data = os.path.join(CONFIG.ADDON_DATA, addon)
         if addon in CONFIG.EXCLUDES:
             logging.log_notify("[COLOR {0}]Protected Plugin[/COLOR]".format(CONFIG.COLOR1),
-                               "[COLOR {0}]No se permite eliminar datos complementarios[/COLOR]".format(CONFIG.COLOR2))
+                               "[COLOR {0}]Not allowed to remove add-on data[/COLOR]".format(CONFIG.COLOR2))
         elif os.path.exists(addon_data):
-            if dialog.yesno(CONFIG.ADDONTITLE, '[COLOR {0}]¿También le gustaría eliminar los datos complementarios para:[/COLOR]'.format(CONFIG.COLOR2) + '\n' + '[COLOR {0}]{1}[/COLOR]'.format(CONFIG.COLOR1, addon), yeslabel='[B][COLOR springgreen]eliminar Data[/COLOR][/B]', nolabel='[B][COLOR red]No quitar[/COLOR][/B]'):
+            if dialog.yesno(CONFIG.ADDONTITLE, '[COLOR {0}]Would you also like to remove the add-on data for:[/COLOR]'.format(CONFIG.COLOR2) + '\n' + '[COLOR {0}]{1}[/COLOR]'.format(CONFIG.COLOR1, addon), yeslabel='[B][COLOR springgreen]Remove Data[/COLOR][/B]', nolabel='[B][COLOR red]Don\'t Remove[/COLOR][/B]'):
                 tools.clean_house(addon_data)
                 try:
                     shutil.rmtree(addon_data)
@@ -697,9 +697,9 @@ def remove_addon_menu():
                 
     if len(addonnames) == 0:
         logging.log_notify(CONFIG.ADDONTITLE,
-                           "[COLOR {0}]No hay complementos para eliminar[/COLOR]".format(CONFIG.COLOR2))
+                           "[COLOR {0}]No Addons To Remove[/COLOR]".format(CONFIG.COLOR2))
         return
-    selected = dialog.multiselect("{0}: Seleccione los complementos que desea eliminar.".format(CONFIG.ADDONTITLE), addonnames)
+    selected = dialog.multiselect("{0}: Select the addons you wish to remove.".format(CONFIG.ADDONTITLE), addonnames)
     if not selected:
         return
     if len(selected) > 0:
@@ -709,7 +709,7 @@ def remove_addon_menu():
 
         xbmc.sleep(500)
 
-        dialog.ok(CONFIG.ADDONTITLE, "[COLOR {0}]Para guardar los cambios, ahora necesita forzar el cierre de Kodi, presione OK para forzar el cierre de Kodi[/COLOR]".format(CONFIG.COLOR2))
+        dialog.ok(CONFIG.ADDONTITLE, "[COLOR {0}]To save changes you now need to force close Kodi, Press OK to force close Kodi[/COLOR]".format(CONFIG.COLOR2))
         
         update.addon_updates('reset')
         tools.kill_kodi(over=True)

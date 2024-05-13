@@ -187,7 +187,7 @@ def file_count(home, excludes=True):
     item = []
     for base, dirs, files in os.walk(home):
         if excludes:
-            dirs[:] = [d for d in dirs if d not in CONFIG.EXCLUDE_DIRS]
+            dirs[:] = [d for d in dirs if os.path.join(base, d) not in CONFIG.EXCLUDE_DIRS]
             files[:] = [f for f in files if f not in CONFIG.EXCLUDE_FILES]
         for file in files:
             item.append(file)
@@ -216,8 +216,8 @@ def ensure_folders(folder=None):
         dialog = xbmcgui.Dialog()
 
         dialog.ok(CONFIG.ADDONTITLE,
-                      "[COLOR {0}]Error creating add-on directories:[/COLOR]".format(CONFIG.COLOR2),
-                      "[COLOR {0}]{1}[/COLOR]".format(CONFIG.COLOR1, name))
+                      "[COLOR {0}]Error creating add-on directories:[/COLOR]".format(CONFIG.COLOR2)
+                      +'\n'+"[COLOR {0}]{1}[/COLOR]".format(CONFIG.COLOR1, name))
 
 #########################
 #  Utility Functions    #
@@ -397,12 +397,12 @@ def platform():
 
 
 def kodi_version():
-    if 17.0 <= CONFIG.KODIV <= 17.9:
-        vername = 'Krypton'
-    elif 18.0 <= CONFIG.KODIV <= 18.9:
-        vername = 'Leia'
-    elif 19.0 <= CONFIG.KODIV <= 19.9:
+    if 19.0 <= CONFIG.KODIV <= 19.9:
         vername = 'Matrix'
+    elif 20.0 <= CONFIG.KODIV <= 20.9:
+        vername = 'Nexus'
+    elif 21.0 <= CONFIG.KODIV <= 21.9:
+        vername = 'Omega'
     else:
         vername = "Unknown"
     return vername
@@ -419,12 +419,12 @@ def kill_kodi(msg=None, over=None):
         dialog = xbmcgui.Dialog()
         
         if not msg:
-            msg = '[COLOR {0}]Estás a punto de cerrar Kodi. Te gustaria continuar?[/COLOR]'.format(CONFIG.COLOR2)
+            msg = '[COLOR {0}]You are about to close Kodi. Would you like to continue?[/COLOR]'.format(CONFIG.COLOR2)
         
-        choice = dialog.yesno('forzar cierre de Kodi',
+        choice = dialog.yesno('Force Close Kodi',
                                   msg,
-                                  nolabel='[B][COLOR red] No Cancelar[/COLOR][/B]',
-                                  yeslabel='[B][COLOR springgreen]forzar cierre de Kodi[/COLOR][/B]')
+                                  nolabel='[B][COLOR red] No Cancel[/COLOR][/B]',
+                                  yeslabel='[B][COLOR springgreen]Force Close Kodi[/COLOR][/B]')
     if choice == 1:
         from resources.libs.common import logging
         logging.log("Force Closing Kodi: Platform[{0}]".format(str(platform())))
