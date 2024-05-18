@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.program.wizardchopo2023" name="[COLOR white]instalador wizard-[COLOR aqua]chopo[/COLOR]" version="5" provider-name="tvchopo">
+<addon id="plugin.program.wizardchopo2023" name="[COLOR white]instalador wizard-[COLOR aqua]chopo[/COLOR]" version="6" provider-name="tvchopo">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="script.module.requests" />

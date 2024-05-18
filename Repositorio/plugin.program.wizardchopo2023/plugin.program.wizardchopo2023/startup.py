@@ -41,7 +41,7 @@ from resources.libs.common import logging
 from resources.libs.common import tools
 from resources.libs import skin
 from resources.libs import update
-
+xbmc.executebuiltin('UpdateAddonRepos')
 
 def auto_install_repo():
     if not os.path.exists(os.path.join(CONFIG.ADDONS, CONFIG.REPOID)):
