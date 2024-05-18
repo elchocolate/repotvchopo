@@ -13,27 +13,25 @@ ART = os.path.join(PATH, 'resources', 'media')
 #########################################################
 #        User Edit Variables                            #
 #########################################################
-ADDON_ID       = xbmcaddon.Addon().getAddonInfo('id')
 ADDONTITLE     = '[COLOR red]INSTALADOR DE WIZARD[/COLOR]'
-BUILDERNAME    = 'WHIZ'
+BUILDERNAME    = 'chopo'
 EXCLUDES       = [ADDON_ID, 'plugin.program.CHOPO-WIZARD']
-# Enable/Disable the text file caching with 'Yes' or 'No' and age being how often it rechecks in minutes
-CACHETEXT      = 'Yes'
-CACHEAGE       = 30
-# Text File with build info in it.
-BUILDFILE      = 'https://pastebin.com/raw/Scv0p5KF'
+# Text File with build info in it. Please read https://github.com/a4k-openproject/plugin.program.openwizard/wiki/Installing-Builds
+BUILDFILE = 'https://pastebin.com/raw/Scv0p5KF'
 # How often you would like it to check for build updates in days
 # 0 being every startup of kodi
-UPDATECHECK    = 0
+CACHETEXT      = 'Yes'
+CACHEAGE       = 30
+UPDATECHECK = 0
 # Text File with apk info in it.  Leave as 'http://' to ignore
-APKFILE        = 'https://'
+APKFILE = 'http://'
 # Text File with Youtube Videos urls.  Leave as 'http://' to ignore
-YOUTUBETITLE   = ''
-YOUTUBEFILE    = ''
+YOUTUBETITLE = 'http://'
+YOUTUBEFILE = 'http://'
 # Text File for addon installer.  Leave as 'http://' to ignore
-ADDONFILE      = 'https://'
+ADDONFILE = 'http://'
 # Text File for advanced settings.  Leave as 'http://' to ignore
-ADVANCEDFILE   = 'https://'
+ADVANCEDFILE = 'http://'
 #########################################################
 
 #########################################################
@@ -65,17 +63,19 @@ SPACER = '='
 # You can edit these however you want, just make sure that you have a %s in each of the
 # THEME's so it grabs the text from the menu item
 COLOR1 = 'gold'
-COLOR2 = 'white'
+COLOR2 = 'red'
+COLOR3 = 'gold'
 # Primary menu items   / {0} is the menu item and is required
-THEME1 = u'[COLOR {color1}][I][/I][/COLOR] [COLOR {color2}]{{}}[/COLOR]'.format(color1=COLOR1, color2=COLOR2)
+THEME1 = u'[COLOR {color1}[B][I][/I][/B][/COLOR][COLOR {color2}{{}}[/COLOR]'.format(color1='[COLOR white]', color2='[COLOR white]')
 # Build Names          / {0} is the menu item and is required
 THEME2 = u'[COLOR {color1}]{{}}[/COLOR]'.format(color1=COLOR1)
 # Alternate items      / {0} is the menu item and is required
 THEME3 = u'[COLOR {color1}]{{}}[/COLOR]'.format(color1=COLOR1)
 # Current Build Header / {0} is the menu item and is required
-THEME4 = u'[COLOR {color1}]WIZARD INSTALADO:[/COLOR] [COLOR {color2}]{{}}[/COLOR]'.format(color1=COLOR1, color2=COLOR2)
+THEME4 = u'[COLOR {color1}]Current Build:[/COLOR] [COLOR {color2}]{{}}[/COLOR]'.format(color1=COLOR1, color2=COLOR2)
 # Current Theme Header / {0} is the menu item and is required
 THEME5 = u'[COLOR {color1}]Current Theme:[/COLOR] [COLOR {color2}]{{}}[/COLOR]'.format(color1=COLOR1, color2=COLOR2)
+
 
 # Message for Contact Page
 # Enable 'Contact' menu item 'Yes' hide or 'No' dont hide
@@ -101,8 +101,6 @@ WIZARDFILE     = 'https://i.imgur.com/RdOWl4p.jpg'
 AUTOINSTALL = 'Yes'
 # Addon ID for the repository
 REPOID = 'repository.chopowizard'
-# Url to Addons.xml file in your repo folder(this is so we can get the latest version)
-REPOID         = 'repository.repoCHOPO-WIZARD'
 # Url to Addons.xml file in your repo folder(this is so we can get the latest version)
 REPOADDONXML   = 'https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/addons.xml'
 # Url to folder zip is located in

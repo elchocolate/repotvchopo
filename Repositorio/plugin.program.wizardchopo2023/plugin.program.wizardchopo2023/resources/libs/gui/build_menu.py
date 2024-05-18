@@ -115,26 +115,26 @@ class BuildMenu:
             else:
                 if count21 > 0:
                     state = '+' if CONFIG.SHOW21 == 'false' else '-'
-                    directory.add_file('[B][COLOR aqua] Omega wizards ({1})[/B]'.format(state, count21), {'mode': 'togglesetting',
+                    directory.add_file('[B][COLOR aqua]{0} Omega wizards para kodi 21 ({1})[/B]'.format(state, count21), {'mode': 'togglesetting',
                                        'name': 'show21'}, themeit=CONFIG.THEME3)
                     if CONFIG.SHOW21 == 'true':
                         self._list_all(match, kodiv=21)
                 if count20 > 0:
                     state = '+' if CONFIG.SHOW20 == 'false' else '-'
-                    directory.add_file('[B][COLOR aqua] Nexus wizards ({1})[/B]'.format(state, count20), {'mode': 'togglesetting',
+                    directory.add_file('[B][COLOR aqua]{0} Nexus wizards para kodi 20 ({1})[/B]'.format(state, count20), {'mode': 'togglesetting',
                                        'name': 'show20'}, themeit=CONFIG.THEME3)
                     if CONFIG.SHOW20 == 'true':
                         self._list_all(match, kodiv=20)
                 if count19 > 0:
                     state = '+' if CONFIG.SHOW19 == 'false' else '-'
-                    directory.add_file('[B][COLOR aqua] Matrix wizards ({1})[/B]'.format(state, count19), {'mode': 'togglesetting',
+                    directory.add_file('[B][COLOR aqua]{0} Matrix wizards para kodi 19({1})[/B]'.format(state, count19), {'mode': 'togglesetting',
                                        'name': 'show19'}, themeit=CONFIG.THEME3)
                     if CONFIG.SHOW19 == 'true':
                         self._list_all(match, kodiv=19)
 
         elif hidden > 0:
             if adultcount > 0:
-                directory.add_file('There is currently only Adult wizard', icon=CONFIG.ICONBUILDS,
+                directory.add_file('There is currently only Adult builds', icon=CONFIG.ICONBUILDS,
                                    themeit=CONFIG.THEME3)
                 directory.add_file('Enable Show Adults in Addon Settings > Misc', icon=CONFIG.ICONBUILDS,
                                    themeit=CONFIG.THEME3)
@@ -187,7 +187,10 @@ class BuildMenu:
                 directory.add_file('View Video Preview', {'mode': 'buildpreview', 'name': name}, description=description, fanart=fanart,
                                    icon=icon, themeit=CONFIG.THEME3)
             
-     
+            if versioncheck:
+                directory.add_file(
+                    '[I]Build designed for Kodi v{0} (installed: v{1})[/I]'.format(str(kodi), str(CONFIG.KODIV)),
+                    fanart=fanart, icon=icon, themeit=CONFIG.THEME3)
                     
             directory.add_separator('INSTALL')
             directory.add_file('[COLOR aqua]Instalar aqui', {'mode': 'install', 'action': 'build', 'name': name}, description=description, fanart=fanart,

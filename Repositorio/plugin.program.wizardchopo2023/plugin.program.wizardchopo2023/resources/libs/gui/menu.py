@@ -159,7 +159,7 @@ def view_ip():
 def speed_test():
     from datetime import date
 
-    directory.add_file('Run Speed Test', {'mode': 'runspeedtest'}, icon=CONFIG.ICONSPEED, themeit=CONFIG.THEME3)
+    directory.add_file('Run Speed Test', {'mode': 'speedtest'}, icon=CONFIG.ICONSPEED, themeit=CONFIG.THEME3)
     if os.path.exists(CONFIG.SPEEDTEST):
         speedimg = glob.glob(os.path.join(CONFIG.SPEEDTEST, '*.png'))
         speedimg.sort(key=lambda f: os.path.getmtime(f), reverse=True)
@@ -493,12 +493,11 @@ def login_menu():
     directory.add_file('Clear All Saved Login Info', {'mode': 'clearlogin', 'name': 'all'}, icon=CONFIG.ICONLOGIN, themeit=CONFIG.THEME3)
 
 
-def enable_addons():
+def enable_addons(all=False):
     from resources.libs.common import tools
     
     from xml.etree import ElementTree
 
-    directory.add_file("[I][B][COLOR red]!!Aviso: deshabilitar algunos complementos puede causar problemas!![/COLOR][/B][/I]", icon=CONFIG.ICONMAINT)
     fold = glob.glob(os.path.join(CONFIG.ADDONS, '*/'))
     addonnames = []
     addonids = []
@@ -515,33 +514,39 @@ def enable_addons():
             root = ElementTree.parse(xml).getroot()
             addonid = root.get('id')
             addonname = root.get('name')
-           
-            try:
-                addonnames.append(tools.get_addon_info(addonid, 'name'))
-                addonids.append(addonid)
-            except:                
-                pass
-                
-            if xbmc.getCondVisibility('System.HasAddon({0})'.format(addonid)):
-                state = "[COLOR springgreen][ACTIVADO][/COLOR]"
-                goto = "false"
-            else:
-                state = "[COLOR red][DESACTIVADO][/COLOR]"
-                goto = "true"
-                
-            icon = os.path.join(folder, 'icon.png') if os.path.exists(os.path.join(folder, 'icon.png')) else CONFIG.ADDON_ICON
-            fanart = os.path.join(folder, 'fanart.jpg') if os.path.exists(os.path.join(folder, 'fanart.jpg')) else CONFIG.ADDON_FANART
-            directory.add_file("{0} {1}".format(state, addonname), {'mode': 'toggleaddon', 'name': addonid, 'url': goto}, icon=icon, fanart=fanart)
-    if len(addonnames) == 0:
-        directory.add_file("No Addons Found to Enable or Disable.", icon=CONFIG.ICONMAINT)
+            addonids.append(addonid)
+            addonnames.append(addonname)
+    if not all:
+        if len(addonids) == 0:
+            directory.add_file("No Addons Found to Enable or Disable.", icon=CONFIG.ICONMAINT)
+        else:
+            directory.add_file("[I][B][COLOR red]!!Notice: Disabling Some Addons Can Cause Issues!![/COLOR][/B][/I]", icon=CONFIG.ICONMAINT)
+            directory.add_dir('Enable All Addons', {'mode': 'enableall'}, icon=CONFIG.ICONMAINT, themeit=CONFIG.THEME3)
+            for i in range(0, len(addonids)):
+                folder = os.path.join(CONFIG.ADDONS, addonids[i])
+                icon = os.path.join(folder, 'icon.png') if os.path.exists(os.path.join(folder, 'icon.png')) else CONFIG.ADDON_ICON
+                fanart = os.path.join(folder, 'fanart.jpg') if os.path.exists(os.path.join(folder, 'fanart.jpg')) else CONFIG.ADDON_FANART
+                if tools.get_addon_info(addonids[i], 'name'):
+                    state = "[COLOR springgreen][Enabled][/COLOR]"
+                    goto = "false"
+                else:
+                    state = "[COLOR red][Disabled][/COLOR]"
+                    goto = "true"
+
+                directory.add_file("{0} {1}".format(state, addonnames[i]), {'mode': 'toggleaddon', 'name': addonids[i], 'url': goto}, icon=icon, fanart=fanart)
+    else:
+        from resources.libs import db
+        for addonid in addonids:
+            db.toggle_addon(addonid, 'true')
+        xbmc.executebuiltin('Container.Refresh()')
 
 
 def remove_addon_data_menu():
     if os.path.exists(CONFIG.ADDON_DATA):
-        directory.add_file('[COLOR red][B][BORRA][/B][/COLOR] All Addon_Data', {'mode': 'removedata', 'name': 'all'}, themeit=CONFIG.THEME2)
-        directory.add_file('[COLOR red][B][BORRA][/B][/COLOR] All Addon_Data for Uninstalled Addons', {'mode': 'removedata', 'name': 'uninstalled'}, themeit=CONFIG.THEME2)
-        directory.add_file('[COLOR red][B][BORRA][/B][/COLOR] All Empty Folders in Addon_Data', {'mode': 'removedata', 'name': 'empty'}, themeit=CONFIG.THEME2)
-        directory.add_file('[COLOR red][B][BORRA][/B][/COLOR] {0} Addon_Data'.format(CONFIG.ADDONTITLE), {'mode': 'resetaddon'}, themeit=CONFIG.THEME2)
+        directory.add_file('[COLOR red][B][REMOVE][/B][/COLOR] All Addon_Data', {'mode': 'removedata', 'name': 'all'}, themeit=CONFIG.THEME2)
+        directory.add_file('[COLOR red][B][REMOVE][/B][/COLOR] All Addon_Data for Uninstalled Addons', {'mode': 'removedata', 'name': 'uninstalled'}, themeit=CONFIG.THEME2)
+        directory.add_file('[COLOR red][B][REMOVE][/B][/COLOR] All Empty Folders in Addon_Data', {'mode': 'removedata', 'name': 'empty'}, themeit=CONFIG.THEME2)
+        directory.add_file('[COLOR red][B][REMOVE][/B][/COLOR] {0} Addon_Data'.format(CONFIG.ADDONTITLE), {'mode': 'resetaddon'}, themeit=CONFIG.THEME2)
         directory.add_separator(themeit=CONFIG.THEME3)
         fold = glob.glob(os.path.join(CONFIG.ADDON_DATA, '*/'))
         for folder in sorted(fold, key = lambda x: x):
@@ -558,9 +563,9 @@ def remove_addon_data_menu():
             for rep in replace:
                 folderdisplay = folderdisplay.replace(rep, replace[rep])
             if foldername in CONFIG.EXCLUDES:
-                folderdisplay = '[COLOR springgreen][B][PROTEGIDO][/B][/COLOR] {0}'.format(folderdisplay)
+                folderdisplay = '[COLOR springgreen][B][PROTECTED][/B][/COLOR] {0}'.format(folderdisplay)
             else:
-                folderdisplay = '[COLOR red][B][BORRA][/B][/COLOR] {0}'.format(folderdisplay)
+                folderdisplay = '[COLOR red][B][REMOVE][/B][/COLOR] {0}'.format(folderdisplay)
             directory.add_file(' {0}'.format(folderdisplay), {'mode': 'removedata', 'name': foldername}, icon=icon, fanart=fanart, themeit=CONFIG.THEME2)
     else:
         directory.add_file('No Addon data folder found.', themeit=CONFIG.THEME3)

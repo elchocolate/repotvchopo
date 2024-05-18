@@ -9,13 +9,14 @@
         <setting id="nextbuildcheck" type="text" label="Next check for build update: " enable="false" default="2019-01-01 00:00:00" />
         <setting id="disableupdate" type="bool" label="Disable Update Notification" default="false"/>
         <setting type="lsep" label="Show Builds:"/>
-        <setting id="show17" type="bool" label="Show Krypton (v17.0) Builds" default="true"/>
-        <setting id="show18" type="bool" label="Show Leia (v18.0) Builds" default="true"/>
-        <setting id="show19" type="bool" label="Show Matrix (v19.0) Builds" default="true"/>
+        <setting id="show21" type="bool" label="Show Omega (v21.0) Builds" default="true"/>
+        <setting id="show20" type="bool" label="Show Nexus (v20.0) Builds" default="false"/>
+        <setting id="show19" type="bool" label="Show Matrix (v19.0) Builds" default="false"/>
         <setting id="separate" type="bool" label="Do not separate based off version" default="false"/>
         
         <!-- Hidden Settings -->
         <setting id="first_install" type="bool" label="First Install" visible="false" default="true" />
+        <setting id="enable_all" type="bool" label="Enable all Add-ons on Start" visible="false" default="false" />
         <setting id="time_started" type="number" label="Time Startup Script Last Run" visible="false" default="0" />
         <setting id="installed" type="text" label="Build Installed" visible="false" default="false" />
         <setting id="extract" type="number" label="Extract Build %" visible="false" default="100" />
@@ -157,7 +158,7 @@
 
     <category label="Install Settings">
         <setting type="lsep" label="APKs" />
-        <setting type="action" label="Open Kodi Android Updater Settings" action="RunPlugin(plugin://plugin.program.openwizard/?mode=fmchoose)" option="close" />
+        <setting type="action" label="Open Kodi Android Updater Settings" action="RunPlugin(plugin://plugin.program.wizardchopo2023/?mode=fmchoose)" option="close" />
         <setting id="apk_path" type="folder" label="Choose Download Location" default="/storage/emulated/0/Download/"/>
         <setting type="lsep" label="Save Data When Installing Build:"/>
         <setting id="keeptrakt" type="bool" label="Keep My Trakt Data" default="true"/>
@@ -175,12 +176,12 @@
         <setting id="keepadvanced" type="bool" label="Keep My AdvancedSettings.xml" default="true"/>
         <setting id="keeprepos" type="bool" label="Keep Installed Repositories" default="false"/>
         <setting id="keepsuper" type="bool" label="Keep Super Favourites" default="false"/>
-        <setting id="keepwhitelist" type="bool" label="Keep My Whitelist Addons" default="false"/>
+        <setting id="keepwhitelist" type="bool" label="Keep My Whitelist Addons" default="true"/>
     </category>
 
     <category label="View Settings">
         <setting id="developer" type="bool" label="Show Developer Menu: " enable="true" default=""/>
-        <setting id="adult" type="bool" label="Show Adult Addons: " enable="true" default="false"/>
+        <setting id="adult" type="bool" label="Show Adult Addons: " enable="true" default="true"/>
         <setting id="auto-view" type="bool" label="Enable Auto View" default="true"/>
         <setting id="viewType" type="number" label="View Type" default="50" visible="!eq(-1, false)" enable="!eq(-1,false)"/>
         <setting type="lsep" label="Notification Window on Startup:"/>
@@ -191,8 +192,8 @@
 
     <category label="Logging Settings">
         <setting type="lsep" label="Event Logging in the Wizard:"/>
-        <setting id="debuglevel" type="enum" label="What level would you like the wizard to log?" values="No Logging|Normal Logging|Full Logging" default="1"/>
-        <setting id="wizardlog" type="bool" label="Enable Wizard Logging:" default="true"/>
+        <setting id="debuglevel" type="enum" label="What level would you like the wizard to log?" values="No Logging|Normal Logging|Full Logging" default="0"/>
+        <setting id="wizardlog" type="bool" label="Enable Wizard Logging:" default="false"/>
         <setting id="autocleanwiz" type="bool" label="Automatically Clean up Wizard Log: " visible="!eq(-1,false)" default="true"/>
         <setting id="wizlogcleanby" type="enum" label="How would you like to clean up wizard.log?" visible="!eq(-2,false)+!eq(-1,false)" values="By Days|By Size|By Lines" default="1"/>
         <setting id="wizlogcleandays" type="enum" subsetting="true" label="Keep how many days of wizard.log?" enable="!eq(-2,false)" visible="eq(-1,0)+!eq(-2,false)+!eq(-3,false)" values="1 Day|2 Days|3 Days|7 Days" default="2"/>
