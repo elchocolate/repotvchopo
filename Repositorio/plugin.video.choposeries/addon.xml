@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
-	id="plugin.video.choposeries" version="20" name="[B][COLOR white]chopo[COLOR gold]series[/COLOR][/B]" provider-name="equipo tvchopo">
+	id="plugin.video.choposeries" version="21" name="[B][COLOR white]chopo[COLOR gold]series[/COLOR][/B]" provider-name="equipo tvchopo">
 <requires>   
     <import addon="script.module.requests" />
     <import addon="script.module.resolveurl"  optional="true" />
@@ -26,7 +26,8 @@
                 <platform>all</platform>
 		<summary lang="en">choposeries</summary>
 		<summary lang="da">choposeries</summary>
-		<description lang="en">[B][LOWERCASE][CAPITALIZE][COLOR white]addon de series de la familia tvchopo para cualquier consulta o problema  unete  a nuestro grupo de telegram [COLOR yellow]@tvchopo[/COLOR][/CAPITALIZE][/LOWERCASE][/B]</description>
+		<description lang="en">[B][COLOR yellow]TVCHOPO NO CONTIENEN NINGUN CONTENIDO 
+[COLOR white]TODO ES  ENLAZADOS A WEBS QUE ESTAN EN INTERNET Y ESTAS SON LAS RESPONSABLES DE EL CONTENIDO.  TVCHOPO ES TOTALMENTE GRATUITO. NO PERMITAS QUE TE VENDAN, NINGUN DISPOSITIVO CON EL INSTALADO..UNETE A NUESTRO TELEGRAM @tvchopo Y TE AYUDAMOS A INSTALARLO GRATUITAMENTE[/B][/COLOR]</description>
 		<website></website>
 		<license>GPL 2.0</license>
 		<platform>all</platform>
