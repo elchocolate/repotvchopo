@@ -317,9 +317,8 @@ para  estar al dia  unete a nuestro grupo de Telegram:
 </addon>
 
 <addon
-	id="plugin.video.choposex" version="14" name="[B][COLOR white]chopo[COLOR fuchsia]sex[/COLOR][/B]" provider-name="equipo tvchopo">
+	id="plugin.video.choposex" version="15" name="[B][COLOR fuchsia]choposex[/COLOR][/B]" provider-name="equipo tvchopo">
 <requires>
-    <import addon="plugin.video.youtube" />
     <import addon="script.module.requests" />
     <import addon="script.module.resolveurl"  optional="true" />
     <import addon="script.module.six" />
@@ -345,6 +344,8 @@ para  estar al dia  unete a nuestro grupo de Telegram:
 		<summary lang="en"></summary>
 		<summary lang="da"></summary>
 		<description lang="en">[B][COLOR white]necesitas la clave pidela en telegram [COLOR yellow]@tvchopo[/COLOR][/B]</description>
+		<disclaimer>[B][COLOR yellow]LOS ADDONS DE TVCHOPO NO CONTIENEN NINGUN CONTENIDO
+[COLOR white]TODO ES  ENLAZADOS A WEBS QUE ESTAN EN INTERNET Y ESTAS SON LAS RESPONSABLES DE EL CONTENIDO.  TVCHOPO ES TOTALMENTE GRATUITO. NO PERMITAS QUE TE VENDAN, NINGUN DISPOSITIVO CON EL INSTALADO..UNETE A NUESTRO TELEGRAM @tvchopo Y TE AYUDAMOS A INSTALARLO GRATUITAMENTE[/B][/COLOR]</disclaimer>
 		<website></website>
 		<license>GPL 2.0</license>
 		<platform>all</platform>
@@ -355,7 +356,7 @@ para  estar al dia  unete a nuestro grupo de Telegram:
   <screenshot>resources/screenshots/screenshot3.jpg</screenshot>
   <screenshot>resources/screenshots/screenshot4.jpg</screenshot>
   <screenshot>resources/screenshots/screenshot5.jpg</screenshot>
-        <fanart>fanart.png</fanart>
+        <fanart>fanart.gif</fanart>
     </assets>
 		<language>es</language>
 	</extension>
