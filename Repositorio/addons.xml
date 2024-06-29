@@ -72,9 +72,8 @@ para  estar al dia  unete a nuestro grupo de Telegram:
 </addon>
 
 <addon
-	id="plugin.video.atresplayerchopo" version="11" name="[B][COLOR white]atresplayer[COLOR aqua] chopo[/COLOR][/B]" provider-name="equipo tvchopo">
+	id="plugin.video.atresplayerchopo" version="12" name="[B][COLOR white]atresplayer[COLOR aqua] chopo[/COLOR][/B]" provider-name="equipo tvchopo">
 <requires>
-    <import addon="plugin.video.youtube" />
     <import addon="script.module.requests" />
     <import addon="script.module.six" />
   </requires>
@@ -111,7 +110,7 @@ para  estar al dia  unete a nuestro grupo de Telegram:
   <screenshot>resources/screenshots/screenshot3.jpg</screenshot>
   <screenshot>resources/screenshots/screenshot4.jpg</screenshot>
   <screenshot>resources/screenshots/screenshot5.jpg</screenshot>
-        <fanart>fanart.gif</fanart>
+        <fanart>fanart.png</fanart>
     </assets>
 		<language>es</language>
 	</extension>
