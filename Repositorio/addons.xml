@@ -209,7 +209,7 @@ para  estar al dia  unete a nuestro grupo de Telegram:
 </addon>
 
 <addon
-	id="plugin.video.choposeries" version="21" name="[B][COLOR white]chopo[COLOR gold]series[/COLOR][/B]" provider-name="equipo tvchopo">
+	id="plugin.video.choposeries" version="22" name="[B][COLOR white]chopo[COLOR aqua]series[/COLOR][/B]" provider-name="equipo tvchopo">
 <requires>
     <import addon="script.module.requests" />
     <import addon="script.module.resolveurl"  optional="true" />
