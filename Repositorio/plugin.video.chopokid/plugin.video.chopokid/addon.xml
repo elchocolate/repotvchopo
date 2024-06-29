@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
-	id="plugin.video.chopokid" version="03" name="[B][COLOR white]chopo[COLOR lime]kids[/COLOR][/B]" provider-name="equipo tvchopo">
+	id="plugin.video.chopokid" version="04" name="[B][COLOR aqua]chopo[COLOR lime]kids[/COLOR][/B]" provider-name="equipo tvchopo">
 <requires>
-    <import addon="plugin.video.youtube" /> 
     <import addon="script.module.requests" />
     <import addon="script.module.resolveurl"  optional="true" />
     <import addon="script.module.six" />
@@ -25,8 +24,8 @@
 	
 	<extension point="xbmc.addon.metadata">
                 <platform>all</platform>
-		<summary lang="en">choposeries</summary>
-		<summary lang="da">choposeries</summary>
+		<summary lang="en">chopokids</summary>
+		<summary lang="da">chopokids</summary>
 		<description lang="en">[B][LOWERCASE][CAPITALIZE][COLOR white]addon infantil de la familia tvchopo.....para cualquier consulta o problema  unete  a nuestro grupo de telegram [COLOR yellow]@tvchopo[/COLOR][/CAPITALIZE][/LOWERCASE][/B]</description>
 		<disclaimer>[B][COLOR yellow]LOS ADDONS DE TVCHOPO NO CONTIENEN NINGUN CONTENIDO 
 [COLOR white]TODO ES  ENLAZADOS A WEBS QUE ESTAN EN INTERNET Y ESTAS SON LAS RESPONSABLES DE EL CONTENIDO.  TVCHOPO ES TOTALMENTE GRATUITO. NO PERMITAS QUE TE VENDAN, NINGUN DISPOSITIVO CON EL INSTALADO..UNETE A NUESTRO TELEGRAM @tvchopo Y TE AYUDAMOS A INSTALARLO GRATUITAMENTE[/B][/COLOR]</disclaimer>
@@ -40,7 +39,7 @@
   <screenshot>resources/screenshots/screenshot3.jpg</screenshot>
   <screenshot>resources/screenshots/screenshot4.jpg</screenshot>
   <screenshot>resources/screenshots/screenshot5.jpg</screenshot>
-        <fanart>fanart.gif</fanart>
+        <fanart>fanart.png</fanart>
     </assets>        
 		<language>es</language>
 	</extension>
