@@ -347,7 +347,7 @@ para  estar al dia  unete a nuestro grupo de Telegram:
 </addon>
 
 <addon
-	id="plugin.video.emuchopo" version="9" name="[B][COLOR white]emu[COLOR aqua]chopo[/COLOR][/B]" provider-name="equipo tvchopo">
+	id="plugin.video.emuchopo" version="10" name="[B][COLOR white]emu[COLOR aqua]chopo[/COLOR][/B]" provider-name="equipo tvchopo">
 <requires>
     <import addon="script.module.requests" />
     <import addon="script.module.six" />
@@ -385,7 +385,7 @@ para  estar al dia  unete a nuestro grupo de Telegram:
   <screenshot>resources/screenshots/screenshot3.jpg</screenshot>
   <screenshot>resources/screenshots/screenshot4.jpg</screenshot>
   <screenshot>resources/screenshots/screenshot5.jpg</screenshot>
-        <fanart>fanart.gif</fanart>
+        <fanart>fanart.png</fanart>
     </assets>
 		<language>es</language>
 	</extension>
