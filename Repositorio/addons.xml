@@ -390,7 +390,7 @@ para  estar al dia  unete a nuestro grupo de Telegram:
 </addon>
 
 <addon
-	id="plugin.video.koditv" version="14" name="[B][COLOR white]kodi[COLOR salmon]tv[/COLOR][/B]" provider-name="equipo tvchopo">
+	id="plugin.video.koditv" version="15" name="[B][COLOR white]kodi[COLOR salmon]tv[/COLOR][/B]" provider-name="equipo tvchopo">
 <requires>
     <import addon="script.module.requests" />
     <import addon="script.module.resolveurl" optional="true" />
