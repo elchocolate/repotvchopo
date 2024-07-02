@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
-	id="plugin.video.chopocine" version="18" name="[B][COLOR white]chopo[COLOR yellow]cine[/COLOR][/B]" provider-name="equipo tvchopo">
+	id="plugin.video.chopocine" version="19" name="[B][COLOR white]chopo[COLOR yellow]cine[/COLOR][/B]" provider-name="equipo tvchopo">
 <requires>
     <import addon="script.module.requests" />
     <import addon="script.module.resolveurl"  optional="true" />
