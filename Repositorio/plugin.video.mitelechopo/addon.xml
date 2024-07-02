@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
-	id="plugin.video.mitelechopo" version="13" name="[B][COLOR white]mitele[COLOR cornflowerblue] chopo[/COLOR][/B]" provider-name="equipo tvchopo">
+	id="plugin.video.mitelechopo" version="14" name="[B][COLOR white]mitele[COLOR cornflowerblue] chopo[/COLOR][/B]" provider-name="equipo tvchopo">
 <requires>
     <import addon="script.module.requests" />
     <import addon="script.module.six" />
