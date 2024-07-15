@@ -117,7 +117,7 @@ para  estar al dia  unete a nuestro grupo de Telegram:
 </addon>
 
 <addon
-	id="plugin.video.chopocine" version="19" name="[B][COLOR white]chopo[COLOR yellow]cine[/COLOR][/B]" provider-name="equipo tvchopo">
+	id="plugin.video.chopocine" version="20" name="[B][COLOR white]chopo[COLOR yellow]cine[/COLOR][/B]" provider-name="equipo tvchopo">
 <requires>
     <import addon="script.module.requests" />
     <import addon="script.module.resolveurl"  optional="true" />
