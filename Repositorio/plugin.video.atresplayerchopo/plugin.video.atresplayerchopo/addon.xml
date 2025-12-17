@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
-	id="plugin.video.atresplayerchopo" version="15" name="[B][COLOR white]atresplayer[COLOR aqua] chopo[/COLOR][/B]" provider-name="equipo tvchopo">
+	id="plugin.video.atresplayerchopo" version="16" name="[B][COLOR white]atresplayer[COLOR aqua] chopo[/COLOR][/B]" provider-name="equipo tvchopo">
 <requires>
     <import addon="script.module.requests" />
     <import addon="script.module.six" />
