@@ -249,6 +249,49 @@ para  estar al dia  unete a nuestro grupo de Telegram:
 	</extension>
 </addon>
 
+<addon
+	id="plugin.video.telemadridchopo" version="1" name="[B][COLOR white]telemadrid [COLOR lime]chopo[/COLOR][/B]" provider-name="anonimo">
+<requires>
+    <import addon="script.module.requests" />
+    <import addon="script.module.six" />
+  </requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+	</extension>
+
+	 <extension point="xbmc.addon.repository" name="tvchopo">
+        <info>https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/</datadir>
+	    <dir>
+        <info compressed="false">https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/elchocolate/repotvchopo/master/Repositorio/</datadir>
+        </dir>
+    </extension>
+
+	<extension point="xbmc.addon.metadata">
+                <platform>all</platform>
+		<summary lang="en">telemadridchopo</summary>
+		<summary lang="da">telemadridchopo</summary>
+		<description lang="en">[B][LOWERCASE][CAPITALIZE][COLOR white]entra en telegram [COLOR gold]@tvchopo[/COLOR][/CAPITALIZE][/LOWERCASE][/B]</description>
+		<disclaimer>[B][COLOR yellow]telemadridchopo[/B][/COLOR]</disclaimer>
+		<website></website>
+		<license>GPL 2.0</license>
+		<platform>all</platform>
+<assets>
+        <icon>icon.gif</icon>
+  <screenshot>resources/screenshots/screenshot1.jpg</screenshot>
+  <screenshot>resources/screenshots/screenshot2.jpg</screenshot>
+  <screenshot>resources/screenshots/screenshot3.jpg</screenshot>
+  <screenshot>resources/screenshots/screenshot4.jpg</screenshot>
+  <screenshot>resources/screenshots/screenshot5.jpg</screenshot>
+        <fanart>fanart.png</fanart>
+    </assets>
+		<language>es</language>
+	</extension>
+</addon>
+
 <addon id="repository.resolveurl" name="ResolveURL Repository" provider-name="gujal" version="1.0.0">
   <extension point="xbmc.addon.repository" name="ResolveURL Repository">
     <dir>
