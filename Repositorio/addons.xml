@@ -250,9 +250,10 @@ para  estar al dia  unete a nuestro grupo de Telegram:
 </addon>
 
 <addon
-	id="plugin.video.telemadridchopo" version="1" name="[B][COLOR white]telemadrid [COLOR lime]chopo[/COLOR][/B]" provider-name="anonimo">
+	id="plugin.video.telemadridchopo" version="2" name="[B][COLOR white]telemadrid [COLOR lime]chopo[/COLOR][/B]" provider-name="anonimo">
 <requires>
     <import addon="script.module.requests" />
+    <import addon="script.module.resolveurl"  optional="true" />
     <import addon="script.module.six" />
   </requires>
 	<extension point="xbmc.python.pluginsource" library="default.py">
